@@ -23,7 +23,7 @@ Run the follow commands to set up the development environment.
 
 ```bash
 # Clone the repository
-git clone https://github.com/cy-cheung/homepage
+git clone https://github.com/cchy-tstss/math
 
 # Go inside the directory
 cd homepage
