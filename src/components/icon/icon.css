@@ -1,0 +1,79 @@
+.card {
+	background-color: var(--bs-black);
+	text-align: center;
+	font-size: 150%;
+}
+.card-header {
+	background-color: var(--bs-dark);
+	border-bottom: solid var(--bs-primary);
+}
+.card-footer {
+	background-color: var(--bs-dark);
+	border-top: solid var(--bs-primary);
+}
+.card ul .row{
+	justify-content: center;
+  	align-items: center; 
+	place-items: center;
+	vertical-align: middle;
+  	text-align: center;
+}
+.card ul li {
+	position: relative;
+	justify-content: center;
+  	align-items: center; 
+	place-items: center;
+	vertical-align: middle;
+  	text-align: center;
+	border-radius: 30px;
+	margin-inline: 2%;
+	margin-block: 1%;
+	padding: 0;
+	width: 12%;
+	aspect-ratio: 1;
+	background: black;
+}
+.card ul a {
+	text-decoration: none;
+	color: var(--bs-light);
+}
+
+.icon{
+	display: grid;
+	justify-content: center;
+  	align-items: center; 
+	place-items: center;
+	vertical-align: middle;
+  	text-align: center;
+	width: 100%;
+	aspect-ratio: 1;
+	font-size: 18px;
+	transition: 0.25s;
+	color: var(--bs-light);
+}
+.icon:before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	aspect-ratio: 1;
+	width: inherit;
+	border-radius: 30px;
+	background: var(--bs-secondary);
+	z-index: -10;
+	transform: scale(0.9);
+	transition: 0.25s;
+}
+.icon:hover:before {
+	transform: scaleX(1.1) scaleY(1.05);
+	box-shadow: 0 0 10px var(--bs-secondary);
+	filter: blur(20px);
+}
+.icon .bi {
+	color: var(--bs-primary);
+	font-size: 250%;
+}
+.icon:hover .bi{
+	color: var(--bs-secondary);
+	text-shadow: 0 0 20px var(--bs-light);
+}

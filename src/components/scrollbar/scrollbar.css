@@ -1,0 +1,14 @@
+.progress {
+	max-width: 100%;
+	text-align: center;
+	width: 100vw;
+	height: 5px;
+	position:absolute;
+  	left:0px;
+	bottom: 0;
+	background-color: var(--bs-dark);
+	/*
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+	*/
+}
