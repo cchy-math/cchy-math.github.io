@@ -5,20 +5,20 @@ import '../../components/clock/clock.css'
 import '../../components/clock/clock.js'
 import { Link, NavLink, HeaderLink, Routes, Route } from 'react-router-dom';
 
-export default function ClockDisplay() {
+export default function Menu() {
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
             <div className="container">
                 <div class="row align-items-center">
-                    <div class="col-3 col-md-5">
+                    <div class="col-5">
                     </div>
-                    <div class="col-6 col-md-2">
-                        <NavLink to="/math"><button className="button-rainbow m-3" style={{'width': '100%'}}>News</button></NavLink>
+                    <div class="col-2">
+                        <NavLink to="/math"><button className="button-rainbow" style={{'width': '100%'}}>News</button></NavLink>
                         <br/>
-                        <NavLink to="/math"><button className="button-rainbow m-3" style={{'width': '100%'}}>Coming Soon</button></NavLink>
+                        <NavLink to="/math"><button className="button-rainbow" style={{'width': '100%'}}>Coming Soon</button></NavLink>
                     </div>
-                    <div class="col-3 col-md-5">
+                    <div class="col-5">
                     </div>
                 </div>
             </div>
