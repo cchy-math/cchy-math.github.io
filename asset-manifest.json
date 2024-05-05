@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/math/static/css/main.c3751ab5.css",
-    "main.js": "/math/static/js/main.6dcd99d5.js",
+    "main.css": "/math/static/css/main.ab3b38ef.css",
+    "main.js": "/math/static/js/main.bca25649.js",
     "static/media/2324-S4T1-MATH-CP-QP-C Cover.jpg": "/math/static/media/2324-S4T1-MATH-CP-QP-C Cover.1db8c696329e6a651a70.jpg",
     "index.html": "/math/index.html",
-    "main.c3751ab5.css.map": "/math/static/css/main.c3751ab5.css.map",
-    "main.6dcd99d5.js.map": "/math/static/js/main.6dcd99d5.js.map"
+    "main.ab3b38ef.css.map": "/math/static/css/main.ab3b38ef.css.map",
+    "main.bca25649.js.map": "/math/static/js/main.bca25649.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3751ab5.css",
-    "static/js/main.6dcd99d5.js"
+    "static/css/main.ab3b38ef.css",
+    "static/js/main.bca25649.js"
   ]
 }
