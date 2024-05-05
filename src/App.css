@@ -34,7 +34,7 @@ header {
 	font-weight: 1;
 	background-color: var(--bs-dark);
 	border-bottom: 3px solid var(--bs-primary);
-	height: 60px;
+	height: 50px;
 	
 }
 .HeaderHeight {
@@ -72,19 +72,18 @@ nav a {
 main {
 	font-size: 12px;
 	position: relative;
-	left: 7rem;
 }
 main h1 {
 	font-size: 30px;
 	text-transform: uppercase;
 }
 .card {
-	background-color: var(--bs-black);
+	background-color: var(--bs-dark);
 	text-align: center;
 	font-size: 150%;
 }
 .card-header {
-	background-color: var(--bs-dark);
+	background-color: var(--bs-warning);
 	border-bottom: solid var(--bs-primary);
 }
 .card-footer {

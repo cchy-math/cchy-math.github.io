@@ -27,161 +27,32 @@ import '../../components/icon/icon.js'
 
 export default function CardIcon() {
     return (
-        <div className="card" style={{'width': '100%'}}>
-            <div className="card-header text-center h4">
-                <p className="invisible">Invisible Text</p>
-            </div>
-            <ul className="container">
-                <div className="row">
-                    <li className="col-1">
-                        <a href="https://mail.google.com/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <EnvelopeFill className="bi" />
-                            Gmail
+        <div class="row mb-2">
+            <div class="col-md-4">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">
+                            World
+                        </strong>
+                        <h3 class="mb-0">
+                            Featured post
+                        </h3>
+                        <div class="mb-1 text-muted">
+                            Nov 12
                         </div>
+                        <p class="card-text mb-auto">
+                            This is a wider card with supporting text below as a natural lead-in to additional content.
+                        </p>
+                        <a href="#" class="stretched-link">
+                            Continue reading
                         </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://www.office.com/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Windows className="bi" />
-                            CUHK Mail
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://portal.cuhk.edu.hk/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <MortarboardFill className="bi" />
-                            CUSIS
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://blackboard.cuhk.edu.hk/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <PencilFill className="bi" />
-                            BlackBoard
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://www.gradescope.com/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Bank2 className="bi" />
-                            Gradescope
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://www.math.cuhk.edu.hk/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Meta className="bi" />
-                            CUHK MATH
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://drive.google.com/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Google className="bi" />
-                            Google Drive
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Youtube className="bi" />
-                            YouTube
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://console.cloud.google.com/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Clouds className="bi" />
-                            Google Cloud
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://discord.com/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Discord className="bi" />
-                            Discord
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Facebook className="bi" />
-                            Facebook
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://github.com/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Github className="bi" />
-                            GitHub
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://www.geogebra.org/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <BoundingBoxCircles className="bi" />
-                            Geogebra
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://www.math3d.org/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Box className="bi" />
-                            Math3D
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://vdoc.pub/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <FileEarmarkText className="bi" />
-                            VDOC.PUB Library
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://acgsecrets.hk/" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Tv className="bi" />
-                            ACG Secrets.HK
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://loader.to/en58/youtube-wav-converter.html" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <Download className="bi" />
-                            YouTube to .wav
-                        </div>
-                        </a>
-                    </li>
-                    <li className="col-1">
-                        <a href="https://wiwi.video" target="_blank" rel="noreferrer">
-                        <div className="icon">
-                            <MusicNoteList className="bi" />
-                            Wiwi Video
-                        </div>
-                        </a>
-                    </li>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="177" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                    </div>
                 </div>
-            </ul>
-            <div className="card-footer">
-                <p className="invisible">Invisible Text</p>
             </div>
+            
         </div>
     );
 }

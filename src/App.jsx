@@ -24,7 +24,6 @@ export default function App() {
 				<div className="App">
 					<div className="row">
 						<HeaderBar />
-						<SideMenu />
 						<Main />
 					</div>
 				</div>

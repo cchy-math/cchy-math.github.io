@@ -1,16 +1,16 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Bookmarks from './pages/Bookmarks.jsx';
-import ClockDisplay from './pages/ClockDisplay.jsx';
+import News from './pages/News.jsx';
+import Menu from './pages/Menu.jsx';
 import YouTubeFrame from './pages/YouTubeFrame.jsx';
 
 export default function Main() {
     return (
         <Routes basename="/">
-            <Route path="*" element={<Bookmarks />} />
-            <Route path="/" element={<Bookmarks />} />
-            <Route path="/clockdisplay/*" element={<ClockDisplay />} />
+            <Route path="*" element={<News />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/menu" element={<Menu />} />
         </Routes>
     );
 }
