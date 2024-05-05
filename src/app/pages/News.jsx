@@ -13,105 +13,92 @@ export default function News() {
 	},[tex])
 	return (
 		<main className="col">
-			<div class="row mt-1">
-				<div class="col my-auto">
-					<h1 class="text-end">4C</h1>
-				</div>
-				<div class="col-11">
-					<div class="row flex-nowrap overflow-auto">
-						<NewsCard
-							title={'星期六補課'}
-							textcolor={'warning'}
-							bordercolor={'warning'}
-							date={'2024 MAY 12'}
-							content={"星期六補課時間：09:00-12:15。"}
-						/>
-						<NewsCard
-							title={'Chapter Test 8'}
-							textcolor={'success'}
-							bordercolor={'success'}
-							date={'2024 MAY 12'}
-							content={"第8課級測將於5月7日星期二補課時段進行。"}
-						/>
-						<NewsCardWithImage 
-							title={'試題專輯'}
-							textcolor={''}
-							bordercolor={'primary'}
-							date={'2024 MAY 12'}
-							content={"2023-2024年度中四第二次考試數學(必修部分)試題專輯現已發佈。"}
-							imagepath={require('./images/2324-S4T1-MATH-CP-QP-C Cover.jpg')}
-						/>
-						<NewsCardWithImage 
-							title={'試題專輯'}
-							textcolor={''}
-							bordercolor={'primary'}
-							date={'2024 MAY 12'}
-							content={"2023-2024年度中四第一次考試數學(必修部分)試題專輯現已發佈。"}
-							imagepath={require('./images/2324-S4T1-MATH-CP-QP-C Cover.jpg')}
-						/>
-					</div>
+			<div class="row">
+				<h1 class="mt-3">4C</h1>
+				<div class="row flex-nowrap overflow-auto">
+					<NewsCard
+						title={'星期六補課'}
+						textcolor={'warning'}
+						bordercolor={'warning'}
+						date={'2024 MAY 12'}
+						content={"星期六補課時間：09:00-12:15。"}
+					/>
+					<NewsCard
+						title={'Chapter Test 8'}
+						textcolor={'success'}
+						bordercolor={'success'}
+						date={'2024 MAY 12'}
+						content={"第8課級測將於5月7日星期二補課時段進行。"}
+					/>
+					<NewsCardWithImage 
+						title={'試題專輯'}
+						textcolor={''}
+						bordercolor={'primary'}
+						date={'2024 MAY 12'}
+						content={"2023-2024年度中四第二次考試數學(必修部分)試題專輯現已發佈。"}
+						imagepath={require('./images/2324-S4T1-MATH-CP-QP-C Cover.jpg')}
+					/>
+					<NewsCardWithImage 
+						title={'試題專輯'}
+						textcolor={''}
+						bordercolor={'primary'}
+						date={'2024 MAY 12'}
+						content={"2023-2024年度中四第一次考試數學(必修部分)試題專輯現已發佈。"}
+						imagepath={require('./images/2324-S4T1-MATH-CP-QP-C Cover.jpg')}
+					/>
 				</div>
 			</div>
-			<div class="row mt-1">
-				<div class="col-1 my-auto">
-					<h1 class="text-end">3B</h1>
-				</div>
-				<div class="col-11">
-					<div class="row flex-nowrap overflow-auto">
-						<NewsCard 
-							title={'TSA 補㡳'}
-							textcolor={''}
-							bordercolor={'dark'}
-							date={'Nov 12'}
-							content={'TSA 補㡳將於星期一及星期二進行，同學請留意日期時間依時出席。'}
-						/>
-					</div>
+			<hr/>
+			<div class="row">
+				<h1 class="mt-3">3B</h1>
+				<div class="row flex-nowrap overflow-auto">
+					<NewsCard 
+						title={'TSA 補㡳'}
+						textcolor={''}
+						bordercolor={'primary'}
+						date={'Nov 12'}
+						content={'TSA 補㡳將於星期一及星期二進行，同學請留意日期時間依時出席。'}
+					/>
 				</div>
 			</div>
-			<div class="row mt-1">
-				<div class="col-1 my-auto">
-					<h1 class="text-end">2D</h1>
-				</div>
-				<div class="col-11">
-					<div class="row flex-nowrap overflow-auto">
-						<NewsCard
-							title={'Chapter Test 12'}
-							textcolor={'success'}
-							bordercolor={'success'}
-							date={'2024 MAY 12'}
-							content={"第12課級測將於5月7日星期二進行。"}
-						/>
-						<NewsCard
-							title={'Chapter Assignment 12'}
-							textcolor={'info'}
-							bordercolor={'info'}
-							date={'2024 MAY 12'}
-							content={"請同學完成第12課功課並於星期一上課時繳交。"}
-						/>
-					</div>
+			<hr/>
+			<div class="row">
+				<h1 class="mt-3">2D</h1>
+				<div class="row flex-nowrap overflow-auto">
+					<NewsCard
+						title={'Chapter Test 12'}
+						textcolor={'success'}
+						bordercolor={'success'}
+						date={'2024 MAY 12'}
+						content={"第12課級測將於5月7日星期二進行。"}
+					/>
+					<NewsCard
+						title={'Chapter Assignment 12'}
+						textcolor={'info'}
+						bordercolor={'info'}
+						date={'2024 MAY 12'}
+						content={"請同學完成第12課功課並於星期一上課時繳交。"}
+					/>
 				</div>
 			</div>
-			<div class="row mt-1">
-				<div class="col-1 my-auto">
-					<h1 class="text-end">2A</h1>
-				</div>
-				<div class="col-11">
-					<div class="row flex-nowrap overflow-auto">
-						<NewsCard
-							title={'Chapter Test 12'}
-							textcolor={'success'}
-							bordercolor={'success'}
-							date={'2024 MAY 12'}
-							content={"第12課級測將於5月7日星期二進行。"}
-						/>
-						<NewsCard
-							title={'Chapter Assignment 12'}
-							textcolor={'info'}
-							bordercolor={'info'}
-							date={'2024 MAY 12'}
-							content={"請同學完成第12課功課並於星期一上課時繳交。"}
-						/>
-					</div>
+			<hr/>
+			<div class="row">
+			<h1 class="mt-3">2A</h1>		
+				<div class="row flex-nowrap overflow-auto">
+					<NewsCard
+						title={'Chapter Test 12'}
+						textcolor={'success'}
+						bordercolor={'success'}
+						date={'2024 MAY 12'}
+						content={"第12課級測將於5月7日星期二進行。"}
+					/>
+					<NewsCard
+						title={'Chapter Assignment 12'}
+						textcolor={'info'}
+						bordercolor={'info'}
+						date={'2024 MAY 12'}
+						content={"請同學完成第12課功課並於星期一上課時繳交。"}
+					/>
 				</div>
 			</div>
 		</main>

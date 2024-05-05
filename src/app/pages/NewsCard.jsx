@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-export default function NewsCardWithImage({title, date, content, textcolor, bordercolor}) {
+export default function NewsCard({title, date, content, textcolor, bordercolor}) {
 	const [tex, setTex] = useState('')
     useEffect(()=>{
 		if( typeof window?.MathJax !== "undefined"){
@@ -9,32 +9,28 @@ export default function NewsCardWithImage({title, date, content, textcolor, bord
 		}
 	},[tex])
 	return (
-		<div class="col-4">
-            <div class={"row g-0 rounded overflow-hidden flex-md-row my-3 shadow-sm h-md-250 position-relative border border-" + bordercolor}>
-            <div class="bg-dark col ps-4 pe-1 pt-4 pb-3 d-flex flex-column position-static">
-                    <div class="h-25 pb-3">
+		<div class="col-12 col-xs-4 col-lg-4 mb-3">
+            <div class={"row g-0 rounded overflow-hidden flex-md-row my-1 shadow-sm h-100 position-relative border border-" + bordercolor}>
+                <div class="bg-dark col p-4">
+                    <div class="h-25 mb-3">
                         <h2 className={"text-" + textcolor}>
                             {title}
                         </h2>
                     </div>
                     <div class="h-50 mt-2">
                         <h6>
+                            <br/>
                             {content}
+                            <br/>
                         </h6>
                     </div>
                     <div class="h-25">
-                        <div class="mb-2">
-                            <p class="text-dark">
-                                Invisible Text
-                            </p>
-                        </div>
-                        <div>
+                        <div class="h-25"/>
+                        <div class="h-25"/>
+                        <div class="h-25">
                             Release date: {date}
                         </div>
                     </div>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <img src={require('./images/transparent.png')} alt="alternatetext" width="1" height="250"/>
                 </div>
             </div>
         </div>
