@@ -8,7 +8,7 @@ export default function Main() {
     return (
         <Routes basename="/math">
             <Route path="*" element={<News />} />
-            <Route path="/news" element={<News />} />
+            <Route path="/math" element={<News />} />
             <Route path="/menu" element={<Menu />} />
         </Routes>
     );
