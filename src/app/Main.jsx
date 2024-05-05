@@ -7,10 +7,10 @@ import YouTubeFrame from './pages/YouTubeFrame.jsx';
 
 export default function Main() {
     return (
-        <Routes basename="/homepage">
+        <Routes basename="/">
             <Route path="*" element={<Bookmarks />} />
-            <Route path="/homepage" element={<Bookmarks />} />
-            <Route path="/homepage/clockdisplay/*" element={<ClockDisplay />} />
+            <Route path="/" element={<Bookmarks />} />
+            <Route path="/clockdisplay/*" element={<ClockDisplay />} />
         </Routes>
     );
 }
