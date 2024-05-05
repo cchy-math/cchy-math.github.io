@@ -6,7 +6,6 @@ import {
 import './App.css';
 
 import HeaderBar from './app/HeaderBar.jsx';
-import SideMenu from './app/SideMenu.jsx';
 import Main from './app/Main.jsx';
 
 
