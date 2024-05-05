@@ -16,7 +16,7 @@ export default function ClockDisplay() {
                     <div class="col-6 col-md-2">
                         <NavLink to="/math"><button className="button-rainbow m-3" style={{'width': '100%'}}>News</button></NavLink>
                         <br/>
-                        <NavLink to="/math"><button className="button-rainbow m-3" style={{'width': '100%'}}>Exersice</button></NavLink>
+                        <NavLink to="/math"><button className="button-rainbow m-3" style={{'width': '100%'}}>Coming Soon</button></NavLink>
                     </div>
                     <div class="col-3 col-md-5">
                     </div>
