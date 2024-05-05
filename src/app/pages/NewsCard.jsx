@@ -18,11 +18,11 @@ export default function NewsCard({title, date, content, textcolor, bordercolor})
                         </h2>
                     </div>
                     <div class="h-50 mt-2">
-                        <h6>
+                        <h5>
                             <br/>
                             {content}
                             <br/>
-                        </h6>
+                        </h5>
                     </div>
                     <div class="h-25">
                         <div class="h-25"/>
