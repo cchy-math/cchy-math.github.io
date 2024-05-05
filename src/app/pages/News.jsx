@@ -50,7 +50,7 @@ export default function News() {
 			</div>
 			<hr/>
 			<div class="row">
-				<h1 class="mt-3">3B</h1>
+				<h1 class="mt-2">3B</h1>
 				<div class="row flex-nowrap overflow-auto">
 					<NewsCard 
 						title={'TSA 補㡳'}
@@ -63,7 +63,7 @@ export default function News() {
 			</div>
 			<hr/>
 			<div class="row">
-				<h1 class="mt-3">2D</h1>
+				<h1 class="mt-2">2D</h1>
 				<div class="row flex-nowrap overflow-auto">
 					<NewsCard
 						title={'Chapter Test 12'}
@@ -83,7 +83,7 @@ export default function News() {
 			</div>
 			<hr/>
 			<div class="row">
-			<h1 class="mt-3">2A</h1>		
+			<h1 class="mt-2">2A</h1>		
 				<div class="row flex-nowrap overflow-auto">
 					<NewsCard
 						title={'Chapter Test 12'}
