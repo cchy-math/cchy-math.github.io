@@ -9,13 +9,13 @@ export default function HeaderBar() {
   return (
     <header>
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="col-2">
           <NavLink to="menu"><button className="button-rainbow">Menu</button></NavLink>
         </div>
-        <div class="col-6">
+        <div class="col-8">
         CCHY MATH
         </div>
-        <div class="col-3">
+        <div class="col-2">
         </div>
       </div>
       <div class="progress">

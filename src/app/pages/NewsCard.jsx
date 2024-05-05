@@ -13,7 +13,7 @@ export default function NewsCard({title, date, content, textcolor, bordercolor})
             <div class={"row g-0 rounded overflow-hidden flex-md-row my-1 shadow-sm h-100 position-relative border border-" + bordercolor}>
                 <div class="bg-dark col p-4">
                     <div class="h-25 mb-3">
-                        <h2 className={"text-" + textcolor}>
+                        <h2 className={"font-weight-bold text-" + textcolor}>
                             {title}
                         </h2>
                     </div>
@@ -26,9 +26,8 @@ export default function NewsCard({title, date, content, textcolor, bordercolor})
                     </div>
                     <div class="h-25">
                         <div class="h-25"/>
-                        <div class="h-25"/>
                         <div class="h-25">
-                            Release date: {date}
+                            {date}
                         </div>
                     </div>
                 </div>
