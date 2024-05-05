@@ -22,7 +22,7 @@ export default function News() {
 						<NewsCardWithImage 
 							title={'試題專輯'}
 							textcolor={''}
-							bordercolor={'dark'}
+							bordercolor={'primary'}
 							date={'2024 MAY 12'}
 							content={'2023-2024年度 中四第一次考試 數學(必修部分) 試題專輯 現已發佈'}
 							imagepath={require('./images/2324-S4T1-MATH-CP-QP-C Cover.jpg')}
@@ -39,7 +39,7 @@ export default function News() {
 						<NewsCard 
 							title={'Featured post'}
 							textcolor={''}
-							bordercolor={'dark'}
+							bordercolor={'black'}
 							date={'Nov 12'}
 							content={'This is a wider card with supporting text below as a natural lead-in to additional content.'}
 						/>
@@ -55,7 +55,7 @@ export default function News() {
 						<NewsCard 
 							title={'Featured post'}
 							textcolor={''}
-							bordercolor={'dark'}
+							bordercolor={'black'}
 							date={'Nov 12'}
 							content={'This is a wider card with supporting text below as a natural lead-in to additional content.'}
 						/>
@@ -71,7 +71,7 @@ export default function News() {
 						<NewsCard 
 							title={'Featured post'}
 							textcolor={''}
-							bordercolor={'dark'}
+							bordercolor={'black'}
 							date={'Nov 12'}
 							content={'This is a wider card with supporting text below as a natural lead-in to additional content.'}
 						/>
