@@ -20,8 +20,8 @@ export default function News() {
 						title={'星期六補課'}
 						textcolor={'warning'}
 						bordercolor={'warning'}
-						date={'2024 MAY 05'}
-						content={"星期六補課時間：09:00-12:15。"}
+						date={'2024 MAY 06'}
+						content={"5月11日星期六補課時間：09:00-12:15。"}
 					/>
 					<NewsCard
 						title={'Chapter Test 8'}
