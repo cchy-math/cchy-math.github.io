@@ -9,11 +9,15 @@ a {
 p {
 	font-size: 12px;
 }
+h2 {
+	font-weight: bold;
+  }
+  
 .container {
 	margin-bottom:0px;
 }
 body {
-	background-image: url("abstract-digital-art-purple-background-5k_1539371152.jpg.webp");
+	/*background-image: url("abstract-digital-art-purple-background-5k_1539371152.jpg.webp");*/
 	background-color: black;
 	color: var(--bs-light);
 	position: relative;
@@ -35,7 +39,6 @@ header {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	font-size: 30px;
 	font-weight: 1;
 	background-color: var(--bs-dark);
 	border-bottom: 3px solid var(--bs-primary);
