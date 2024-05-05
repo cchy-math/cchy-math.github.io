@@ -9,7 +9,7 @@ export default function NewsCardWithImage({ title, date, content, textcolor, bor
 		}
 	},[tex])
 	return (
-		<div class="col-12 col-xs-4 col-lg-4 mb-3">
+		<div class="col-10 col-xs-4 col-lg-4 mb-3">
             <div class={"row g-0 rounded overflow-hidden flex-md-row my-1 shadow-sm h-100 position-relative border border-" + bordercolor}>
                 <div class="bg-dark col p-4">
                     <div class="h-25 mb-3">

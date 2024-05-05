@@ -36,7 +36,7 @@ export default function News() {
 						bordercolor={'primary'}
 						date={'2024 MAY 12'}
 						content={"2023-2024年度中四第二次考試數學(必修部分)試題專輯現已發佈。"}
-						imagepath={require('./images/2324-S4T1-MATH-CP-QP-C Cover.jpg')}
+						imagepath={require('./images/2324-S4T2-MATH-CP-QP-C Cover.jpg')}
 					/>
 					<NewsCardWithImage 
 						title={'試題專輯'}
