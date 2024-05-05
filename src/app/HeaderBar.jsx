@@ -7,15 +7,15 @@ import '../components/scrollbar/scrollbar.js'
 
 export default function HeaderBar() {
   return (
-    <header>
+    <header class="px-4">
       <div class="row align-items-center">
-        <div class="col-2">
+        <div class="col-2 col-md-3">
           <NavLink to="menu"><button className="button-rainbow">Menu</button></NavLink>
         </div>
-        <div class="col-8">
+        <div class="col-8 col-md-6">
         CCHY MATH
         </div>
-        <div class="col-2">
+        <div class="col-2 col-md-3">
         </div>
       </div>
       <div class="progress">

@@ -11,14 +11,14 @@ export default function ClockDisplay() {
             <div className="HeaderHeight"></div>
             <div className="container">
                 <div class="row align-items-center">
-                    <div class="col-3">
+                    <div class="col-3 col-md-5">
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 col-md-2">
                         <NavLink to="/math"><button className="button-rainbow m-3" style={{'width': '100%'}}>News</button></NavLink>
                         <br/>
                         <NavLink to="/math"><button className="button-rainbow m-3" style={{'width': '100%'}}>Exersice</button></NavLink>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 col-md-5">
                     </div>
                 </div>
             </div>

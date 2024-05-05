@@ -12,7 +12,7 @@ export default function News() {
 		}
 	},[tex])
 	return (
-		<main className="col">
+		<main className="px-4 col">
 			<div class="row">
 				<h1 class="mt-3">4C</h1>
 				<div class="row flex-nowrap overflow-auto">
