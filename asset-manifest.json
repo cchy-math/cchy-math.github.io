@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/math/static/css/main.2887f70a.css",
-    "main.js": "/math/static/js/main.0b049b66.js",
-    "static/media/abstract-digital-art-purple-background-5k_1539371152.jpg.webp": "/math/static/media/abstract-digital-art-purple-background-5k_1539371152.jpg.7451a51f1b9f496df1c8.webp",
+    "main.css": "/math/static/css/main.fa40641c.css",
+    "main.js": "/math/static/js/main.fe22424f.js",
     "static/media/2324-S4T2-MATH-CP-QP-C Cover.jpg": "/math/static/media/2324-S4T2-MATH-CP-QP-C Cover.d3d65f64926c47dd0658.jpg",
     "static/media/2324-S4T1-MATH-CP-QP-C Cover.jpg": "/math/static/media/2324-S4T1-MATH-CP-QP-C Cover.1db8c696329e6a651a70.jpg",
     "index.html": "/math/index.html",
-    "main.2887f70a.css.map": "/math/static/css/main.2887f70a.css.map",
-    "main.0b049b66.js.map": "/math/static/js/main.0b049b66.js.map"
+    "main.fa40641c.css.map": "/math/static/css/main.fa40641c.css.map",
+    "main.fe22424f.js.map": "/math/static/js/main.fe22424f.js.map"
   },
   "entrypoints": [
-    "static/css/main.2887f70a.css",
-    "static/js/main.0b049b66.js"
+    "static/css/main.fa40641c.css",
+    "static/js/main.fe22424f.js"
   ]
 }
