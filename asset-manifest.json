@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/math/static/css/main.fa40641c.css",
-    "main.js": "/math/static/js/main.fe22424f.js",
+    "main.css": "/math/static/css/main.86904089.css",
+    "main.js": "/math/static/js/main.97388caf.js",
     "static/media/2324-S4T2-MATH-CP-QP-C Cover.jpg": "/math/static/media/2324-S4T2-MATH-CP-QP-C Cover.d3d65f64926c47dd0658.jpg",
     "static/media/2324-S4T1-MATH-CP-QP-C Cover.jpg": "/math/static/media/2324-S4T1-MATH-CP-QP-C Cover.1db8c696329e6a651a70.jpg",
     "index.html": "/math/index.html",
-    "main.fa40641c.css.map": "/math/static/css/main.fa40641c.css.map",
-    "main.fe22424f.js.map": "/math/static/js/main.fe22424f.js.map"
+    "main.86904089.css.map": "/math/static/css/main.86904089.css.map",
+    "main.97388caf.js.map": "/math/static/js/main.97388caf.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa40641c.css",
-    "static/js/main.fe22424f.js"
+    "static/css/main.86904089.css",
+    "static/js/main.97388caf.js"
   ]
 }
