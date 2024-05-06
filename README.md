@@ -26,7 +26,7 @@ Run the follow commands to set up the development environment.
 git clone https://github.com/cchy-tstss/math
 
 # Go inside the directory
-cd CCHY-MATH\ webpage/
+cd CCHY-MATH\ math/
 
 # Install dependencies
 yarn
