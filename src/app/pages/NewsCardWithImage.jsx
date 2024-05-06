@@ -9,8 +9,8 @@ export default function NewsCardWithImage({ title, date, content, textcolor, bor
 		}
 	},[tex])
 	return (
-		<div class="col-12 col-md-4 mb-3">
-            <div class={"row g-0 rounded overflow-hidden flex-md-row my-1 shadow-sm h-100 position-relative border border-" + bordercolor}>
+		<div class="col-12 w-md-50 w-xl-25 col-md-8 col-xl-4 mb-3">
+            <div class={"row g-0 rounded my-1 h-100 border border-" + bordercolor}>
                 <div class="bg-dark col p-4">
                     <div class="h-25 mb-3">
                         <h2 className={"text-" + textcolor}>
@@ -18,21 +18,18 @@ export default function NewsCardWithImage({ title, date, content, textcolor, bor
                         </h2>
                     </div>
                     <div class="h-50 mt-2">
-                        <h5>
+                        <h6>
                             <br/>
                             {content}
                             <br/>
-                        </h5>
+                        </h6>
                     </div>
                     <div class="h-25">
-                        <div class="h-25"/>
-                        <div class="h-25">
-                            {date}
-                        </div>
+                        {date}
                     </div>
                 </div>
-                <div class="col-4 col-md-3">
-                    <img src={imagepath} class="img-fluid rounded float-end h-100" alt="alternatetext"/>
+                <div class="bg-dark col h-100">
+                    <img src={imagepath} class="img-fluid h-100 float-end" alt="alternatetext"/>
                 </div>
             </div>
         </div>
