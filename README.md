@@ -29,6 +29,7 @@ git clone https://github.com/cchy-tstss/math
 cd CCHY-MATH\ math/
 
 # Install dependencies
+npm install react-scripts --legacy-peer-deps
 yarn
 yarn add react-scripts --dev
 ```
