@@ -30,6 +30,7 @@ cd CCHY-MATH\ math/
 
 # Install dependencies
 yarn
+yarn add react-scripts --dev
 ```
 
 To start a development version of the app with hot reload support, run:
