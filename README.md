@@ -8,7 +8,7 @@ Install [nvm for Windows](https://nodejs.org/en/download/) or [nvm](https://gith
 
 ```bash
 # Install Node.js 20.12.2 LTS
-nvm install 16.14.2
+nvm install 20.12.2
 
 # Use the newly installed version
 nvm use 20.12.2
