@@ -14,7 +14,7 @@ export default function News() {
 	return (
 		<main className="px-4 col">
 			<div class="row h-25">
-				<h1 class="mt-3">4C</h1>
+				<h1 class="mt-2">4C</h1>
 				<div class="row h-75 flex-nowrap overflow-auto">
 					<NewsCard
 						title={'星期六補課'}
