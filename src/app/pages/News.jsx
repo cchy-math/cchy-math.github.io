@@ -57,7 +57,7 @@ export default function News() {
 						textcolor={''}
 						bordercolor={'primary'}
 						date={'2024 May 05'}
-						content={'TSA 補㡳將於星期一及星期二進行，同學請留意日期時間依時出席。'}
+						content={'TSA 補㡳將於5月6日星期一及5月7日星期二進行，同學請留意日期時間依時出席。'}
 					/>
 				</div>
 			</div>
@@ -77,7 +77,7 @@ export default function News() {
 						textcolor={'info'}
 						bordercolor={'info'}
 						date={'2024 May 05'}
-						content={"請同學完成第12課功課並於星期一上課時繳交。"}
+						content={"請同學完成第12課功課並於5月6日星期一上課時繳交。"}
 					/>
 				</div>
 			</div>
@@ -97,7 +97,7 @@ export default function News() {
 						textcolor={'info'}
 						bordercolor={'info'}
 						date={'2024 May 05'}
-						content={"請同學完成第12課功課並於星期一上課時繳交。"}
+						content={"請同學完成第12課功課並於5月6日星期一上課時繳交。"}
 					/>
 				</div>
 			</div>

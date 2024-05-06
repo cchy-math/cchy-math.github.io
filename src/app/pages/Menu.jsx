@@ -11,14 +11,14 @@ export default function Menu() {
             <div className="HeaderHeight"></div>
             <div className="container">
                 <div class="row align-items-center">
-                    <div class="col-5">
+                    <div class="col-4">
                     </div>
-                    <div class="col-2">
+                    <div class="col-4">
                         <NavLink to="/math"><button className="button-rainbow" style={{'width': '100%'}}>News</button></NavLink>
                         <br/>
                         <NavLink to="/math"><button className="button-rainbow" style={{'width': '100%'}}>Coming Soon</button></NavLink>
                     </div>
-                    <div class="col-5">
+                    <div class="col-4">
                     </div>
                 </div>
             </div>
