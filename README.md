@@ -7,11 +7,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Install [nvm for Windows](https://nodejs.org/en/download/) or [nvm](https://github.com/nvm-sh/nvm) for macOS and Linux.
 
 ```bash
-# Install Node.js 16.14.2 LTS
+# Install Node.js 20.12.2 LTS
 nvm install 16.14.2
 
 # Use the newly installed version
-nvm use 16.14.2
+nvm use 20.12.2
 
 # Install the yarn package manager
 npm install -g yarn
