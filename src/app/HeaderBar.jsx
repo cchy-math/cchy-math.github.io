@@ -13,7 +13,7 @@ export default function HeaderBar() {
           <NavLink to="menu"><button className="button-rainbow mt-2">Menu</button></NavLink>
         </div>
         <div class="col">
-          <p class="h2 mt-2">
+          <p class="h3 mt-2">
             CCHY
           </p>
         </div>

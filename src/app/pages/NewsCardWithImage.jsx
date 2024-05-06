@@ -18,15 +18,15 @@ export default function NewsCardWithImage({ title, date, content, textcolor, bor
                         </h2>
                     </div>
                     <div class="h-50 mt-2">
-                        <h5>
+                        <h4>
                             <br/>
                             {content}
                             <br/>
-                        </h5>
+                        </h4>
                     </div>
                     <div class="h-25">
                         <div class="h-25"/>
-                        <div class="h-25">
+                        <div class="h5 h-25">
                             {date}
                         </div>
                     </div>
