@@ -7,11 +7,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Install [nvm for Windows](https://nodejs.org/en/download/) or [nvm](https://github.com/nvm-sh/nvm) for macOS and Linux.
 
 ```bash
-# Install Node.js 16.14.2 LTS
-nvm install 16.14.2
+# Install Node.js 20.12.2 LTS
+nvm install 20.12.2
 
 # Use the newly installed version
-nvm use 16.14.2
+nvm use 20.12.2
 
 # Install the yarn package manager
 npm install -g yarn
@@ -26,10 +26,12 @@ Run the follow commands to set up the development environment.
 git clone https://github.com/cchy-tstss/math
 
 # Go inside the directory
-cd CCHY-MATH\ webpage/
+cd CCHY-MATH\ math/
 
 # Install dependencies
+npm install react-scripts --legacy-peer-deps
 yarn
+yarn add react-scripts --dev
 ```
 
 To start a development version of the app with hot reload support, run:
