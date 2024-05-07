@@ -8,17 +8,16 @@ import '../components/scrollbar/scrollbar.js'
 export default function HeaderBar() {
   return (
     <header class="px-4">
-      <div class="row">
-        <div class="col mt-1">
-          <NavLink to="menu"><button className="button-rainbow mt-2">Menu</button></NavLink>
-        </div>
-        <div class="col">
-          <p class="h3 mt-2">
+      <div class="d-flex align-items-center justify-content-between">
+        <NavLink to="menu"><button className="button-rainbow">
+          Menu
+        </button></NavLink>
+        <p class="h3 mt-1">
             CCHY
-          </p>
-        </div>
-        <div class="col">
-        </div>
+        </p>
+        <button className="button-dark invisible">
+          Empty Space
+        </button>
       </div>
       <div class="progress">
         <div class="progress-bar progress-bar-striped progress-bar-animated" />
