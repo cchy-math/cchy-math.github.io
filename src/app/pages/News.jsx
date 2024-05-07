@@ -13,9 +13,9 @@ export default function News() {
 	},[tex])
 	return (
 		<main className="px-4 col">
-			<div class="row h-25">
-				<h1 class="mt-2">4C</h1>
-				<div class="row h-75 flex-nowrap overflow-auto">
+			<div class="row">
+				<h1 class="mt-1 ms-3">4C</h1>
+				<div class="row ms-1 flex-nowrap overflow-auto">
 					<NewsCard
 						title={'星期六補課'}
 						textcolor={'warning'}
@@ -49,9 +49,9 @@ export default function News() {
 				</div>
 			</div>
 			<hr/>
-			<div class="row h-25">
-				<h1 class="mt-1">3B</h1>
-				<div class="row h-75 flex-nowrap overflow-auto">
+			<div class="row">
+				<h1 class="mt-1 ms-3">3B</h1>
+				<div class="row ms-1 flex-nowrap overflow-auto">
 					<NewsCard 
 						title={'TSA 補㡳'}
 						textcolor={''}
@@ -62,9 +62,9 @@ export default function News() {
 				</div>
 			</div>
 			<hr/>
-			<div class="row h-25">
-				<h1 class="mt-1">2D</h1>
-				<div class="row h-75 flex-nowrap overflow-auto">
+			<div class="row">
+				<h1 class="mt-1 ms-3">2D</h1>
+				<div class="row ms-1 flex-nowrap overflow-auto">
 					<NewsCard
 						title={'Chapter Test 12'}
 						textcolor={'success'}
@@ -82,9 +82,9 @@ export default function News() {
 				</div>
 			</div>
 			<hr/>
-			<div class="row h-25">
-			<h1 class="mt-1">2A</h1>		
-				<div class="row h-75 flex-nowrap overflow-auto">
+			<div class="row">
+			<h1 class="mt-1 ms-3">2A</h1>		
+				<div class="row ms-1 flex-nowrap overflow-auto">
 					<NewsCard
 						title={'Chapter Test 12'}
 						textcolor={'success'}

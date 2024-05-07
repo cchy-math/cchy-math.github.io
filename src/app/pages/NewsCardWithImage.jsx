@@ -9,25 +9,14 @@ export default function NewsCardWithImage({ title, date, content, textcolor, bor
 		}
 	},[tex])
 	return (
-		<div class="col-12 w-md-50 w-xl-25 col-md-8 col-xl-4 mb-3">
-            <div class={"row g-0 rounded my-1 h-100 border border-" + bordercolor}>
-                <div class="bg-dark col h-100 ps-4 pt-4">
-                    <div class="row h-25">
-                        <h1 className={"text-" + textcolor}>
-                            {title}
-                        </h1>
-                        <p>
-                            {date}
-                        </p>
-                    </div>
-                    <div class="h5 h-75 mt-2">
-                        <br/>
-                        {content}
-                    </div>
-                </div>
-                <div class="bg-dark col h-100">
-                    <img src={imagepath} class="img-fluid h-100 float-end" alt="alternatetext"/>
-                </div>
+		<div class={"col-4 m-3 g-0 d-flex bg-dark m-2 rounded-4 border border-" + bordercolor} style={{ height: 250, width: 625 }} >
+            <div class="px-4 py-3 flex-grow-1">
+                <h2 className={"text-" + textcolor}>{title}</h2>
+                <p class="text-muted">{date}</p>
+                <p class="fs-6">{content}</p>
+            </div>
+            <div>
+                <img class="rounded-4 rounded-start" src={imagepath} height="100%"/>
             </div>
         </div>
 	);
