@@ -8,11 +8,11 @@ import '../components/scrollbar/scrollbar.js'
 export default function HeaderBar() {
   return (
     <header class="px-4">
-      <div class="d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center justify-content-between pt-4" style={{ height: 10 }}>
         <NavLink to="menu"><button className="button-rainbow">
           Menu
         </button></NavLink>
-        <p class="h3 mt-1">
+        <p class="h2">
             CCHY
         </p>
         <button className="button-dark invisible">
