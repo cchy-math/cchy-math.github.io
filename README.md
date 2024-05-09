@@ -75,5 +75,6 @@ yarn add gh-pages
 }
 
 #Deploy to GitHub page
+yarn cache clean
 yarn deploy
 ```
