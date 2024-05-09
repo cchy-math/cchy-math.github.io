@@ -53,6 +53,13 @@ export default function News() {
 				3B
 				<div class="row ms-3 flex-nowrap overflow-auto scroll-news">
 					<NewsCard 
+						title={'午間補㡳班'}
+						textcolor={''}
+						bordercolor={'primary'}
+						date={'2024 May 08'}
+						content={'午間補㡳班將於5月9日星期四進行，請同學於13:40到達702D室出席。'}
+					/>
+					<NewsCard 
 						title={'TSA 補㡳'}
 						textcolor={''}
 						bordercolor={'primary'}
@@ -65,6 +72,13 @@ export default function News() {
 			<div class="row align-items-center flex-nowrap h1 px-3">
 				2D
 				<div class="row ms-3 flex-nowrap overflow-auto scroll-news">
+					<NewsCard 
+						title={'午間補㡳班'}
+						textcolor={''}
+						bordercolor={'primary'}
+						date={'2024 May 09'}
+						content={'午間補㡳班將於5月10日星期五進行，請同學於13:40到達702D室出席。'}
+					/>
 					<NewsCard
 						title={'Chapter Test 12'}
 						textcolor={'success'}
@@ -85,6 +99,13 @@ export default function News() {
 			<div class="row align-items-center flex-nowrap h1 px-3">
 				2A		
 				<div class="row ms-3 flex-nowrap overflow-auto scroll-news">
+					<NewsCard 
+						title={'午間補㡳班'}
+						textcolor={''}
+						bordercolor={'primary'}
+						date={'2024 May 09'}
+						content={'午間補㡳班將於5月10日星期五進行，請同學於13:40到達702D室出席。'}
+					/>
 					<NewsCard
 						title={'Chapter Test 12'}
 						textcolor={'success'}
