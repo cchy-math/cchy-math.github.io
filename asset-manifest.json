@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/math/static/css/main.0aead5d5.css",
-    "main.js": "/math/static/js/main.8283298c.js",
+    "main.js": "/math/static/js/main.c246bdff.js",
     "static/media/abstract-digital-art-purple-background-5k_1539371152.jpg.webp": "/math/static/media/abstract-digital-art-purple-background-5k_1539371152.jpg.7451a51f1b9f496df1c8.webp",
     "static/media/2324-S4T2-MATH-CP-QP-C_Cover.jpg": "/math/static/media/2324-S4T2-MATH-CP-QP-C_Cover.d3d65f64926c47dd0658.jpg",
     "static/media/2324-S4T1-MATH-CP-QP-C_Cover.jpg": "/math/static/media/2324-S4T1-MATH-CP-QP-C_Cover.1db8c696329e6a651a70.jpg",
     "index.html": "/math/index.html",
     "main.0aead5d5.css.map": "/math/static/css/main.0aead5d5.css.map",
-    "main.8283298c.js.map": "/math/static/js/main.8283298c.js.map"
+    "main.c246bdff.js.map": "/math/static/js/main.c246bdff.js.map"
   },
   "entrypoints": [
     "static/css/main.0aead5d5.css",
-    "static/js/main.8283298c.js"
+    "static/js/main.c246bdff.js"
   ]
 }
