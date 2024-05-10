@@ -14,9 +14,21 @@ export default function Menu() {
                     <div class="col-4">
                     </div>
                     <div class="col-4">
-                        <NavLink to="/page"><button className="button-rainbow my-3" style={{'width': '100%'}}><h5>News</h5></button></NavLink>
-                        <br/>
-                        <NavLink to="/math-drills"><button className="button-rainbow my-3" style={{'width': '100%'}}><h5>Math Drills</h5></button></NavLink>
+                        <NavLink to="/page">
+                            <button className="button-rainbow my-5" style={{'width': '100%'}}>
+                                <h5>News</h5>
+                            </button>
+                        </NavLink>
+                        <NavLink to="/math-drills-S123">
+                            <button className="button-rainbow my-5" style={{'width': '100%'}}>
+                                <h5>Math Drills S1-S3</h5>
+                            </button>
+                        </NavLink>
+                        <NavLink to="/math-drills-DSEMathCore">
+                            <button className="button-rainbow my-5" style={{'width': '100%'}}>
+                                <h5>Math Drills DSE Math (Compulsory Part)</h5>
+                            </button>
+                        </NavLink>
                     </div>
                     <div class="col-4">
                     </div>
