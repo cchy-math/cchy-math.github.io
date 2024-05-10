@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 
-import NewsCardWithImage from './NewsCardWithImage.jsx';
 import NewsCard from './NewsCard.jsx';
 
 export default function News() {
@@ -30,7 +29,7 @@ export default function News() {
 						date={'2024 MAY 05'}
 						content={"第8課級測將於5月7日星期二補課時段進行。"}
 					/>
-					<NewsCardWithImage 
+					<NewsCard 
 						title={'試題專輯'}
 						textcolor={''}
 						bordercolor={'primary'}
@@ -38,7 +37,7 @@ export default function News() {
 						content={"2023-2024年度中四第二次考試數學(必修部分)試題專輯現已發佈。"}
 						imagepath={require('.//images/2324-S4T2-MATH-CP-QP-C_Cover.jpg')}
 					/>
-					<NewsCardWithImage 
+					<NewsCard 
 						title={'試題專輯'}
 						textcolor={''}
 						bordercolor={'primary'}
