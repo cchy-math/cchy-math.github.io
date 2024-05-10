@@ -10,7 +10,7 @@ export default function NewsCard({ title, date, content, textcolor, bordercolor,
 	},[tex])
 	if( imagepath !== ""){
 		return (
-			<div class={"col-4 m-2 g-0 d-flex bg-dark rounded-4 border border-" + bordercolor} style={{ height: 200, width: 500 }} >
+			<div class={"col-4 m-2 g-0 d-flex bg-dark rounded-4 border border-2 border-" + bordercolor} style={{ height: 200, width: 500 }} >
 				<div class="px-4 py-3 flex-grow-1">
 					<p class={"h3 text-" + textcolor}>{title}</p>
 					<p class="text-muted">{date}</p>
