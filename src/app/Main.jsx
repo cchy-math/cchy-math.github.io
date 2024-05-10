@@ -6,9 +6,9 @@ import Menu from './pages/Menu.jsx';
 
 export default function Main() {
     return (
-        <Routes basename="/math">
+        <Routes basename="/page">
             <Route path="*" element={<News />} />
-            <Route path="/math" element={<News />} />
+            <Route path="/page" element={<News />} />
             <Route path="/menu" element={<Menu />} />
         </Routes>
     );
