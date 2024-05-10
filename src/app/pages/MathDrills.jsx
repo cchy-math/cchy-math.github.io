@@ -3,7 +3,9 @@ import React, {useEffect, useState} from 'react';
 import MathDrillsCard from './MathDrillsCard.jsx';
 
 export default function News() {
+	const data = "\\( \\overset{移項}{\\text{Transposition}} \\)";
 	const [tex, setTex] =useState('')
+
 	useEffect(()=>{
 		if( typeof window?.MathJax !== "undefined"){
 			window.MathJax.typesetClear()
@@ -13,7 +15,7 @@ export default function News() {
 	return (
 		<main className="px-4 col">
 			<div class="row align-items-center flex-nowrap h1 px-3">
-				\cos(x)
+				{data}
 				<div class="row ms-3 flex-nowrap overflow-auto scroll-news">
 					<MathDrillsCard
 						title={'星期六補課'}
