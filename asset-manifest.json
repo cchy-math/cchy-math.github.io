@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/page/static/css/main.7b93e020.css",
-    "main.js": "/page/static/js/main.d4cb6f6b.js",
+    "main.css": "/page/static/css/main.3ff63bbc.css",
+    "main.js": "/page/static/js/main.88318a2a.js",
     "static/media/abstract-digital-art-purple-background-5k_1539371152.jpg.webp": "/page/static/media/abstract-digital-art-purple-background-5k_1539371152.jpg.7451a51f1b9f496df1c8.webp",
     "static/media/2324-S4T2-MATH-CP-QP-C_Cover.jpg": "/page/static/media/2324-S4T2-MATH-CP-QP-C_Cover.d3d65f64926c47dd0658.jpg",
     "static/media/2324-S4T1-MATH-CP-QP-C_Cover.jpg": "/page/static/media/2324-S4T1-MATH-CP-QP-C_Cover.1db8c696329e6a651a70.jpg",
     "index.html": "/page/index.html",
-    "main.7b93e020.css.map": "/page/static/css/main.7b93e020.css.map",
-    "main.d4cb6f6b.js.map": "/page/static/js/main.d4cb6f6b.js.map"
+    "main.3ff63bbc.css.map": "/page/static/css/main.3ff63bbc.css.map",
+    "main.88318a2a.js.map": "/page/static/js/main.88318a2a.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b93e020.css",
-    "static/js/main.d4cb6f6b.js"
+    "static/css/main.3ff63bbc.css",
+    "static/js/main.88318a2a.js"
   ]
 }
