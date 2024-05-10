@@ -20,6 +20,7 @@ body {
 	position: relative;
 	max-width: 100%;
     overflow-x: hidden;
+	font-family: "Computer Modern Sans", sans-serif;
 }
 hr {
 	border: 1px solid var(--bs-secondary);

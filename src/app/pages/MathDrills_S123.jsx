@@ -14,7 +14,7 @@ export default function MathDrills_S123() {
 	return (
 		<main className="px-4 col">
 			<div class="row align-items-center flex h1 px-3">
-				{"\\( \\overset{展開}{\\text{Expansion}} \\)"}
+				Expansion
 				<div class="row flex-nowrap overflow-auto scroll-news">
 					<MathDrillsCard
 						content={"\\( x^m x^n \\)"}
@@ -38,7 +38,7 @@ export default function MathDrills_S123() {
 			</div>
 			<hr/>
 			<div class="row align-items-center flex h1 px-3">
-				{"\\( \\overset{移項}{\\text{Transposition}} \\)"}
+				Transposition
 				<div class="row flex-nowrap overflow-auto scroll-news">
 					<MathDrillsCard
 						content={"\\( x + a = b \\)"}
@@ -65,7 +65,7 @@ export default function MathDrills_S123() {
 			</div>
 			<hr/>
 			<div class="row align-items-center flex h1 px-3">
-				{"\\( \\overset{恆等式(展開)}{\\text{Identity (Expansion)}} \\)"}
+				Identities (Expansion)
 				<div class="row flex-nowrap overflow-auto scroll-news">
 					<MathDrillsCard
 						content={"\\( \\left( x + a \\right) \\left( x - a \\right) \\)"}

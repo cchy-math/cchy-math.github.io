@@ -11,7 +11,7 @@ export default function MathDrillsCard({ title, date, content, textcolor, border
 	return (
 		<div class={"col-3 m-2 g-0 d-flex bg-dark rounded-4 border border-2 border-" + bordercolor} style={{ height: 100, width: 250 }} >
 			<button class="px-4 py-3 flex-grow-1">
-				<p class="h3">{content}</p>
+				<p class="h5">{content}</p>
 			</button>
 		</div>
 	);

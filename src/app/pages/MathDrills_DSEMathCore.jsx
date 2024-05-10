@@ -12,93 +12,48 @@ export default function MathDrills_DSEMathCore() {
 		}
 	},[tex])
 	return (
-		<main className="px-4 col">
+		<main className="px-4 py-3 col">
 			<div class="row align-items-center flex h1 px-3">
-				{"\\( \\overset{展開}{\\text{Expansion}} \\)"}
+				ASTC (Compulsory Part)
 				<div class="row flex-nowrap overflow-auto scroll-news">
 					<MathDrillsCard
-						content={"\\( x^m x^n \\)"}
+						content={"\\( \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\pm \\theta \\)"}
 					/>
 					<MathDrillsCard
-						content={"\\( (ax)^n \\)"}
+						content={"\\( \\theta \\pm \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\)"}
 					/>
 					<MathDrillsCard
-						content={"\\( a(x + y) \\)"}
+						content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} ( - \\theta ) \\)"}
 					/>
 					<MathDrillsCard
-						content={"\\( x(x + y) \\)"}
+						content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} \\left( \\begin{smallmatrix} 180^{\\circ} \\\\ 360^{\\circ}  \\end{smallmatrix} \\pm \\theta \\right) \\)"}
 					/>
 					<MathDrillsCard
-						content={"\\( ax(x + y) \\)"}
+						content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} \\left( \\begin{smallmatrix} 90^{\\circ} \\\\ 270^{\\circ} \\end{smallmatrix} \\pm \\theta \\right) \\)"}
 					/>
 					<MathDrillsCard
-						content={"\\( (x + y)(x + z) \\)"}
+						content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} \\left( \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\pm \\theta \\right) \\)"}
 					/>
 				</div>
 			</div>
 			<hr/>
 			<div class="row align-items-center flex h1 px-3">
-				{"\\( \\overset{移項}{\\text{Transposition}} \\)"}
+				ASTC (M2)
 				<div class="row flex-nowrap overflow-auto scroll-news">
 					<MathDrillsCard
-						content={"\\( x + a = b \\)"}
+						content={"\\( \\displaystyle \\frac{\\pi}{2} \\pm \\theta \\)"}
 					/>
 					<MathDrillsCard
-						content={"\\( ax = b \\)"}
+						content={"\\( \\theta \\pm \\displaystyle \\frac{\\pi}{2} \\)"}
 					/>
 					<MathDrillsCard
-						content={"\\( \\displaystyle \\frac{x}{a} = b \\)"}
+						content={"\\( \\csc ( - \\theta ) \\)"}
 					/>
 					<MathDrillsCard
-						content={"\\( \\displaystyle \\frac{ax}{b} = c \\)"}
+						content={"\\( \\sec \\left( \\displaystyle \\frac{\\pi}{2} \\pm \\theta \\right) \\)"}
 					/>
 					<MathDrillsCard
-						content={"\\( ax + b = c \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\displaystyle \\frac{ax + b}{c} = d \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\displaystyle \\frac{ax + b}{cx + d} = e \\)"}
-					/>
-				</div>
-			</div>
-			<hr/>
-			<div class="row align-items-center flex h1 px-3">
-				{"\\( \\overset{恆等式(展開)}{\\text{Identity (Expansion)}} \\)"}
-				<div class="row flex-nowrap overflow-auto scroll-news">
-					<MathDrillsCard
-						content={"\\( \\left( x + a \\right) \\left( x - a \\right) \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( x + y \\right) \\left( x - y \\right) \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( ax + by \\right) \\left( ax - by \\right) \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( x + a \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( x - a \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( ax + b \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( ax - b \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( x + y \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( x - y \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( ax + by \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( ax - by \\right)^2 \\)"}
+						content={"\\( \\cot \\left( \\displaystyle \\frac{\\pi}{2} \\pm \\theta \\right) \\)"}
 					/>
 				</div>
 			</div>
