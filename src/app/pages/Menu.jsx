@@ -11,9 +11,9 @@ export default function Menu() {
             <div className="HeaderHeight"></div>
             <div className="container">
                 <div class="row align-items-center">
-                    <div class="col-4">
+                    <div class="col-xs-1 col-lg-4">
                     </div>
-                    <div class="col-4">
+                    <div class="col-xs-10 col-lg-4">
                         <NavLink to="/page">
                             <button className="button-rainbow my-5" style={{'width': '100%'}}>
                                 <h5>News</h5>
@@ -30,7 +30,7 @@ export default function Menu() {
                             </button>
                         </NavLink>
                     </div>
-                    <div class="col-4">
+                    <div class="col-xs-1 col-lg-4">
                     </div>
                 </div>
             </div>
