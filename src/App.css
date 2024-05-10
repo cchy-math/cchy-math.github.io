@@ -14,6 +14,7 @@ p {
 	margin-bottom:0px;
 }
 body {
+	background-image: url("dark-purple-20.jpg");
 	background-color: black;
 	color: var(--bs-light);
 	position: relative;
@@ -87,7 +88,7 @@ main h1 {
 	font-size: 150%;
 }
 .card-header {
-	background-color: var(--bs-warning);
+	background-color: var(--bs-black);
 	border-bottom: solid var(--bs-primary);
 }
 .card-footer {
