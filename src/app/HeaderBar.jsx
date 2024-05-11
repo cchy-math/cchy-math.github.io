@@ -20,9 +20,9 @@ export default function HeaderBar() {
         <NavLink to="menu"><button className="button-rainbow">
           Menu
         </button></NavLink>
-        <p class="h2">
-            CCHY
-        </p>
+        <NavLink to="page" className="h2 text-white">
+          CCHY
+        </NavLink>
         <button className="button-dark invisible">
           Empty Space
         </button>
