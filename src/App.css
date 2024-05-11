@@ -79,10 +79,6 @@ main {
 	font-size: 12px;
 	position: relative;
 }
-main h1 {
-	font-size: 30px;
-	text-transform: uppercase;
-}
 .card {
 	background-color: var(--bs-dark);
 	text-align: center;
