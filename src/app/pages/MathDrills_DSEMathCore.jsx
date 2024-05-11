@@ -49,30 +49,35 @@ export default function MathDrills_DSEMathCore() {
 					</NavLink>
 					<NavLink to="/math-drills-DSEMathCore/astc" style={{width: 300 }}>
 						<MathDrillsCard
-							content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} \\left( \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\pm \\theta \\right) \\)"}
+							content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} \\theta \\pm \\left( \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\right) \\)"}
 						/>
 					</NavLink>
 				</div>
 			</div>
 			<hr/>
 			<div class="row align-items-center flex h2 px-3">
-				ASTC (M2)
+				Graphs of Trigonometric Functions
 				<div class="row flex-nowrap overflow-auto scroll-news">
-					<MathDrillsCard
-						content={"\\( \\displaystyle \\frac{\\pi}{2} \\pm \\theta \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\theta \\pm \\displaystyle \\frac{\\pi}{2} \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\csc ( - \\theta ) \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\sec \\left( \\displaystyle \\frac{\\pi}{2} \\pm \\theta \\right) \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\cot \\left( \\displaystyle \\frac{\\pi}{2} \\pm \\theta \\right) \\)"}
-					/>
+					<NavLink to="/math-drills-DSEMathCore/" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\(  \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-DSEMathCore/" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\(  \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-DSEMathCore/" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\(  \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-DSEMathCore/" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\(  \\)"}
+						/>
+					</NavLink>
 				</div>
 			</div>
 			<hr/>
