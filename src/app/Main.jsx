@@ -9,7 +9,9 @@ import AnglePmTheta from './pages/dse-drills/angle-pm-theta.jsx';
 import ThetaPmAngle from './pages/dse-drills/theta-pm-angle.jsx';
 import NegativeAngle from './pages/dse-drills/negative-angle.jsx';
 import ASTCsign from './pages/dse-drills/astc-sign.jsx';
-import ASTC180360 from './pages/dse-drills/astc-180-360';
+import ASTC180360 from './pages/dse-drills/astc-180-360.jsx';
+import ASTC90270 from './pages/dse-drills/astc-90-270.jsx';
+import ASTC from './pages/dse-drills/astc.jsx';
 
 export default function Main() {
     return (
@@ -24,6 +26,8 @@ export default function Main() {
             <Route path="/math-drills-DSEMathCore/negative-angle" element={<NegativeAngle />} />
             <Route path="/math-drills-DSEMathCore/astc-sign" element={<ASTCsign />} />
             <Route path="/math-drills-DSEMathCore/astc-180-360" element={<ASTC180360 />} />
+            <Route path="/math-drills-DSEMathCore/astc-90-270" element={<ASTC90270 />} />
+            <Route path="/math-drills-DSEMathCore/astc" element={<ASTC />} />
         </Routes>
     );
 }
