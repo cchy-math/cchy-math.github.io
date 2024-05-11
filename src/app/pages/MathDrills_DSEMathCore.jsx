@@ -27,9 +27,11 @@ export default function MathDrills_DSEMathCore() {
 							content={"\\( \\theta \\pm \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\)"}
 						/>
 					</NavLink>
-					<MathDrillsCard
-						content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} ( - \\theta ) \\)"}
-					/>
+					<NavLink to="/math-drills-DSEMathCore/negative-angle" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} ( - \\theta ) \\)"}
+						/>
+					</NavLink>
 					<MathDrillsCard
 						content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} \\left( \\begin{smallmatrix} 180^{\\circ} \\\\ 360^{\\circ}  \\end{smallmatrix} \\pm \\theta \\right) \\)"}
 					/>
