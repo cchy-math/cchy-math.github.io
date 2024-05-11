@@ -15,7 +15,7 @@ export default function MathDrills_DSEMathCore() {
 	return (
 		<main className="px-4 py-3 col">
 			<div class="row align-items-center flex h2 px-3">
-				ASTC (Compulsory Part)
+				ASTC
 				<div class="row flex-nowrap overflow-auto scroll-news">
 					<NavLink to="/math-drills-DSEMathCore/angle-pm-theta" style={{width: 300 }}>
 						<MathDrillsCard
@@ -49,7 +49,7 @@ export default function MathDrills_DSEMathCore() {
 					</NavLink>
 					<NavLink to="/math-drills-DSEMathCore/astc" style={{width: 300 }}>
 						<MathDrillsCard
-							content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} \\theta \\pm \\left( \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\right) \\)"}
+							content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} \\left( \\theta \\pm \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\right) \\)"}
 						/>
 					</NavLink>
 				</div>

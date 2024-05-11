@@ -46,9 +46,9 @@ export default function ASTC() {
         
 		<main className="px-4 py-3">
 			<div className="h1">
-                Let {"\\( \\ \\theta \\ \\)"} be an acute angle. Simplify the following expression.
+                Simplify the following expression.
                 <br/><br/>
-                設 {"\\( \\ \\theta \\ \\)"} 為銳角，化簡下列數式。
+                化簡下列數式。
                 <br/><br/><br/><br/>
                 <h1 className="display-1 d-flex justify-content-center">
                     {texQ}
@@ -76,20 +76,16 @@ export default function ASTC() {
                                 pm = 1;
                             }else{
                                 plus_or_minus = "-";
-                                pm = 0;
+                                pm = -1;
                             }
                             let j = getRndInteger(1,3);
                             let Qnum = 1;
                             if(j == 1){
                                 setTexQ(begin+trigo+"("+angle+degree+plus_or_minus+theta+")"+end);
-                                Qnum = (Math.floor(Number(angle)/90) + pm) % 4;
+                                Qnum = (Math.floor(Number(angle + pm)/90) + 1) % 4;
                             }else{
                                 setTexQ(begin+trigo+"("+theta+plus_or_minus+angle+degree+")"+end);
-                                if(pm == 1){
-                                    Qnum = (Math.floor(Number(angle)/90) + pm) % 4;
-                                }else{
-                                    Qnum = 5 - ((Math.floor(Number(angle)/90) + pm) % 4);
-                                }
+                                Qnum = (Math.floor(Number(1 + pm*angle)/90) + 5) % 4;
                             }
                             let trigo_result = "";
                             if(angle == 90 || angle == 270){
@@ -110,8 +106,8 @@ export default function ASTC() {
                                     setTexA_eng("\\( "+trigo_result+"\\)");
                                     setTexA_chi("\\( "+trigo_result+"\\)");
                                 }else{
-                                    setTexA_eng("\\( -"+trigo_result+"\\)");
-                                    setTexA_chi("\\( -"+trigo_result+"\\)");
+                                    setTexA_eng("\\( - "+trigo_result+"\\)");
+                                    setTexA_chi("\\( - "+trigo_result+"\\)");
                                 }
                             };
                             if(Qnum == 1){
@@ -123,8 +119,8 @@ export default function ASTC() {
                                     setTexA_eng("\\( "+trigo_result+"\\)");
                                     setTexA_chi("\\( "+trigo_result+"\\)");
                                 }else{
-                                    setTexA_eng("\\( -"+trigo_result+"\\)");
-                                    setTexA_chi("\\( -"+trigo_result+"\\)");
+                                    setTexA_eng("\\( - "+trigo_result+"\\)");
+                                    setTexA_chi("\\( - "+trigo_result+"\\)");
                                 }
                             };
                             if(Qnum == 3){
@@ -132,8 +128,8 @@ export default function ASTC() {
                                     setTexA_eng("\\( "+trigo_result+"\\)");
                                     setTexA_chi("\\( "+trigo_result+"\\)");
                                 }else{
-                                    setTexA_eng("\\( -"+trigo_result+"\\)");
-                                    setTexA_chi("\\( -"+trigo_result+"\\)");
+                                    setTexA_eng("\\( - "+trigo_result+"\\)");
+                                    setTexA_chi("\\( - "+trigo_result+"\\)");
                                 }
                             };
                             setIsVisible(false);
