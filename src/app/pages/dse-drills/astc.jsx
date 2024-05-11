@@ -33,7 +33,7 @@ export default function ASTC() {
     let degree = "^{\\circ}";
     let plus_or_minus = "-";
     let theta = "\\theta";
-    let end = "\\)";
+    let end = " = \\)";
     let i = 0;
     let pm = 0;
 
