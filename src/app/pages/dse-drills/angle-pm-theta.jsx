@@ -45,7 +45,7 @@ export default function AnglePmTheta() {
         
 		<main className="px-4 py-3">
 			<div className="h1">
-                Let {"\\( \\ \\theta \\ \\)"} be an acute angle. Determine which quadrant does the folowing angle lies on.
+                Let {"\\( \\ \\theta \\ \\)"} be an acute angle. Determine which quadrant does the following angle lies on.
                 <br/><br/>
                 設 {"\\( \\ \\theta \\ \\)"} 為銳角，判斷下列角度所屬的象限。
                 <br/><br/><br/><br/>
