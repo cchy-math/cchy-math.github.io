@@ -4,7 +4,7 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-export default function AnglePmTheta() {
+export default function ThetaPmAngle() {
     
 	const [texQ, setTexQ] =useState('');
     const [texA_chi, setTexA_chi] =useState('');
@@ -67,8 +67,19 @@ export default function AnglePmTheta() {
                                 eq4 = "-";
                                 pm = 0;
                             }
-                            setTexQ(eq1+eq2+eq3+eq4+eq5+eq6);
-                            let ans = (Math.floor(Number(eq2)/90) + pm) % 4;
+                            let j = getRndInteger(1,3);
+                            let ans = 1;
+                            if(j == 1){
+                                setTexQ(eq1+eq2+eq3+eq4+eq5+eq6);
+                                ans = (Math.floor(Number(eq2)/90) + pm) % 4;
+                            }else{
+                                setTexQ(eq1+eq5+eq4+eq2+eq3+eq6);
+                                if(pm == 1){
+                                    ans = (Math.floor(Number(eq2)/90) + pm) % 4;
+                                }else{
+                                    ans = 5 - ((Math.floor(Number(eq2)/90) + pm) % 4);
+                                }
+                            }
                             if(ans == 0){
                                 setTexA_eng("\\( \\text{Quadrant IV} \\)");
                                 setTexA_chi("\\( \\text{象限 IV} \\)");

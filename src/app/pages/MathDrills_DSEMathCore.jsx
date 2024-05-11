@@ -22,7 +22,7 @@ export default function MathDrills_DSEMathCore() {
 							content={"\\( \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\pm \\theta \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-DSEMathCore/" style={{width: 300 }}>
+					<NavLink to="/math-drills-DSEMathCore/theta-pm-angle" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( \\theta \\pm \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\)"}
 						/>
