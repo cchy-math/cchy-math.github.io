@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { Link, NavLink, HeaderLink, Routes, Route } from 'react-router-dom';
 
 import MathDrillsCard from './MathDrillsCard.jsx';
 
@@ -13,15 +14,19 @@ export default function MathDrills_DSEMathCore() {
 	},[tex])
 	return (
 		<main className="px-4 py-3 col">
-			<div class="row align-items-center flex h1 px-3">
+			<div class="row align-items-center flex h2 px-3">
 				ASTC (Compulsory Part)
 				<div class="row flex-nowrap overflow-auto scroll-news">
-					<MathDrillsCard
-						content={"\\( \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\pm \\theta \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\theta \\pm \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\)"}
-					/>
+					<NavLink to="/math-drills-DSEMathCore/angle-pm-theta" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\pm \\theta \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-DSEMathCore/" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( \\theta \\pm \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\)"}
+						/>
+					</NavLink>
 					<MathDrillsCard
 						content={"\\( \\begin{smallmatrix} \\sin \\\\ \\cos \\\\ \\tan \\end{smallmatrix} ( - \\theta ) \\)"}
 					/>
@@ -37,7 +42,7 @@ export default function MathDrills_DSEMathCore() {
 				</div>
 			</div>
 			<hr/>
-			<div class="row align-items-center flex h1 px-3">
+			<div class="row align-items-center flex h2 px-3">
 				ASTC (M2)
 				<div class="row flex-nowrap overflow-auto scroll-news">
 					<MathDrillsCard
@@ -60,4 +65,4 @@ export default function MathDrills_DSEMathCore() {
 			<hr/>
 		</main>
 	);
-}/* \overset{Transposition}{移項} */
+}

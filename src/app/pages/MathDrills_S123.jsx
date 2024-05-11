@@ -105,4 +105,4 @@ export default function MathDrills_S123() {
 			<hr/>
 		</main>
 	);
-}/* \overset{Transposition}{移項} */
+}
