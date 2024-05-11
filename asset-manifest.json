@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/page/static/css/main.ac21645c.css",
-    "main.js": "/page/static/js/main.5f5afc6b.js",
+    "main.js": "/page/static/js/main.04c4e5c9.js",
     "static/media/dark-purple-20.jpg": "/page/static/media/dark-purple-20.fbf67e9fe37175d0ef25.jpg",
     "static/media/2324-S4T2-MATH-CP-QP-C_Cover.jpg": "/page/static/media/2324-S4T2-MATH-CP-QP-C_Cover.d3d65f64926c47dd0658.jpg",
     "static/media/2324-S4T1-MATH-CP-QP-C_Cover.jpg": "/page/static/media/2324-S4T1-MATH-CP-QP-C_Cover.1db8c696329e6a651a70.jpg",
     "index.html": "/page/index.html",
     "main.ac21645c.css.map": "/page/static/css/main.ac21645c.css.map",
-    "main.5f5afc6b.js.map": "/page/static/js/main.5f5afc6b.js.map"
+    "main.04c4e5c9.js.map": "/page/static/js/main.04c4e5c9.js.map"
   },
   "entrypoints": [
     "static/css/main.ac21645c.css",
-    "static/js/main.5f5afc6b.js"
+    "static/js/main.04c4e5c9.js"
   ]
 }
