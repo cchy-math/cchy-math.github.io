@@ -49,11 +49,11 @@ export default function ASTC() {
                 Simplify the following expression.
                 <br/><br/>
                 化簡下列數式。
-                <br/><br/><br/><br/>
+                <br/><br/><br/><br/><br/>
                 <h1 className="display-1 d-flex justify-content-center">
                     {texQ}
                 </h1>
-                <br/><br/><br/><br/>
+                <br/><br/><br/>
                 <div class="row mb-5">
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>

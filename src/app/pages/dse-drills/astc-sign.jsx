@@ -49,11 +49,11 @@ export default function ASTCsign() {
                 Let {"\\( \\ \\theta \\ \\)"} be an acute angle. Determine the sign of the following expression.
                 <br/><br/>
                 設 {"\\( \\ \\theta \\ \\)"} 為銳角，判斷下列數式的正負值。
-                <br/><br/><br/><br/>
+                <br/><br/><br/><br/><br/>
                 <h1 className="display-1 d-flex justify-content-center">
                     {texQ}
                 </h1>
-                <br/><br/><br/><br/>
+                <br/><br/><br/>
                 <div class="row mb-5">
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>

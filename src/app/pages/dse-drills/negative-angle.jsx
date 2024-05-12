@@ -45,11 +45,11 @@ export default function NegativeAngle() {
                 Let {"\\( \\ \\theta \\ \\)"} be a real number.
                 <br/><br/>
                 設 {"\\( \\ \\theta \\ \\)"} 為實數。
-                <br/><br/><br/><br/>
+                <br/><br/><br/><br/><br/>
                 <h1 className="display-1 d-flex justify-content-center">
                     {texQ}
                 </h1>
-                <br/><br/><br/><br/>
+                <br/><br/><br/>
                 <div class="row mb-5">
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
