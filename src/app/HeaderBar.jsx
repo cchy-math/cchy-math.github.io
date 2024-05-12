@@ -17,10 +17,10 @@ export default function HeaderBar() {
   return (
     <header class="px-4">
       <div class="d-flex align-items-center justify-content-between pt-4" style={{ height: 10 }}>
-        <NavLink to="menu"><button className="button-rainbow">
+        <NavLink to="/menu"><button className="button-rainbow">
           Menu
         </button></NavLink>
-        <NavLink to="page" className="h2 text-white">
+        <NavLink to="/" className="h2 text-white">
           CCHY
         </NavLink>
         <button className="button-dark invisible">

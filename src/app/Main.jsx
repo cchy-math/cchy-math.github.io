@@ -15,9 +15,9 @@ import ASTC from './pages/dse-drills/astc.jsx';
 
 export default function Main() {
     return (
-        <Routes basename="/page">
+        <Routes basename="/">
             <Route path="*" element={<News />} />
-            <Route path="/page" element={<News />} />
+            <Route path="/" element={<News />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/math-drills-S123" element={<MathDrills_S123 />} />
             <Route path="/math-drills-DSEMathCore" element={<MathDrills_DSEMathCore />} />
