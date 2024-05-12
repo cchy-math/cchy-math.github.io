@@ -49,7 +49,7 @@ export default function ASTC180360() {
                 <br/><br/>
                 {"\\( \\text{化簡下列數式。} \\)"}
             </div>
-            <div className="LaTeX-Q vh-50 vw-100 d-flex justify-content-center align-items-center">
+            <div className="display-1 vh-50 vw-100 d-flex justify-content-center align-items-center">
                 {texQ}
             </div>
             <div class="vh-25 vw-100 mb-5 align-items-center">
@@ -143,7 +143,7 @@ export default function ASTC180360() {
                     </div>
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
                 </div>
-                <div class="row mb-5 LaTeX-A">
+                <div class="row mb-5 display-5">
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
                     <div class="col-4 col-sm-3 d-flex justify-content-center">
                         <div className={isVisible ? 'visible' : 'invisible'}>

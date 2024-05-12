@@ -143,7 +143,7 @@ export default function ASTC90270() {
                     </div>
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
                 </div>
-                <div class="row mb-5 LaTeX-A vw-100">
+                <div class="row mb-5 display-5 vw-100">
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
                     <div class="col-4 col-sm-3 d-flex justify-content-center">
                         <div className={isVisible ? 'visible' : 'invisible'}>
