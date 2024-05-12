@@ -41,9 +41,9 @@ export default function NegativeAngle() {
     return (    
         <main className="px-4 py-3 vh-100 vw-100 d-flex align-content-between flex-wrap">
 			<div className="h1 vh-25 vw-100">
-                {"\\( \\text{Let } \\theta \\text{ be a real number.} \\)"}
+                Let {"\\( \\ \\theta \\  \\)"} be a real number.
                 <br/><br/>
-                {"\\( \\text{設 } \\theta \\text{ 為實數。} \\)"}
+                設 {"\\( \\  \\theta \\  \\)"} 為實數。
             </div>
             <div className="display-1 vh-50 vw-100 d-flex justify-content-center align-items-center">
                 {texQ}

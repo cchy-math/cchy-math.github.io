@@ -43,10 +43,10 @@ export default function ThetaPmAngle() {
     };
     return (
         <main className="px-4 py-3 vh-100 vw-100 d-flex align-content-between flex-wrap">
-			<div className="h1 vh-25 vw-100">
-                {"\\( \\text{Let } \\theta \\text{ be an acute angle. Determine which quadrant does the following angle lies on.} \\)"}
+			<div className="h1 vh-25 w-100">
+                Let {"\\( \\ \\theta \\ \\)"} be an acute angle. Determine which quadrant does the following angle lies on.
                 <br/><br/>
-                {"\\( \\text{設 } \\theta \\text{ 為銳角，判斷下列角度所屬的象限。} \\)"}
+                設 {"\\( \\ \\theta \\ \\)"} 為銳角，判斷下列角度所屬的象限。
             </div>
             <div className="display-1 vh-50 vw-100 d-flex justify-content-center align-items-center">
                 {texQ}

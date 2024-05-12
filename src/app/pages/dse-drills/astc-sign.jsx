@@ -45,9 +45,9 @@ export default function ASTCsign() {
     return (          
         <main className="px-4 py-3 vh-100 vw-100 d-flex align-content-between flex-wrap">
             <div className="h1 vh-25 vw-100">
-                {"\\( \\text{Let } \\theta \\text{ be an acute angle. Determine the sign of the following expression.} \\)"}
+                Let {"\\( \\  \\theta \\  \\)"} be an acute angle. Determine the sign of the following expression.
                 <br/><br/>
-                {"\\( \\text{設 } \\theta \\text{ 為銳角，判斷下列數式的正負值。} \\)"}
+                設 {"\\( \\  \\theta \\  \\)"} 為銳角，判斷下列數式的正負值。
             </div>
             <div className="display-1 vh-50 vw-100 d-flex justify-content-center align-items-center">
                 {texQ}

@@ -45,9 +45,9 @@ export default function ASTC180360() {
     return (
 		<main className="px-4 py-3 vh-100 vw-100 d-flex align-content-between flex-wrap">
 			<div className="h1 vh-25 vw-100">
-                {"\\( \\text{Simplify the following expression.} \\)"}
+                Simplify the following expression.
                 <br/><br/>
-                {"\\( \\text{化簡下列數式。} \\)"}
+                化簡下列數式。
             </div>
             <div className="display-1 vh-50 vw-100 d-flex justify-content-center align-items-center">
                 {texQ}
