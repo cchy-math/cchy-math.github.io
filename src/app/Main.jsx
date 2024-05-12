@@ -13,6 +13,7 @@ import ASTC180360 from './pages/dse-drills/Trigo/ASTC/astc-180-360.jsx';
 import ASTC90270 from './pages/dse-drills/Trigo/ASTC/astc-90-270.jsx';
 import ASTC from './pages/dse-drills/Trigo/ASTC/astc.jsx';
 import Acosx from './pages/dse-drills/Trigo/Range/acosx.jsx';
+import AcosxpmB from './pages/dse-drills/Trigo/Range/acosx-pm-b.jsx';
 
 export default function Main() {
     return (
@@ -30,6 +31,7 @@ export default function Main() {
             <Route path="/math-drills-DSEMathCore/Trigo/ASTC/astc-90-270" element={<ASTC90270 />} />
             <Route path="/math-drills-DSEMathCore/Trigo/ASTC/astc" element={<ASTC />} />
             <Route path="/math-drills-DSEMathCore/Trigo/Range/acosx" element={<Acosx />} />
+            <Route path="/math-drills-DSEMathCore/Trigo/Range/acosx-pm-b" element={<AcosxpmB />} />
         </Routes>
     );
 }

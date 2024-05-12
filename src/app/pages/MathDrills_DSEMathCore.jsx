@@ -63,7 +63,7 @@ export default function MathDrills_DSEMathCore() {
 							content={"\\( A\\cos(\\theta) \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-DSEMathCore/Trigo/Range/" style={{width: 300 }}>
+					<NavLink to="/math-drills-DSEMathCore/Trigo/Range/acosx-pm-b" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( A\\cos(\\theta) \\pm B \\)"}
 						/>
