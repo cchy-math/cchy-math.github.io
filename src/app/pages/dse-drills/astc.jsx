@@ -49,7 +49,7 @@ export default function ASTC() {
                 <br/><br/>
                 {"\\( \\text{化簡下列數式。} \\)"}
             </div>
-            <div className="LaTeX-Q vh-50 vw-100 d-flex justify-content-center align-items-center">
+            <div className="display-1 vh-50 vw-100 d-flex justify-content-center align-items-center">
                 {texQ}
             </div>
             <div class="vh-25 vw-100 mb-5 align-items-center">

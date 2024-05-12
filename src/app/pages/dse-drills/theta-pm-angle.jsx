@@ -48,7 +48,7 @@ export default function ThetaPmAngle() {
                 <br/><br/>
                 {"\\( \\text{設 } \\theta \\text{ 為銳角，判斷下列角度所屬的象限。} \\)"}
             </div>
-            <div className="LaTeX-Q vh-50 vw-100 d-flex justify-content-center align-items-center">
+            <div className="display-1 vh-50 vw-100 d-flex justify-content-center align-items-center">
                 {texQ}
             </div>
             <div className="vh-25 vw-100 mb-5 align-items-center">
