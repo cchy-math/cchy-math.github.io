@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { Link, NavLink, HeaderLink, Routes, Route } from 'react-router-dom';
 
 import MathDrillsCard from './MathDrillsCard.jsx';
 
@@ -14,92 +15,43 @@ export default function MathDrills_S123() {
 	return (
 		<main className="px-4 col">
 			<div class="row align-items-center flex h1 px-3">
-				Expansion
-				<div class="row flex-nowrap overflow-auto scroll-news">
-					<MathDrillsCard
-						content={"\\( x^m x^n \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( (ax)^n \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( a(x + y) \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( x(x + y) \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( ax(x + y) \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( (x + y)(x + z) \\)"}
-					/>
-				</div>
-			</div>
-			<hr/>
-			<div class="row align-items-center flex h1 px-3">
 				Transposition
 				<div class="row flex-nowrap overflow-auto scroll-news">
-					<MathDrillsCard
-						content={"\\( x + a = b \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( ax = b \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\displaystyle \\frac{x}{a} = b \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\displaystyle \\frac{ax}{b} = c \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( ax + b = c \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\displaystyle \\frac{ax + b}{c} = d \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\displaystyle \\frac{ax + b}{cx + d} = e \\)"}
-					/>
-				</div>
-			</div>
-			<hr/>
-			<div class="row align-items-center flex h1 px-3">
-				Identities (Expansion)
-				<div class="row flex-nowrap overflow-auto scroll-news">
-					<MathDrillsCard
-						content={"\\( \\left( x + a \\right) \\left( x - a \\right) \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( x + y \\right) \\left( x - y \\right) \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( ax + by \\right) \\left( ax - by \\right) \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( x + a \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( x - a \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( ax + b \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( ax - b \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( x + y \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( x - y \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( ax + by \\right)^2 \\)"}
-					/>
-					<MathDrillsCard
-						content={"\\( \\left( ax - by \\right)^2 \\)"}
-					/>
+					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( x \\pm a = b \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( ax = b \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( \\displaystyle \\frac{x}{a} = b \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( \\displaystyle \\frac{ax}{b} = c \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( ax \\pm b = c \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( \\displaystyle \\frac{ax \\pm b}{c} = d \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+						<MathDrillsCard
+						content={"\\( \\displaystyle \\frac{ax \\pm b}{cx \\pm d} = e \\)"}
+						/>
+					</NavLink>
 				</div>
 			</div>
 			<hr/>
