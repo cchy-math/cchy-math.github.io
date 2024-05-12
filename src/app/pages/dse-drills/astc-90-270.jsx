@@ -59,7 +59,7 @@ export default function ASTC90270() {
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
                     <div class="col-4 col-sm-2 d-flex justify-content-center">
                         <button className="button-rainbow h4 w-75" onClick={() => {
-                            angle = 90*getRndInteger(1,5);
+                            angle = 90*(2*getRndInteger(1,3)-1);
                             let Trig = getRndInteger(1,4);
                             if(Trig == 1){
                                 trigo = "\\sin";
