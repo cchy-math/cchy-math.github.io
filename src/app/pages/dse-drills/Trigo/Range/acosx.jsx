@@ -54,20 +54,20 @@ export default function Acosx() {
                     <div class="col-4 col-sm-3 d-flex justify-content-center">
                         <button className="button-rainbow h4 w-75" onClick={() => {
                             i = getRndInteger(1,3);
-                            if(i == 1){
+                            if(i === 1){
                                 trigo = "\\sin \\theta";
                             };
-                            if(i == 2){
+                            if(i === 2){
                                 trigo = "\\cos \\theta";
                             };
                             A = getRndInteger(1,11)*Math.pow(-1,getRndInteger(1,3));
                             let Max = Math.abs(A);
                             setTexA_eng("\\( \\begin{eqnarray} \\text{Min} &=& - &"+Max+"& \\\\ \\text{Max} &=& &"+Max+"&  \\end{eqnarray} \\)");
                             setTexA_chi("\\( \\begin{eqnarray} \\text{極小值} &=& - &"+Max+"& \\\\ \\text{極大值} &=& &"+Max+"&  \\end{eqnarray} \\)");
-                            if(A == 1){
+                            if(A === 1){
                                 A = "";
                             };
-                            if(A == -1){
+                            if(A === -1){
                                 A = "-";
                             };
                             setTexQ(begin+A+trigo+end);

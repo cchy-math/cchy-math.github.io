@@ -67,16 +67,16 @@ export default function CoverBpmAcos2x() {
                     <div class="col-4 col-sm-3 d-flex justify-content-center">
                         <button className="button-rainbow h4 w-75" onClick={() => {
                             i = getRndInteger(1,5);
-                            if(i == 1){
+                            if(i === 1){
                                 trigo = "\\sin \\theta";
                             };
-                            if(i == 2){
+                            if(i === 2){
                                 trigo = "\\cos \\theta";
                             };
-                            if(i == 3){
+                            if(i === 3){
                                 trigo = "\\sin^2 \\theta";
                             };
-                            if(i == 4){
+                            if(i === 4){
                                 trigo = "\\cos^2 \\theta";
                             };
                             let Min = -1;
@@ -87,7 +87,7 @@ export default function CoverBpmAcos2x() {
                             A = getRndInteger(1,6)*Math.pow(-1,getRndInteger(1,3));
                             do {
                                 B = getRndInteger(1,6)*Math.pow(-1,getRndInteger(1,3));
-                            } while ((A*Min+B)*(A*Max+B) == 0);
+                            } while ((A*Min+B)*(A*Max+B) === 0);
                             let lcm = LCM(Math.abs(A*Min+B),Math.abs(A*Max+B));
                             if(lcm > 10){
                                 C = lcm;
@@ -106,17 +106,17 @@ export default function CoverBpmAcos2x() {
                             setTexA_eng("\\( \\begin{eqnarray} \\text{Min} &=& "+Min+" \\\\ \\text{Max} &=& "+Max+"  \\end{eqnarray} \\)");
                             setTexA_chi("\\( \\begin{eqnarray} \\text{極小值} &=& "+Min+" \\\\ \\text{極大值} &=& "+Max+"  \\end{eqnarray} \\)");
                             let order = getRndInteger(1,3);
-                            if(order == 1){
-                                if(A == 1){
+                            if(order === 1){
+                                if(A === 1){
                                     A = "";
                                 };
-                                if(B == 1){
+                                if(B === 1){
                                     B = "+1";
                                 };
                                 if(B > 1){
                                     B = "+"+B;
                                 };
-                                if(A == -1){
+                                if(A === -1){
                                     A = "-";
                                 };
                                 setTexQ(begin+"\\displaystyle \\frac{"+C+"}{"+A+trigo+B+"}"+end);
@@ -124,10 +124,10 @@ export default function CoverBpmAcos2x() {
                                 if(A > 1){
                                     A = "+"+A;
                                 };
-                                if(A == 1){
+                                if(A === 1){
                                     A = "+";
                                 };
-                                if(A == -1){
+                                if(A === -1){
                                     A = "-";
                                 };
                                 setTexQ(begin+"\\displaystyle \\frac{"+C+"}{"+B+A+trigo+"}"+end);

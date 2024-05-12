@@ -58,7 +58,7 @@ export default function ThetaPmAngle() {
                         <button className="button-rainbow h4 w-75" onClick={() => {
                             eq2 = 90*getRndInteger(1,5);
                             i = getRndInteger(1,3);
-                            if(i == 2){
+                            if(i === 2){
                                 eq4 = "+";
                                 pm = 1;
                             }else{
@@ -67,30 +67,30 @@ export default function ThetaPmAngle() {
                             }
                             let j = getRndInteger(1,3);
                             let ans = 1;
-                            if(j == 1){
+                            if(j === 1){
                                 setTexQ(eq1+eq2+eq3+eq4+eq5+eq6);
                                 ans = (Math.floor(Number(eq2)/90) + pm) % 4;
                             }else{
                                 setTexQ(eq1+eq5+eq4+eq2+eq3+eq6);
-                                if(pm == 1){
+                                if(pm === 1){
                                     ans = (Math.floor(Number(eq2)/90) + pm) % 4;
                                 }else{
                                     ans = 5 - ((Math.floor(Number(eq2)/90) + pm) % 4);
                                 }
                             }
-                            if(ans == 0){
+                            if(ans === 0){
                                 setTexA_eng("\\( \\text{Quadrant IV} \\)");
                                 setTexA_chi("\\( \\text{象限 IV} \\)");
                             };
-                            if(ans == 1){
+                            if(ans === 1){
                                 setTexA_eng("\\( \\text{Quadrant I} \\)");
                                 setTexA_chi("\\( \\text{象限 I} \\)");
                             };
-                            if(ans == 2){
+                            if(ans === 2){
                                 setTexA_eng("\\( \\text{Quadrant II} \\)");
                                 setTexA_chi("\\( \\text{象限 II} \\)");
                             };
-                            if(ans == 3){
+                            if(ans === 3){
                                 setTexA_eng("\\( \\text{Quadrant III} \\)");
                                 setTexA_chi("\\( \\text{象限 III} \\)");
                             };

@@ -17,6 +17,7 @@ import AcosxpmB from './pages/dse-drills/Trigo/Range/acosx-pm-b.jsx';
 import BpmAcosx from './pages/dse-drills/Trigo/Range/b-pm-acosx.jsx';
 import BpmAcos2x from './pages/dse-drills/Trigo/Range/b-pm-acos2x.jsx';
 import CoverBpmAcos2x from './pages/dse-drills/Trigo/Range/c-over-b-pm-acos2x.jsx';
+import RangeAllType from './pages/dse-drills/Trigo/Range/range-all-type.jsx';
 
 export default function Main() {
     return (
@@ -38,6 +39,7 @@ export default function Main() {
             <Route path="/math-drills-DSEMathCore/Trigo/Range/b-pm-acosx" element={<BpmAcosx />} />
             <Route path="/math-drills-DSEMathCore/Trigo/Range/b-pm-acos2x" element={<BpmAcos2x />} />
             <Route path="/math-drills-DSEMathCore/Trigo/Range/c-over-b-pm-acos2x" element={<CoverBpmAcos2x />} />
+            <Route path="/math-drills-DSEMathCore/Trigo/Range/range-all-type" element={<RangeAllType />} />
         </Routes>
     );
 }

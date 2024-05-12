@@ -4,7 +4,18 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-export default function BpmAcosx() {
+function GCD(a, b) {
+    if (b) {
+        while ((a %= b) && (b %= a));
+    }
+    return a + b;
+}
+
+function LCM(a, b) {
+    return (a * b) / GCD(a, b);
+}
+
+export default function RangeAllType() {
     
 	const [texQ, setTexQ] =useState('');
     const [texA_chi, setTexA_chi] =useState('');
@@ -31,6 +42,7 @@ export default function BpmAcosx() {
     let i = 1;
     let A = 1;
     let B = 1;
+    let C = 1;
     let trigo = "\\sin \\theta";
     let end = " \\)";
 
@@ -54,19 +66,77 @@ export default function BpmAcosx() {
                     <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
                     <div class="col-4 col-sm-3 d-flex justify-content-center">
                         <button className="button-rainbow h4 w-75" onClick={() => {
-                            i = getRndInteger(1,3);
+                            i = getRndInteger(1,5);
                             if(i === 1){
                                 trigo = "\\sin \\theta";
                             };
                             if(i === 2){
                                 trigo = "\\cos \\theta";
                             };
-                            A = getRndInteger(1,11)*Math.pow(-1,getRndInteger(1,3));
-                            B = getRndInteger(1,11)*Math.pow(-1,getRndInteger(1,3));
-                            let LHS = -A+B;
-                            let RHS = A+B;
+                            if(i === 3){
+                                trigo = "\\sin^2 \\theta";
+                            };
+                            if(i === 4){
+                                trigo = "\\cos^2 \\theta";
+                            };
                             let Min = -1;
                             let Max = 1;
+                            if(i > 2){
+                                Min = 0;
+                            };
+                            let LHS = -1;
+                            let RHS = 1;
+                            A = getRndInteger(1,6)*Math.pow(-1,getRndInteger(1,3));
+                            do {
+                                B = getRndInteger(1,6)*Math.pow(-1,getRndInteger(1,3));
+                            } while ((A*Min+B)*(A*Max+B) === 0);
+                            let j = getRndInteger(1,3);
+                            let order = getRndInteger(1,3);
+                            if(j === 1){
+                                let lcm = LCM(Math.abs(A*Min+B),Math.abs(A*Max+B));
+                                if(lcm > 10){
+                                    C = lcm*Math.pow(-1,getRndInteger(1,3));
+                                }else{
+                                    C = getRndInteger(1,4)*lcm*Math.pow(-1,getRndInteger(1,3));
+                                };
+                                let pm = "-";
+                                LHS = C/(A*Max+B);
+                                RHS = C/(A*Min+B);
+                                if(C > 0){
+                                    pm = "";
+                                }else{
+                                    pm = "-";
+                                    C = Math.abs(C);
+                                };
+                                
+                                if(order === 1){
+                                    if(A === 1){A = "";};
+                                    if(B === 1){B = "+1";};
+                                    if(B > 1){B = "+"+B;};
+                                    if(A === -1){A = "-";};
+                                    setTexQ(begin+pm+"\\displaystyle \\frac{"+C+"}{"+A+trigo+B+"}"+end);
+                                }else{
+                                    if(A > 1){A = "+"+A;};
+                                    if(A === 1){A = "+";};
+                                    if(A === -1){A = "-";};
+                                    setTexQ(begin+pm+"\\displaystyle \\frac{"+C+"}{"+B+A+trigo+"}"+end);
+                                };
+                            }else{
+                                LHS = A*Min+B;
+                                RHS = A*Max+B;
+                                if(order === 1){
+                                    if(A === 1){A = "";};
+                                    if(B === 1){B = "+1";};
+                                    if(B > 1){B = "+"+B;};
+                                    if(A === -1){A = "-";};
+                                    setTexQ(begin+A+trigo+B+end);
+                                }else{
+                                    if(A > 1){A = "+"+A;};
+                                    if(A === 1){A = "+";};
+                                    if(A === -1){A = "-";};
+                                    setTexQ(begin+B+A+trigo+end);
+                                };
+                            };
                             if(LHS < RHS){
                                 Min = LHS;
                                 Max = RHS;
@@ -76,30 +146,7 @@ export default function BpmAcosx() {
                             };
                             setTexA_eng("\\( \\begin{eqnarray} \\text{Min} &=& "+Min+" \\\\ \\text{Max} &=& "+Max+"  \\end{eqnarray} \\)");
                             setTexA_chi("\\( \\begin{eqnarray} \\text{極小值} &=& "+Min+" \\\\ \\text{極大值} &=& "+Max+"  \\end{eqnarray} \\)");
-                            let order = getRndInteger(1,3);
-                            if(order === 1){
-                                if(A === 1){
-                                    A = "";
-                                };
-                                if(B === 1){
-                                    B = "+1";
-                                };
-                                if(B > 1){
-                                    B = "+"+B;
-                                };
-                                if(A === -1){
-                                    A = "-";
-                                };
-                                setTexQ(begin+A+trigo+B+end);
-                            }else{
-                                if(A > 1){
-                                    A = "+"+A;
-                                };
-                                if(A === -1){
-                                    A = "-";
-                                };
-                                setTexQ(begin+B+A+trigo+end);
-                            };
+                            
                             setIsVisible(false);
                         }}>
                             Next

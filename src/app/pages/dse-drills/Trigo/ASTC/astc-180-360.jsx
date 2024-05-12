@@ -59,17 +59,17 @@ export default function ASTC180360() {
                         <button className="button-rainbow h4 w-75" onClick={() => {
                             angle = 180*getRndInteger(1,3);
                             let Trig = getRndInteger(1,4);
-                            if(Trig == 1){
+                            if(Trig === 1){
                                 trigo = "\\sin";
                             };
-                            if(Trig == 2){
+                            if(Trig === 2){
                                 trigo = "\\cos";
                             };
-                            if(Trig == 3){
+                            if(Trig === 3){
                                 trigo = "\\tan";
                             };
                             i = getRndInteger(1,3);
-                            if(i == 2){
+                            if(i === 2){
                                 plus_or_minus = "+";
                                 pm = 1;
                             }else{
@@ -78,7 +78,7 @@ export default function ASTC180360() {
                             }
                             let j = getRndInteger(1,3);
                             let Qnum = 1;
-                            if(j == 1){
+                            if(j === 1){
                                 setTexQ(begin+trigo+"("+angle+degree+plus_or_minus+theta+")"+end);
                                 Qnum = (Math.floor(Number(angle + pm)/90) + 1) % 4;
                             }else{
@@ -86,21 +86,21 @@ export default function ASTC180360() {
                                 Qnum = (Math.floor(Number(1 + pm*angle)/90) + 5) % 4;
                             }
                             let trigo_result = "";
-                            if(angle == 90 || angle == 270){
-                                if(trigo == "\\sin"){
+                            if(angle === 90 || angle === 270){
+                                if(trigo === "\\sin"){
                                     trigo_result = "\\cos \\theta";
                                 };
-                                if(trigo == "\\cos"){
+                                if(trigo === "\\cos"){
                                     trigo_result = "\\sin \\theta";
                                 };
-                                if(trigo == "\\tan"){
+                                if(trigo === "\\tan"){
                                     trigo_result = " \\displaystyle \\frac{1}{\\tan \\theta}";
                                 };
                             }else{
                                 trigo_result = trigo + " \\theta"
                             };
-                            if(Qnum == 0){
-                                if(Trig == 2){
+                            if(Qnum === 0){
+                                if(Trig === 2){
                                     setTexA_eng("\\( "+trigo_result+"\\)");
                                     setTexA_chi("\\( "+trigo_result+"\\)");
                                 }else{
@@ -108,12 +108,12 @@ export default function ASTC180360() {
                                     setTexA_chi("\\( - "+trigo_result+"\\)");
                                 }
                             };
-                            if(Qnum == 1){
+                            if(Qnum === 1){
                                     setTexA_eng("\\( "+trigo_result+"\\)");
                                     setTexA_chi("\\( "+trigo_result+"\\)");
                             };
-                            if(Qnum == 2){
-                                if(Trig == 1){
+                            if(Qnum === 2){
+                                if(Trig === 1){
                                     setTexA_eng("\\( "+trigo_result+"\\)");
                                     setTexA_chi("\\( "+trigo_result+"\\)");
                                 }else{
@@ -121,8 +121,8 @@ export default function ASTC180360() {
                                     setTexA_chi("\\( - "+trigo_result+"\\)");
                                 }
                             };
-                            if(Qnum == 3){
-                                if(Trig == 3){
+                            if(Qnum === 3){
+                                if(Trig === 3){
                                     setTexA_eng("\\( "+trigo_result+"\\)");
                                     setTexA_chi("\\( "+trigo_result+"\\)");
                                 }else{

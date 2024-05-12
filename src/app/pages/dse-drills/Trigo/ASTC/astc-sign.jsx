@@ -59,17 +59,17 @@ export default function ASTCsign() {
                         <button className="button-rainbow h4 w-75" onClick={() => {
                             angle = 90*getRndInteger(1,5);
                             let Trig = getRndInteger(1,4);
-                            if(Trig == 1){
+                            if(Trig === 1){
                                 trigo = "\\sin";
                             };
-                            if(Trig == 2){
+                            if(Trig === 2){
                                 trigo = "\\cos";
                             };
-                            if(Trig == 3){
+                            if(Trig === 3){
                                 trigo = "\\tan";
                             };
                             i = getRndInteger(1,3);
-                            if(i == 2){
+                            if(i === 2){
                                 plus_or_minus = "+";
                                 pm = 1;
                             }else{
@@ -78,19 +78,19 @@ export default function ASTCsign() {
                             }
                             let j = getRndInteger(1,3);
                             let Qnum = 1;
-                            if(j == 1){
+                            if(j === 1){
                                 setTexQ(begin+trigo+"("+angle+degree+plus_or_minus+theta+")"+end);
                                 Qnum = (Math.floor(Number(angle)/90) + pm) % 4;
                             }else{
                                 setTexQ(begin+trigo+"("+theta+plus_or_minus+angle+degree+")"+end);
-                                if(pm == 1){
+                                if(pm === 1){
                                     Qnum = (Math.floor(Number(angle)/90) + pm) % 4;
                                 }else{
                                     Qnum = 5 - ((Math.floor(Number(angle)/90) + pm) % 4);
                                 }
                             }
-                            if(Qnum == 0){
-                                if(Trig == 2){
+                            if(Qnum === 0){
+                                if(Trig === 2){
                                     setTexA_eng("\\( \\text{Positive} \\)");
                                     setTexA_chi("\\( \\text{正} \\)");
                                 }else{
@@ -98,12 +98,12 @@ export default function ASTCsign() {
                                     setTexA_chi("\\( \\text{負} \\)");
                                 }
                             };
-                            if(Qnum == 1){
+                            if(Qnum === 1){
                                 setTexA_eng("\\( \\text{Positive} \\)");
                                 setTexA_chi("\\( \\text{正} \\)");
                             };
-                            if(Qnum == 2){
-                                if(Trig == 1){
+                            if(Qnum === 2){
+                                if(Trig === 1){
                                     setTexA_eng("\\( \\text{Positive} \\)");
                                     setTexA_chi("\\( \\text{正} \\)");
                                 }else{
@@ -111,8 +111,8 @@ export default function ASTCsign() {
                                     setTexA_chi("\\( \\text{負} \\)");
                                 }
                             };
-                            if(Qnum == 3){
-                                if(Trig == 3){
+                            if(Qnum === 3){
+                                if(Trig === 3){
                                     setTexA_eng("\\( \\text{Positive} \\)");
                                     setTexA_chi("\\( \\text{正} \\)");
                                 }else{

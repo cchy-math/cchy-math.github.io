@@ -48,22 +48,22 @@ export default function News() {
 				3B
 				<div class="row ms-3 flex-nowrap overflow-auto scroll-news">
 					<NewsCard 
-						title={'午間補㡳班'}
+						title={'午間補底班'}
 						color={''}
 						date={'2024 May 10'}
-						content={'午間補㡳班將於5月13日星期一進行，請同學於13:40到達702D室出席。'}
+						content={'午間補底班將於5月13日星期一進行，請同學於13:40到達702D室出席。'}
 					/>
 					<NewsCard 
-						title={'午間補㡳班'}
+						title={'午間補底班'}
 						color={''}
 						date={'2024 May 08'}
-						content={'午間補㡳班將於5月9日星期四進行，請同學於13:40到達702D室出席。'}
+						content={'午間補底班將於5月9日星期四進行，請同學於13:40到達702D室出席。'}
 					/>
 					<NewsCard 
-						title={'TSA 補㡳'}
+						title={'TSA 補底'}
 						color={''}
 						date={'2024 May 05'}
-						content={'TSA 補㡳將於5月6日星期一及5月7日星期二進行，同學請留意日期時間依時出席。'}
+						content={'TSA 補底將於5月6日星期一及5月7日星期二進行，同學請留意日期時間依時出席。'}
 					/>
 				</div>
 			</div>
@@ -72,16 +72,16 @@ export default function News() {
 				2D
 				<div class="row ms-3 flex-nowrap overflow-auto scroll-news">
 					<NewsCard 
-						title={'午間補㡳班'}
+						title={'午間補底班'}
 						color={''}
 						date={'2024 May 10'}
-						content={'午間補㡳班將於5月17日星期五進行，請同學於13:40到達702D室出席。'}
+						content={'午間補底班將於5月17日星期五進行，請同學於13:40到達702D室出席。'}
 					/>
 					<NewsCard 
-						title={'午間補㡳班'}
+						title={'午間補底班'}
 						color={''}
 						date={'2024 May 09'}
-						content={'午間補㡳班將於5月10日星期五進行，請同學於13:40到達702D室出席。'}
+						content={'午間補底班將於5月10日星期五進行，請同學於13:40到達702D室出席。'}
 					/>
 					<NewsCard
 						title={'Chapter Test 12'}
@@ -102,16 +102,16 @@ export default function News() {
 				2A		
 				<div class="row ms-3 flex-nowrap overflow-auto scroll-news">
 					<NewsCard 
-						title={'午間補㡳班'}
+						title={'午間補底班'}
 						color={''}
 						date={'2024 May 10'}
-						content={'午間補㡳班將於5月17日星期五進行，請同學於13:40到達702D室出席。'}
+						content={'午間補底班將於5月17日星期五進行，請同學於13:40到達702D室出席。'}
 					/>
 					<NewsCard 
-						title={'午間補㡳班'}
+						title={'午間補底班'}
 						color={''}
 						date={'2024 May 09'}
-						content={'午間補㡳班將於5月10日星期五進行，請同學於13:40到達702D室出席。'}
+						content={'午間補底班將於5月10日星期五進行，請同學於13:40到達702D室出席。'}
 					/>
 					<NewsCard
 						title={'Chapter Test 12'}

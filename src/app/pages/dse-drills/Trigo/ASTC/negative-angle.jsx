@@ -55,15 +55,15 @@ export default function NegativeAngle() {
                         <button className="button-rainbow h4 w-75" onClick={() => {
                             i = getRndInteger(1,4);
                             let ans = "";
-                            if(i == 1){
+                            if(i === 1){
                                 trigo = "\\sin";
                                 ans = "\\( -\\sin ( \\theta ) \\)"
                             };
-                            if(i == 2){
+                            if(i === 2){
                                 trigo = "\\cos";
                                 ans = "\\( \\cos ( \\theta ) \\)"
                             };
-                            if(i == 3){
+                            if(i === 3){
                                 trigo = "\\tan";
                                 ans = "\\( -\\tan ( \\theta ) \\)"
                             };
