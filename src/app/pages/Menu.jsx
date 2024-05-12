@@ -14,7 +14,7 @@ export default function Menu() {
                     <div class="col-xs-1 col-lg-4">
                     </div>
                     <div class="col-xs-10 col-lg-4">
-                        <NavLink to="">
+                        <NavLink to="/page">
                             <button className="button-rainbow my-5" style={{'width': '100%'}}>
                                 <h5>News</h5>
                             </button>
