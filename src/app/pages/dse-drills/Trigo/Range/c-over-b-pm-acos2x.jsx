@@ -84,11 +84,16 @@ export default function CoverBpmAcos2x() {
                             if(i > 2){
                                 Min = 0;
                             };
-                            A = getRndInteger(1,4)*Math.pow(-1,getRndInteger(1,3));
+                            A = getRndInteger(1,6)*Math.pow(-1,getRndInteger(1,3));
                             do {
                                 B = getRndInteger(1,6)*Math.pow(-1,getRndInteger(1,3));
-                              } while ((A*Min+B)*(A*Max+B) == 0);
-                            C = getRndInteger(1,4)*LCM(Math.abs(A*Min+B),Math.abs(A*Max+B));
+                            } while ((A*Min+B)*(A*Max+B) == 0);
+                            let lcm = LCM(Math.abs(A*Min+B),Math.abs(A*Max+B));
+                            if(lcm > 10){
+                                C = lcm;
+                            }else{
+                                C = getRndInteger(1,4)*lcm;
+                            };
                             let LHS = C/(A*Max+B);
                             let RHS = C/(A*Min+B);
                             if(LHS < RHS){
