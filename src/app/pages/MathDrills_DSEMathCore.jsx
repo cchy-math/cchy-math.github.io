@@ -73,17 +73,17 @@ export default function MathDrills_DSEMathCore() {
 							content={"\\( B \\pm A\\cos(\\theta) \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-DSEMathCore/Trigo/Range/" style={{width: 300 }}>
+					<NavLink to="/math-drills-DSEMathCore/Trigo/Range/b-pm-acos2x" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( B \\pm A\\cos^2(\\theta) \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-DSEMathCore/Trigo/Range/" style={{width: 300 }}>
+					<NavLink to="/math-drills-DSEMathCore/Trigo/Range/c-over-b-pm-acos2x" style={{width: 300 }}>
 						<MathDrillsCard
-							content={"\\( \\displaystyle \\frac{1}{B \\pm A\\cos^2(\\theta)} \\)"}
+							content={"\\( \\displaystyle \\frac{C}{B \\pm A\\cos^2(\\theta)} \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-DSEMathCore/Trigo/Range/" style={{width: 300 }}>
+					<NavLink to="/math-drills-DSEMathCore/Trigo/Range/pm-c-over-b-pm-acos2x" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( \\displaystyle \\pm \\frac{C}{B \\pm A\\cos^2(\\theta)} \\)"}
 						/>
