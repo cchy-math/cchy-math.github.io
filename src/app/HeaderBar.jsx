@@ -15,7 +15,7 @@ export default function HeaderBar() {
 		}
 	},[tex])
   return (
-    <header class="px-4">
+    <header class="px-4 vww-100">
       <div class="d-flex align-items-center justify-content-between pt-4" style={{ height: 10 }}>
         <NavLink to="/menu"><button className="button-rainbow">
           Menu

@@ -1,3 +1,10 @@
+.LaTeX-Q {
+	font-size: 7rem;
+}
+.LaTeX-A {
+	font-size: 3.5rem;
+}
+
 ul {
 	list-style-type:none; 
 	padding-block: 1%;
@@ -17,7 +24,6 @@ body {
 	background-image: url("dark-purple-20.jpg");
 	background-color: black;
 	color: var(--bs-light);
-	position: relative;
 	max-width: 100%;
     overflow-x: hidden;
 	font-family: "Computer Modern Sans", sans-serif;
@@ -77,7 +83,6 @@ nav a {
 }
 main {
 	font-size: 12px;
-	position: relative;
 }
 .card {
 	background-color: var(--bs-dark);
