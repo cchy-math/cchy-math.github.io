@@ -13,8 +13,8 @@ export default function MathDrills_DSEMathCore() {
 		}
 	},[tex])
 	return (
-		<main className="px-4 py-3 col">
-			<div class="row align-items-center flex h2 px-3">
+		<main className="px-4 py-3 col h3">
+			<div class="row align-items-center flex px-3">
 				ASTC
 				<div class="row flex-nowrap overflow-auto scroll-news">
 					<NavLink to="/math-drills-DSEMathCore/angle-pm-theta" style={{width: 300 }}>
@@ -55,7 +55,7 @@ export default function MathDrills_DSEMathCore() {
 				</div>
 			</div>
 			<hr/>
-			<div class="row align-items-center flex h2 px-3">
+			<div class="row align-items-center flex px-3">
 				Graphs of Trigonometric Functions
 				<div class="row flex-nowrap overflow-auto scroll-news">
 					<NavLink to="/math-drills-DSEMathCore/" style={{width: 300 }}>
