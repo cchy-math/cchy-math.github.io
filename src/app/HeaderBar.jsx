@@ -15,8 +15,8 @@ export default function HeaderBar() {
 		}
 	},[tex])
   return (
-    <header class="px-4 vww-100">
-      <div class="d-flex align-items-center justify-content-between pt-4" style={{ height: 10 }}>
+    <header className="px-4 vww-100">
+      <div className="d-flex align-items-center justify-content-between pt-4" style={{ height: 10 }}>
         <NavLink to="/menu"><button className="button-rainbow">
           Menu
         </button></NavLink>
@@ -27,8 +27,8 @@ export default function HeaderBar() {
           Empty Space
         </button>
       </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" />
+      <div className="progress">
+        <div className="progress-bar progress-bar-striped progress-bar-animated" />
       </div>
     </header>
   );

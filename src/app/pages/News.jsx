@@ -12,9 +12,9 @@ export default function News() {
 	},[tex])
 	return (
 		<main className="ps-4 pt-3 col">
-			<div class="row align-items-center flex-nowrap h2 ps-3">
+			<div className="row align-items-center flex-nowrap h2 ps-3">
 				4C
-				<div class="row ms-3 flex-nowrap overflow-auto scroll-news">
+				<div className="row ms-3 flex-nowrap overflow-auto scroll-news">
 					<NewsCard
 						title={'星期六補課'}
 						color={'warning'}
@@ -44,9 +44,9 @@ export default function News() {
 				</div>
 			</div>
 			<hr/>
-			<div class="row align-items-center flex-nowrap h2 ps-3">
+			<div className="row align-items-center flex-nowrap h2 ps-3">
 				3B
-				<div class="row ms-3 flex-nowrap overflow-auto scroll-news">
+				<div className="row ms-3 flex-nowrap overflow-auto scroll-news">
 					<NewsCard 
 						title={'午間補底班'}
 						color={''}
@@ -68,9 +68,9 @@ export default function News() {
 				</div>
 			</div>
 			<hr/>
-			<div class="row align-items-center flex-nowrap h2 ps-3">
+			<div className="row align-items-center flex-nowrap h2 ps-3">
 				2D
-				<div class="row ms-3 flex-nowrap overflow-auto scroll-news">
+				<div className="row ms-3 flex-nowrap overflow-auto scroll-news">
 					<NewsCard 
 						title={'午間補底班'}
 						color={''}
@@ -98,9 +98,9 @@ export default function News() {
 				</div>
 			</div>
 			<hr/>
-			<div class="row align-items-center flex-nowrap h2 ps-3">
+			<div className="row align-items-center flex-nowrap h2 ps-3">
 				2A		
-				<div class="row ms-3 flex-nowrap overflow-auto scroll-news">
+				<div className="row ms-3 flex-nowrap overflow-auto scroll-news">
 					<NewsCard 
 						title={'午間補底班'}
 						color={''}

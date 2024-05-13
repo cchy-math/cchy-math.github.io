@@ -14,9 +14,9 @@ export default function MathDrills_DSEMathCore() {
 	},[tex])
 	return (
 		<main className="px-4 py-3 col h3">
-			<div class="row align-items-center flex px-3">
+			<div className="row align-items-center flex px-3">
 				{"\\( \\text{ASTC} \\)"}
-				<div class="row flex-nowrap overflow-auto scroll-news">
+				<div className="row flex-nowrap overflow-auto scroll-news">
 					<NavLink to="/math-drills-DSEMathCore/Trigo/ASTC/angle-pm-theta" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( \\begin{smallmatrix} 90^{\\circ} & 180^{\\circ} \\\\ 270^{\\circ} & 360^{\\circ}  \\end{smallmatrix} \\pm \\theta \\)"}
@@ -55,9 +55,9 @@ export default function MathDrills_DSEMathCore() {
 				</div>
 			</div>
 			<hr/>
-			<div class="row align-items-center flex px-3">
+			<div className="row align-items-center flex px-3">
 				{"\\( \\text{Min} \\leq f(\\theta) \\leq \\text{Max} \\)"}
-				<div class="row flex-nowrap overflow-auto scroll-news">
+				<div className="row flex-nowrap overflow-auto scroll-news">
 					<NavLink to="/math-drills-DSEMathCore/Trigo/Range/acosx" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( A\\cos(\\theta) \\)"}

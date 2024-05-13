@@ -52,10 +52,10 @@ export default function ASTC180360() {
             <div className="display-1 vh-50 vw-100 d-flex justify-content-center align-items-center">
                 {texQ}
             </div>
-            <div class="vh-25 vw-100 mb-5 align-items-center">
-                <div class="row mb-5">
-                    <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
-                    <div class="col-4 col-sm-3 d-flex justify-content-center">
+            <div className="vh-25 vw-100 mb-5 align-items-center">
+                <div className="row mb-5">
+                    <div className="col-1 col-sm-2 d-flex justify-content-center"></div>
+                    <div className="col-4 col-sm-3 d-flex justify-content-center">
                         <button className="button-rainbow h4 w-75" onClick={() => {
                             angle = 180*getRndInteger(1,3);
                             let Trig = getRndInteger(1,4);
@@ -135,32 +135,32 @@ export default function ASTC180360() {
                             Next
                         </button>
                     </div>
-                    <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
-                    <div class="col-4 col-sm-3 d-flex justify-content-center">
+                    <div className="col-1 col-sm-2 d-flex justify-content-center"></div>
+                    <div className="col-4 col-sm-3 d-flex justify-content-center">
                         <button className="button-rainbow h4 w-75" onClick={toggleVisibility}>
                             Answer
                         </button>
                     </div>
-                    <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
+                    <div className="col-1 col-sm-2 d-flex justify-content-center"></div>
                 </div>
-                <div class="row mb-5 display-5">
-                    <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
-                    <div class="col-4 col-sm-3 d-flex justify-content-center">
+                <div className="row mb-5 display-5">
+                    <div className="col-1 col-sm-2 d-flex justify-content-center"></div>
+                    <div className="col-4 col-sm-3 d-flex justify-content-center">
                         <div className={isVisible ? 'visible' : 'invisible'}>
                             {texA_eng}
                         </div>
                     </div>
-                    <div class="col-2 col-sm-2 d-flex justify-content-center">
+                    <div className="col-2 col-sm-2 d-flex justify-content-center">
                         <div className="invisible">
                             {"\\( \\displaystyle \\frac{1}{2} \\)"}
                         </div>
                     </div>
-                    <div class="col-4 col-sm-3 d-flex justify-content-center">
+                    <div className="col-4 col-sm-3 d-flex justify-content-center">
                         <div className={isVisible ? 'visible' : 'invisible'}>
                             {texA_chi}
                         </div>
                     </div>
-                    <div class="col-1 col-sm-2 d-flex justify-content-center"></div>
+                    <div className="col-1 col-sm-2 d-flex justify-content-center"></div>
                 </div>
             </div>
 		</main>

@@ -14,9 +14,9 @@ export default function MathDrills_S123() {
 	},[tex])
 	return (
 		<main className="px-4 col">
-			<div class="row align-items-center flex h1 px-3">
+			<div className="row align-items-center flex h1 px-3">
 				Transposition
-				<div class="row flex-nowrap overflow-auto scroll-news">
+				<div className="row flex-nowrap overflow-auto scroll-news">
 					<NavLink to="/math-drills-S123/algebraic-equations/x-pm-a-eq-b" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( x \\pm a = b \\)"}

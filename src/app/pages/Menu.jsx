@@ -10,10 +10,10 @@ export default function Menu() {
         <main className="container">
             <div className="HeaderHeight"></div>
             <div className="container">
-                <div class="row align-items-center">
-                    <div class="col-xs-1 col-lg-4">
+                <div className="row align-items-center">
+                    <div className="col-xs-1 col-lg-4">
                     </div>
-                    <div class="col-xs-10 col-lg-4">
+                    <div className="col-xs-10 col-lg-4">
                         <NavLink to="/">
                             <button className="button-rainbow my-5" style={{'width': '100%'}}>
                                 <h5>News</h5>
@@ -30,7 +30,7 @@ export default function Menu() {
                             </button>
                         </NavLink>
                     </div>
-                    <div class="col-xs-1 col-lg-4">
+                    <div className="col-xs-1 col-lg-4">
                     </div>
                 </div>
             </div>
