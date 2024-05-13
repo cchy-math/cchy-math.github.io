@@ -17,37 +17,42 @@ export default function MathDrills_S123() {
 			<div class="row align-items-center flex h1 px-3">
 				Transposition
 				<div class="row flex-nowrap overflow-auto scroll-news">
-					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+					<NavLink to="/math-drills-S123/algebraic-equations/x-pm-a-eq-b" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( x \\pm a = b \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+					<NavLink to="/math-drills-S123/algebraic-equations/a-pm-x-eq-b" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( a \\pm x = b \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-S123/algebraic-equations/ax-eq-b" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( ax = b \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+					<NavLink to="/math-drills-S123/algebraic-equations/x-over-a-eq-b" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( \\displaystyle \\frac{x}{a} = b \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+					<NavLink to="/math-drills-S123/algebraic-equations/ax-over-b-eq-c" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( \\displaystyle \\frac{ax}{b} = c \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+					<NavLink to="/math-drills-S123/algebraic-equations/ax-pm-b-eq-c" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( ax \\pm b = c \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+					<NavLink to="/math-drills-S123/algebraic-equations/ax-pm-b-over-c-eq-d" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( \\displaystyle \\frac{ax \\pm b}{c} = d \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-S123/algebraic-equations" style={{width: 300 }}>
+					<NavLink to="/math-drills-S123/algebraic-equations/ax-pm-b-over-cx-pm-d-eq-e" style={{width: 300 }}>
 						<MathDrillsCard
 						content={"\\( \\displaystyle \\frac{ax \\pm b}{cx \\pm d} = e \\)"}
 						/>
