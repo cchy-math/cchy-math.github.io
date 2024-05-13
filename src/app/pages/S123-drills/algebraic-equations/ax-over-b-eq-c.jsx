@@ -112,7 +112,7 @@ export default function AXoverBeqC() {
                                     a = "";
                                 };
                                 if(position === 1){
-                                    setTexQ(begin+"\\displaystyle \\frac{ -"+a+x+"}{"+b+"}"+eqsign+c+end);
+                                    setTexQ(begin+"\\displaystyle \\frac{-"+a+x+"}{"+b+"}"+eqsign+c+end);
                                 };
                                 if(position === 2){
                                     setTexQ(begin+"- \\displaystyle \\frac{"+a+x+"}{"+b+"}"+eqsign+c+end);
