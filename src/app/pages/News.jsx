@@ -47,6 +47,12 @@ export default function News() {
 			<div className="row align-items-center flex-nowrap h2 ps-3">
 				3B
 				<div className="row ms-3 flex-nowrap overflow-auto scroll-news">
+					<NewsCard
+						title={'Chapter Test 10'}
+						color={'success'}
+						date={'2024 May 13'}
+						content={"第10課級測將於5月17日星期五進行。"}
+					/>
 					<NewsCard 
 						title={'午間補底班'}
 						color={''}
