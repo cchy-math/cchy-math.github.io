@@ -63,36 +63,33 @@ export default function ThetaPmAngle() {
                                 pm = 1;
                             }else{
                                 eq4 = "-";
-                                pm = 0;
+                                pm = -1;
                             }
-                            let j = getRndInteger(1,3);
+                            let order = getRndInteger(1,3);
                             let ans = 1;
-                            if(j === 1){
+                            if(order === 1){
                                 setTexQ(eq1+eq2+eq3+eq4+eq5+eq6);
-                                ans = (Math.floor(Number(eq2)/90) + pm) % 4;
+                                ans = Math.floor((Number(eq2) + Number(pm)) / 90) + 1;
+                                
                             }else{
                                 setTexQ(eq1+eq5+eq4+eq2+eq3+eq6);
-                                if(pm === 1){
-                                    ans = (Math.floor(Number(eq2)/90) + pm) % 4;
-                                }else{
-                                    ans = 5 - ((Math.floor(Number(eq2)/90) + pm) % 4);
-                                }
+                                ans = Math.floor(Math.abs((1 + Number(pm)*Number(eq2))) / 90) + 1;
                             }
-                            if(ans === 0){
-                                setTexA_eng("\\( \\text{Quadrant IV} \\)");
-                                setTexA_chi("\\( \\text{象限 IV} \\)");
-                            };
-                            if(ans === 1){
+                            if(ans === 1 || ans === 5 || ans === -3){
                                 setTexA_eng("\\( \\text{Quadrant I} \\)");
                                 setTexA_chi("\\( \\text{象限 I} \\)");
                             };
-                            if(ans === 2){
+                            if(ans === 2 || ans === -2){
                                 setTexA_eng("\\( \\text{Quadrant II} \\)");
                                 setTexA_chi("\\( \\text{象限 II} \\)");
                             };
-                            if(ans === 3){
+                            if(ans === 3 || ans === -1){
                                 setTexA_eng("\\( \\text{Quadrant III} \\)");
                                 setTexA_chi("\\( \\text{象限 III} \\)");
+                            };
+                            if(ans === 4 || ans === 0){
+                                setTexA_eng("\\( \\text{Quadrant IV} \\)");
+                                setTexA_chi("\\( \\text{象限 IV} \\)");
                             };
                             setIsVisible(false);
                         }}>

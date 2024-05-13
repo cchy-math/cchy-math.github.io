@@ -63,15 +63,11 @@ export default function AnglePmTheta() {
                                 pm = 1;
                             }else{
                                 eq4 = "-";
-                                pm = 0;
+                                pm = -1;
                             }
                             setTexQ(eq1+eq2+eq3+eq4+eq5+eq6);
-                            let ans = (Math.floor(Number(eq2)/90) + pm) % 4;
-                            if(ans === 0){
-                                setTexA_eng("\\( \\text{Quadrant IV} \\)");
-                                setTexA_chi("\\( \\text{象限 IV} \\)");
-                            };
-                            if(ans === 1){
+                            let ans = Math.floor((Number(eq2) + Number(pm)) / 90) + 1;
+                            if(ans === 1 || ans === 5){
                                 setTexA_eng("\\( \\text{Quadrant I} \\)");
                                 setTexA_chi("\\( \\text{象限 I} \\)");
                             };
@@ -82,6 +78,10 @@ export default function AnglePmTheta() {
                             if(ans === 3){
                                 setTexA_eng("\\( \\text{Quadrant III} \\)");
                                 setTexA_chi("\\( \\text{象限 III} \\)");
+                            };
+                            if(ans === 4){
+                                setTexA_eng("\\( \\text{Quadrant IV} \\)");
+                                setTexA_chi("\\( \\text{象限 IV} \\)");
                             };
                             setIsVisible(false);
                         }}>

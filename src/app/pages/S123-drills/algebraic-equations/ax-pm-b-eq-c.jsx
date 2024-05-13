@@ -25,7 +25,7 @@ function getAlphabetLetter(number) {
     return letter;
 }
 
-export default function ApmXeqB() {
+export default function AXpmBeqC() {
     
 	const [texQ, setTexQ] =useState('');
     const [texA_chi, setTexA_chi] =useState('');

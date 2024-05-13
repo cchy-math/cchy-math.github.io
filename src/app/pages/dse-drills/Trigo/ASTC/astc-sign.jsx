@@ -80,25 +80,12 @@ export default function ASTCsign() {
                             let Qnum = 1;
                             if(j === 1){
                                 setTexQ(begin+trigo+"("+angle+degree+plus_or_minus+theta+")"+end);
-                                Qnum = (Math.floor(Number(angle)/90) + pm) % 4;
+                                Qnum = Math.floor((Number(angle) + Number(pm)) / 90) + 1;
                             }else{
                                 setTexQ(begin+trigo+"("+theta+plus_or_minus+angle+degree+")"+end);
-                                if(pm === 1){
-                                    Qnum = (Math.floor(Number(angle)/90) + pm) % 4;
-                                }else{
-                                    Qnum = 5 - ((Math.floor(Number(angle)/90) + pm) % 4);
-                                }
+                                Qnum = Math.floor(Math.abs((1 + Number(pm)*Number(angle))) / 90) + 1;
                             }
-                            if(Qnum === 0){
-                                if(Trig === 2){
-                                    setTexA_eng("\\( \\text{Positive} \\)");
-                                    setTexA_chi("\\( \\text{正} \\)");
-                                }else{
-                                    setTexA_eng("\\( \\text{Negative} \\)");
-                                    setTexA_chi("\\( \\text{負} \\)");
-                                }
-                            };
-                            if(Qnum === 1){
+                            if(Qnum === 1 || Qnum === 5){
                                 setTexA_eng("\\( \\text{Positive} \\)");
                                 setTexA_chi("\\( \\text{正} \\)");
                             };
@@ -113,6 +100,15 @@ export default function ASTCsign() {
                             };
                             if(Qnum === 3){
                                 if(Trig === 3){
+                                    setTexA_eng("\\( \\text{Positive} \\)");
+                                    setTexA_chi("\\( \\text{正} \\)");
+                                }else{
+                                    setTexA_eng("\\( \\text{Negative} \\)");
+                                    setTexA_chi("\\( \\text{負} \\)");
+                                }
+                            };
+                            if(Qnum === 4){
+                                if(Trig === 2){
                                     setTexA_eng("\\( \\text{Positive} \\)");
                                     setTexA_chi("\\( \\text{正} \\)");
                                 }else{
