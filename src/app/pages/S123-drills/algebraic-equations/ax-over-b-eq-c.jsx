@@ -108,6 +108,9 @@ export default function AXoverBeqC() {
                                 let position = getRndInteger(1,4);
                                 a = Math.abs(a);
                                 b = Math.abs(b);
+                                if(a === 1){
+                                    a = "";
+                                };
                                 if(position === 1){
                                     setTexQ(begin+"\\displaystyle \\frac{ -"+a+x+"}{"+b+"}"+eqsign+c+end);
                                 };
