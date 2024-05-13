@@ -25,7 +25,7 @@ function getAlphabetLetter(number) {
     return letter;
 }
 
-export default function XoverAeqB() {
+export default function AXoverBeqC() {
     
 	const [texQ, setTexQ] =useState('');
     const [texA_chi, setTexA_chi] =useState('');
@@ -54,6 +54,7 @@ export default function XoverAeqB() {
     let a = "a";
     let eqsign = "=";
     let b = "b";
+    let c = "c";
     let end = "\\)";
     let i = 0;
     let pm = -1;
@@ -82,26 +83,41 @@ export default function XoverAeqB() {
                             do{
                                 x = getAlphabetLetter(getRndInteger(1,27));
                             }while(x === "e" || x === "i" || x === "l" || x === "o");
-                            a = getRndInteger(2,10)*Math.pow(-1,getRndInteger(1,3));
-                            b = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
-                            ans = a*b;
-                            setTexA_eng("\\( "+x+eqsign+ans+" \\)");
-                            setTexA_chi("\\( "+x+eqsign+ans+" \\)");
+                            a = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
+                            b = getRndInteger(2,10)*Math.pow(-1,getRndInteger(1,3));
+                            c = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
+                            let N = c*b;
+                            let D = Math.abs(a);
+                            let numerator = N/GCD(N,D);
+                            let denominator = D/GCD(N,D);
+                            pm = c*b/a;
+                            if(pm > 0){
+                                pmsign="";
+                            }else{
+                                pmsign="-";
+                            }
+                            if(denominator === 1){
+                                setTexA_eng("\\( "+x+eqsign+pmsign+Math.abs(numerator)+" \\)");
+                                setTexA_chi("\\( "+x+eqsign+pmsign+Math.abs(numerator)+" \\)");
+                            }else{
+                                setTexA_eng("\\( "+x+eqsign+pmsign+"\\displaystyle \\frac{"+Math.abs(numerator)+"}{"+Math.abs(denominator)+"} \\)");
+                                setTexA_chi("\\( "+x+eqsign+pmsign+"\\displaystyle \\frac{"+Math.abs(numerator)+"}{"+Math.abs(denominator)+"} \\)");
+                            }
                             setIsVisible(false);
-                            if(a < 0){
+                            if(a*b < 0){
                                 let position = getRndInteger(1,4);
                                 a = Math.abs(a);
+                                b = Math.abs(b);
                                 if(position === 1){
-                                    setTexQ(begin+"\\displaystyle \\frac{ -"+x+"}{"+a+"}"+eqsign+b+end);
+                                    setTexQ(begin+"\\displaystyle \\frac{ -"+a+x+"}{"+b+"}"+eqsign+c+end);
                                 };
                                 if(position === 2){
-                                    setTexQ(begin+"- \\displaystyle \\frac{"+x+"}{"+a+"}"+eqsign+b+end);
+                                    setTexQ(begin+"- \\displaystyle \\frac{"+a+x+"}{"+b+"}"+eqsign+c+end);
                                 };
                                 if(position === 3){
-                                    setTexQ(begin+"\\displaystyle \\frac{"+x+"}{-"+a+"}"+eqsign+b+end);
+                                    setTexQ(begin+"\\displaystyle \\frac{"+a+x+"}{-"+b+"}"+eqsign+c+end);
                                 };
                             };
-                            
                         }}>
                             Next
                         </button>

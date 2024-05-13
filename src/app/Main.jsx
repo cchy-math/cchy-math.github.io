@@ -22,7 +22,7 @@ import XpmAeqB from './pages/S123-drills/algebraic-equations/x-pm-a-eq-b.jsx';
 import ApmXeqB from './pages/S123-drills/algebraic-equations/a-pm-x-eq-b.jsx';
 import AXeqB from './pages/S123-drills/algebraic-equations/ax-eq-b.jsx';
 import XoverAeqB from './pages/S123-drills/algebraic-equations/x-over-a-eq-b.jsx';
-
+import AXoverBeqC from './pages/S123-drills/algebraic-equations/ax-over-b-eq-c.jsx';
 
 export default function Main() {
     return (
@@ -49,6 +49,7 @@ export default function Main() {
             <Route path="/math-drills-S123/algebraic-equations/a-pm-x-eq-b" element={<ApmXeqB />} />
             <Route path="/math-drills-S123/algebraic-equations/ax-eq-b" element={<AXeqB />} />
             <Route path="/math-drills-S123/algebraic-equations/x-over-a-eq-b" element={<XoverAeqB />} />
+            <Route path="/math-drills-S123/algebraic-equations/ax-over-b-eq-c" element={<AXoverBeqC />} />
         </Routes>
     );
 }
