@@ -91,6 +91,47 @@ export default function MathDrills_DSEMathCore() {
 				</div>
 			</div>
 			<hr/>
+			<div className="row align-items-center flex px-3">
+				{"\\( \\text{Trigonometric Equations} \\)"}
+				<div className="row flex-nowrap overflow-auto scroll-news">
+					<NavLink to="/math-drills-DSEMathCore/Trigo/Equations/asinx-eq-b" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( A\\sin(\\theta) = B \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-DSEMathCore/Trigo/Equations/acosx-eq-b" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( A\\cos(\\theta) = B \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-DSEMathCore/Trigo/Equations/atanx-eq-b" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( A\\tan(\\theta) = B \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-DSEMathCore/Trigo/Equations/all-tranformation" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( A\\cos(B \\theta + C) = D \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-DSEMathCore/Trigo/Equations/trigo-square" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( \\cos^2(\\theta) = K \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-DSEMathCore/Trigo/Equations/trigo-quadratic" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( Af(\\theta)^2 + Bf(\\theta) + C \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-DSEMathCore/Trigo/Equations/trigo-quadratic-advance" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( 1 - \\sin^2(\\theta) = \\cos^2(\\theta) \\)"}
+						/>
+					</NavLink>
+				</div>
+			</div>
+			<hr/>
 		</main>
 	);
 }
