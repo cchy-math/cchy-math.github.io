@@ -20,6 +20,8 @@ import CoverBpmAcos2x from './pages/dse-drills/Trigo/Range/c-over-b-pm-acos2x.js
 import RangeAllType from './pages/dse-drills/Trigo/Range/range-all-type.jsx';
 import XpmAeqB from './pages/S123-drills/algebraic-equations/x-pm-a-eq-b.jsx';
 import ApmXeqB from './pages/S123-drills/algebraic-equations/a-pm-x-eq-b.jsx';
+import AXeqB from './pages/S123-drills/algebraic-equations/ax-eq-b.jsx';
+import XoverAeqB from './pages/S123-drills/algebraic-equations/x-over-a-eq-b.jsx';
 
 
 export default function Main() {
@@ -45,6 +47,8 @@ export default function Main() {
             <Route path="/math-drills-DSEMathCore/Trigo/Range/range-all-type" element={<RangeAllType />} />
             <Route path="/math-drills-S123/algebraic-equations/x-pm-a-eq-b" element={<XpmAeqB />} />
             <Route path="/math-drills-S123/algebraic-equations/a-pm-x-eq-b" element={<ApmXeqB />} />
+            <Route path="/math-drills-S123/algebraic-equations/ax-eq-b" element={<AXeqB />} />
+            <Route path="/math-drills-S123/algebraic-equations/x-over-a-eq-b" element={<XoverAeqB />} />
         </Routes>
     );
 }
