@@ -22,22 +22,15 @@ function divToFracLaTeX(numerator, denominator) {
     return (D === 1) ? (sign + N) : (sign + "\\displaystyle \\frac{"+N+"}{"+D+"}");
 }
 
-function corrTo3sf(num) {
-    // Check for valid number
-    if(isNaN(num)) return "Invalid number";
-
-    // Get number of digits before decimal
-    let digitsBeforeDecimal = (`${Math.floor(num)}`).length;
-
-    // Calculate rounding level
-    let sigFigs = digitsBeforeDecimal <= 3 ? digitsBeforeDecimal : 3;
-
-    // Round number to specified sig figs
-    let power = Math.pow(10, sigFigs);
-    let rounded = Math.round(num * power) / power;  
-
-    // Return rounded number
-    return rounded;
+function corrTo3sf(number) {
+    if (number === 0) {
+        return 0;
+      }
+      
+      const power = Math.floor(Math.log10(Math.abs(number))) + 1;
+      const factor = Math.pow(10, 3 - power);
+      
+      return Math.round(number * factor) / factor;
 }
 
 function arcsinDeg(num) {

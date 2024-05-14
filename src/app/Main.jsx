@@ -25,6 +25,8 @@ import XoverAeqB from './pages/S123-drills/algebraic-equations/x-over-a-eq-b.jsx
 import AXoverBeqC from './pages/S123-drills/algebraic-equations/ax-over-b-eq-c.jsx';
 import AXpmBeqC from './pages/S123-drills/algebraic-equations/ax-pm-b-eq-c.jsx';
 import AsinxeqB from './pages/dse-drills/Trigo/Equations/asinx-eq-b.jsx';
+import AcosxeqB from './pages/dse-drills/Trigo/Equations/acosx-eq-b.jsx';
+import AtanxeqB from './pages/dse-drills/Trigo/Equations/atanx-eq-b.jsx';
 
 export default function Main() {
     return (
@@ -54,6 +56,8 @@ export default function Main() {
             <Route path="/math-drills-S123/algebraic-equations/ax-over-b-eq-c" element={<AXoverBeqC />} />
             <Route path="/math-drills-S123/algebraic-equations/ax-pm-b-eq-c" element={<AXpmBeqC />} />
             <Route path="/math-drills-DSEMathCore/Trigo/Equations/asinx-eq-b" element={<AsinxeqB />} />
+            <Route path="/math-drills-DSEMathCore/Trigo/Equations/acosx-eq-b" element={<AcosxeqB />} />
+            <Route path="/math-drills-DSEMathCore/Trigo/Equations/atanx-eq-b" element={<AtanxeqB />} />
         </Routes>
     );
 }

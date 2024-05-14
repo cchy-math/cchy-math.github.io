@@ -22,26 +22,19 @@ function divToFracLaTeX(numerator, denominator) {
     return (D === 1) ? (sign + N) : (sign + "\\displaystyle \\frac{"+N+"}{"+D+"}");
 }
 
-function corrTo3sf(num) {
-    // Check for valid number
-    if(isNaN(num)) return "Invalid number";
-
-    // Get number of digits before decimal
-    let digitsBeforeDecimal = (`${Math.floor(num)}`).length;
-
-    // Calculate rounding level
-    let sigFigs = digitsBeforeDecimal <= 3 ? digitsBeforeDecimal : 3;
-
-    // Round number to specified sig figs
-    let power = Math.pow(10, sigFigs);
-    let rounded = Math.round(num * power) / power;  
-
-    // Return rounded number
-    return rounded;
+function corrTo3sf(number) {
+    if (number === 0) {
+        return 0;
+      }
+      
+      const power = Math.floor(Math.log10(Math.abs(number))) + 1;
+      const factor = Math.pow(10, 3 - power);
+      
+      return Math.round(number * factor) / factor;
 }
 
-function arcsinDeg(num) {
-    let radians = Math.asin(num);
+function arctanDeg(num) {
+    let radians = Math.atan(num);
     let degrees = radians * (180 / Math.PI);
     return degrees;
 }
@@ -89,25 +82,18 @@ export default function AtanxeqB() {
                         <button className="button-rainbow h4 w-75" onClick={() => {
                             A = getRndInteger(1,11)*Math.pow(-1,getRndInteger(1,3));
                             B = getRndInteger(0,11)*Math.pow(-1,getRndInteger(1,3));
-                            let arcTrigo = "\\arcsin \\left(" + divToFracLaTeX(B,A) + "\\right)";
+                            let arcTrigo = "\\arctan \\left(" + divToFracLaTeX(B,A) + "\\right)";
                             setTexA(begin + trigo + "=" + divToFracLaTeX(B,A) + end);
-                            if(B/A > 1 || B/A < -1){
-                                setTexA_LHS1(begin + "\\because -1 \\leq \\sin \\theta \\leq 1 " + end);
-                                setTexA_LHS2(begin + "\\therefore \\text{No real solutions}" + end);
-                                setTexA_RHS1(begin + "\\because -1 \\leq \\sin \\theta \\leq 1 " + end);
-                                setTexA_RHS2(begin + "\\therefore \\text{無實數解}" + end);
+                            if(A*B >= 0){
+                                setTexA_LHS1(begin + "\\theta = " + arcTrigo + end);
+                                setTexA_RHS1(begin + "\\theta = 180^{\\circ} + " + arcTrigo + end);
+                                setTexA_LHS2(begin + "\\theta = " + corrTo3sf(Number(arctanDeg(B/A))) + "^{\\circ}" + end);
+                                setTexA_RHS2(begin + "\\theta = " + corrTo3sf(180 + Number(arctanDeg(B/A))) + "^{\\circ}" + end);    
                             }else{
-                                if(A*B >= 0){
-                                    setTexA_LHS1(begin + "\\theta = " + arcTrigo + end);
-                                    setTexA_RHS1(begin + "\\theta = 180^{\\circ} - " + arcTrigo + end);
-                                    setTexA_LHS2(begin + "\\theta = " + corrTo3sf(Number(arcsinDeg(B/A))) + "^{\\circ}" + end);
-                                    setTexA_RHS2(begin + "\\theta = " + corrTo3sf(180 - Number(arcsinDeg(B/A))) + "^{\\circ}" + end);    
-                                }else{
-                                    setTexA_LHS1(begin + "\\theta = 180^{\\circ} + \\left|" + arcTrigo + "\\right|" + end);
-                                    setTexA_RHS1(begin + "\\theta = 360^{\\circ} - \\left|" + arcTrigo + "\\right|" + end);
-                                    setTexA_LHS2(begin + "\\theta = " + corrTo3sf(180 + Math.abs(Number(arcsinDeg(B/A)))) + "^{\\circ}" + end);
-                                    setTexA_RHS2(begin + "\\theta = " + corrTo3sf(360 - Math.abs(Number(arcsinDeg(B/A)))) + "^{\\circ}" + end);    
-                                }
+                                setTexA_LHS1(begin + "\\theta = 180^{\\circ} - \\left|" + arcTrigo + "\\right|" + end);
+                                setTexA_RHS1(begin + "\\theta = 360^{\\circ} - \\left|" + arcTrigo + "\\right|" + end);
+                                setTexA_LHS2(begin + "\\theta = " + corrTo3sf(180 - Math.abs(Number(arctanDeg(B/A)))) + "^{\\circ}" + end);
+                                setTexA_RHS2(begin + "\\theta = " + corrTo3sf(360 - Math.abs(Number(arctanDeg(B/A)))) + "^{\\circ}" + end);    
                             }
                             if(A === 1){
                                 A = "";
