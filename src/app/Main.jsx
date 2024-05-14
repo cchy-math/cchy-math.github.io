@@ -27,6 +27,7 @@ import AXpmBeqC from './pages/S123-drills/algebraic-equations/ax-pm-b-eq-c.jsx';
 import AsinxeqB from './pages/dse-drills/Trigo/Equations/asinx-eq-b.jsx';
 import AcosxeqB from './pages/dse-drills/Trigo/Equations/acosx-eq-b.jsx';
 import AtanxeqB from './pages/dse-drills/Trigo/Equations/atanx-eq-b.jsx';
+import TrigoQuadratic from './pages/dse-drills/Trigo/Equations/trigo-quadratic.jsx';
 
 export default function Main() {
     return (
@@ -58,6 +59,7 @@ export default function Main() {
             <Route path="/math-drills-DSEMathCore/Trigo/Equations/asinx-eq-b" element={<AsinxeqB />} />
             <Route path="/math-drills-DSEMathCore/Trigo/Equations/acosx-eq-b" element={<AcosxeqB />} />
             <Route path="/math-drills-DSEMathCore/Trigo/Equations/atanx-eq-b" element={<AtanxeqB />} />
+            <Route path="/math-drills-DSEMathCore/Trigo/Equations/trigo-quadratic" element={<TrigoQuadratic />} />
         </Routes>
     );
 }

@@ -109,16 +109,6 @@ export default function MathDrills_DSEMathCore() {
 							content={"\\( A\\tan(\\theta) = B \\)"}
 						/>
 					</NavLink>
-					<NavLink to="/math-drills-DSEMathCore/Trigo/Equations/all-tranformation" style={{width: 300 }}>
-						<MathDrillsCard
-							content={"\\( A\\cos(B \\theta + C) = D \\)"}
-						/>
-					</NavLink>
-					<NavLink to="/math-drills-DSEMathCore/Trigo/Equations/trigo-square" style={{width: 300 }}>
-						<MathDrillsCard
-							content={"\\( \\cos^2(\\theta) = K \\)"}
-						/>
-					</NavLink>
 					<NavLink to="/math-drills-DSEMathCore/Trigo/Equations/trigo-quadratic" style={{width: 300 }}>
 						<MathDrillsCard
 							content={"\\( Af(\\theta)^2 + Bf(\\theta) + C \\)"}
