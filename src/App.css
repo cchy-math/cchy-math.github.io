@@ -17,6 +17,9 @@ p {
 body {
 	background-image: url("dark-purple-20.jpg");
 	background-color: black;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 	color: var(--bs-light);
 	max-width: 100%;
     overflow-x: hidden;
