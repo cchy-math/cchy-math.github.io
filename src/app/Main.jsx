@@ -35,7 +35,6 @@ export default function Main() {
             <Route path="*" element={<News />} />
             <Route path="/" element={<News />} />
             <Route path="menu" element={<Menu />} />
-            <Route path="math-drills-S123" element={<MathDrills_S123 />} />
             <Route path="math-drills-DSEMathCore">
                 <Route path="" element={<MathDrills_DSEMathCore />} />
                 <Route path="Trigo">
@@ -64,7 +63,8 @@ export default function Main() {
                     </Route>
                 </Route>
             </Route>
-            <Route path="math-drills-DSEMathCore">
+            <Route path="math-drills-S123">
+                <Route path="" element={<MathDrills_S123 />} />
                 <Route path="algebraic-equations">
                     <Route path="x-pm-a-eq-b" element={<XpmAeqB />} />
                     <Route path="a-pm-x-eq-b" element={<ApmXeqB />} />
