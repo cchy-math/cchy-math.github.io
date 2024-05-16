@@ -34,32 +34,46 @@ export default function Main() {
         <Routes basename="/">
             <Route path="*" element={<News />} />
             <Route path="/" element={<News />} />
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/math-drills-S123" element={<MathDrills_S123 />} />
-            <Route path="/math-drills-DSEMathCore" element={<MathDrills_DSEMathCore />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/ASTC/angle-pm-theta" element={<AnglePmTheta />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/ASTC/theta-pm-angle" element={<ThetaPmAngle />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/ASTC/negative-angle" element={<NegativeAngle />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/ASTC/astc-sign" element={<ASTCsign />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/ASTC/astc-180-360" element={<ASTC180360 />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/ASTC/astc-90-270" element={<ASTC90270 />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/ASTC/astc" element={<ASTC />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/Range/acosx" element={<Acosx />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/Range/acosx-pm-b" element={<AcosxpmB />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/Range/b-pm-acosx" element={<BpmAcosx />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/Range/b-pm-acos2x" element={<BpmAcos2x />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/Range/c-over-b-pm-acos2x" element={<CoverBpmAcos2x />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/Range/range-all-type" element={<RangeAllType />} />
-            <Route path="/math-drills-S123/algebraic-equations/x-pm-a-eq-b" element={<XpmAeqB />} />
-            <Route path="/math-drills-S123/algebraic-equations/a-pm-x-eq-b" element={<ApmXeqB />} />
-            <Route path="/math-drills-S123/algebraic-equations/ax-eq-b" element={<AXeqB />} />
-            <Route path="/math-drills-S123/algebraic-equations/x-over-a-eq-b" element={<XoverAeqB />} />
-            <Route path="/math-drills-S123/algebraic-equations/ax-over-b-eq-c" element={<AXoverBeqC />} />
-            <Route path="/math-drills-S123/algebraic-equations/ax-pm-b-eq-c" element={<AXpmBeqC />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/Equations/asinx-eq-b" element={<AsinxeqB />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/Equations/acosx-eq-b" element={<AcosxeqB />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/Equations/atanx-eq-b" element={<AtanxeqB />} />
-            <Route path="/math-drills-DSEMathCore/Trigo/Equations/trigo-quadratic" element={<TrigoQuadratic />} />
+            <Route path="menu" element={<Menu />} />
+            <Route path="math-drills-S123" element={<MathDrills_S123 />} />
+            <Route path="math-drills-DSEMathCore">
+                <Route path="" element={<MathDrills_DSEMathCore />} />
+                <Route path="Trigo">
+                    <Route path="ASTC">
+                        <Route path="angle-pm-theta" element={<AnglePmTheta />} />
+                        <Route path="theta-pm-angle" element={<ThetaPmAngle />} />
+                        <Route path="negative-angle" element={<NegativeAngle />} />
+                        <Route path="astc-sign" element={<ASTCsign />} />
+                        <Route path="astc-180-360" element={<ASTC180360 />} />
+                        <Route path="astc-90-270" element={<ASTC90270 />} />
+                        <Route path="astc" element={<ASTC />} />
+                    </Route>
+                    <Route path="Range">
+                        <Route path="acosx" element={<Acosx />} />
+                        <Route path="acosx-pm-b" element={<AcosxpmB />} />
+                        <Route path="b-pm-acosx" element={<BpmAcosx />} />
+                        <Route path="b-pm-acos2x" element={<BpmAcos2x />} />
+                        <Route path="c-over-b-pm-acos2x" element={<CoverBpmAcos2x />} />
+                        <Route path="range-all-type" element={<RangeAllType />} />
+                    </Route>
+                    <Route path="Equations">
+                        <Route path="asinx-eq-b" element={<AsinxeqB />} />
+                        <Route path="acosx-eq-b" element={<AcosxeqB />} />
+                        <Route path="atanx-eq-b" element={<AtanxeqB />} />
+                        <Route path="trigo-quadratic" element={<TrigoQuadratic />} />
+                    </Route>
+                </Route>
+            </Route>
+            <Route path="math-drills-DSEMathCore">
+                <Route path="algebraic-equations">
+                    <Route path="x-pm-a-eq-b" element={<XpmAeqB />} />
+                    <Route path="a-pm-x-eq-b" element={<ApmXeqB />} />
+                    <Route path="ax-eq-b" element={<AXeqB />} />
+                    <Route path="x-over-a-eq-b" element={<XoverAeqB />} />
+                    <Route path="ax-over-b-eq-c" element={<AXoverBeqC />} />
+                    <Route path="ax-pm-b-eq-c" element={<AXpmBeqC />} />
+                </Route>
+            </Route>
         </Routes>
     );
 }
