@@ -16,6 +16,12 @@ export default function News() {
 				4C
 				<div className="row ms-3 flex-nowrap overflow-auto scroll-news">
 					<NewsCard
+						title={'Chapter Test 10'}
+						color={'success'}
+						date={'2024 May 17'}
+						content={"第10課級測將於5月28日星期二進行。"}
+					/>
+					<NewsCard
 						title={'星期六補課'}
 						color={'warning'}
 						date={'2024 MAY 06'}
