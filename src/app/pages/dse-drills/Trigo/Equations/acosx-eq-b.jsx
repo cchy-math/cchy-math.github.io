@@ -43,10 +43,10 @@ export default function AcosxeqB() {
     
 	const [texQ, setTexQ] =useState('');
     const [texA, setTexA] =useState('');
-    const [texA_LHS1, setTexA_LHS1] =useState('');
-    const [texA_RHS1, setTexA_RHS1] =useState('');
-    const [texA_LHS2, setTexA_LHS2] =useState('');
-    const [texA_RHS2, setTexA_RHS2] =useState('');
+    const [texA_LHS1, setTexA_LHS1] = useState('');
+    const [texA_RHS1, setTexA_RHS1] = useState('');
+    const [texA_LHS2, setTexA_LHS2] = useState('');
+    const [texA_RHS2, setTexA_RHS2] = useState('');
     useEffect(()=>{
 		if( typeof window?.MathJax !== "undefined"){
 			window.MathJax.typesetClear()
