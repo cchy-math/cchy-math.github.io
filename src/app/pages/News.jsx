@@ -98,7 +98,7 @@ export default function News() {
 					<NewsCard
 						title={'Chapter Test 13'}
 						color={'success'}
-						date={'2024 May 17'}
+						date={'2024 May 20'}
 						content={"第13課級測將於5月28日星期二進行。"}
 					/>
 					<NewsCard 
@@ -134,7 +134,7 @@ export default function News() {
 					<NewsCard
 						title={'Chapter Test 13'}
 						color={'success'}
-						date={'2024 May 17'}
+						date={'2024 May 20'}
 						content={"第13課級測將於5月28日星期二進行。"}
 					/>
 					<NewsCard 
