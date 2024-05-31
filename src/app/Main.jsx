@@ -28,6 +28,9 @@ import AsinxeqB from './pages/dse-drills/Trigo/Equations/asinx-eq-b.jsx';
 import AcosxeqB from './pages/dse-drills/Trigo/Equations/acosx-eq-b.jsx';
 import AtanxeqB from './pages/dse-drills/Trigo/Equations/atanx-eq-b.jsx';
 import TrigoQuadratic from './pages/dse-drills/Trigo/Equations/trigo-quadratic.jsx';
+import XpmA2 from './pages/S123-drills/Identities(Expand)/x-pm-a-2.jsx';
+import AXpmB2 from './pages/S123-drills/Identities(Expand)/ax-pm-b-2.jsx';
+import AXpmBY2 from './pages/S123-drills/Identities(Expand)/ax-pm-by-2.jsx';
 
 export default function Main() {
     return (
@@ -72,6 +75,11 @@ export default function Main() {
                     <Route path="x-over-a-eq-b" element={<XoverAeqB />} />
                     <Route path="ax-over-b-eq-c" element={<AXoverBeqC />} />
                     <Route path="ax-pm-b-eq-c" element={<AXpmBeqC />} />
+                </Route>
+                <Route path="identites-expand">
+                    <Route path="x-pm-a-2" element={<XpmA2 />} />
+                    <Route path="ax-pm-b-2" element={<AXpmB2 />} />
+                    <Route path="ax-pm-by-2" element={<AXpmBY2 />} />
                 </Route>
             </Route>
         </Routes>

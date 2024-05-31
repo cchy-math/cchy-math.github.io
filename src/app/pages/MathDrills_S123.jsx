@@ -60,6 +60,27 @@ export default function MathDrills_S123() {
 				</div>
 			</div>
 			<hr/>
+			<div className="row align-items-center flex h1 px-3">
+				Identites (Expand)
+				<div className="row flex-nowrap overflow-auto scroll-news">
+					<NavLink to="/math-drills-S123/identites-expand/x-pm-a-2" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( (x \\pm a)^2 \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-S123/identites-expand/ax-pm-b-2" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( (ax \\pm b)^2 \\)"}
+						/>
+					</NavLink>
+					<NavLink to="/math-drills-S123/identites-expand/ax-pm-by-2" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( (ax \\pm by)^2 \\)"}
+						/>
+					</NavLink>
+				</div>
+			</div>
+			<hr/>
 		</main>
 	);
 }
