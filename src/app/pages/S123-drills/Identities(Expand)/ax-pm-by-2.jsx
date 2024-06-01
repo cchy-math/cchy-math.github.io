@@ -82,7 +82,7 @@ export default function AXpmBY2() {
                                     setTexA_eng("\\( "+x+"^2 + "+2*a*b+x+y+" + "+(b*b)+y+"^2 \\)");
                                 }
                                 else{
-                                    setTexA_eng("\\( "+a+x+"^2 + "+2*a*b+x+y+" + "+(b*b)+y+"^2 \\)");
+                                    setTexA_eng("\\( "+(a*a)+x+"^2 + "+2*a*b+x+y+" + "+(b*b)+y+"^2 \\)");
                                 };
                                 pmsign = "+";
                             }
@@ -91,7 +91,7 @@ export default function AXpmBY2() {
                                     setTexA_eng("\\( "+x+"^2 - "+2*a*b+x+y+" + "+(b*b)+y+"^2 \\)");
                                 }
                                 else{
-                                    setTexA_eng("\\( "+a+x+"^2 - "+2*a*b+x+y+" + "+(b*b)+y+"^2 \\)");
+                                    setTexA_eng("\\( "+(a*a)+x+"^2 - "+2*a*b+x+y+" + "+(b*b)+y+"^2 \\)");
                                 };
                                 pmsign = "-";
                             }
