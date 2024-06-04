@@ -31,6 +31,7 @@ import TrigoQuadratic from './pages/dse-drills/Trigo/Equations/trigo-quadratic.j
 import XpmA2 from './pages/S123-drills/Identities(Expand)/x-pm-a-2.jsx';
 import AXpmB2 from './pages/S123-drills/Identities(Expand)/ax-pm-b-2.jsx';
 import AXpmBY2 from './pages/S123-drills/Identities(Expand)/ax-pm-by-2.jsx';
+import AllTypeCompletingTheSquare from './pages/dse-drills/Quadratic/CompletingTheSquare/all-type.jsx';
 
 export default function Main() {
     return (
@@ -40,6 +41,11 @@ export default function Main() {
             <Route path="menu" element={<Menu />} />
             <Route path="math-drills-DSEMathCore">
                 <Route path="" element={<MathDrills_DSEMathCore />} />
+                <Route path="Quadratic">
+                    <Route path="CompletingTheSquare">
+                        <Route path="all-type" element={<AllTypeCompletingTheSquare />} />
+                    </Route>
+                </Route>
                 <Route path="Trigo">
                     <Route path="ASTC">
                         <Route path="angle-pm-theta" element={<AnglePmTheta />} />
