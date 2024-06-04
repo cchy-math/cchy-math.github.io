@@ -29,6 +29,11 @@ export default function Menu() {
                                 <h5>Math Drills DSE Math (Compulsory Part)</h5>
                             </button>
                         </NavLink>
+                        <NavLink to="/timer">
+                            <button className="button-rainbow my-5" style={{'width': '100%'}}>
+                                <h5>Countdown Timer</h5>
+                            </button>
+                        </NavLink>
                     </div>
                     <div className="col-xs-1 col-lg-4">
                     </div>
