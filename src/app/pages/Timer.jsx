@@ -32,7 +32,7 @@ export default function Timer() {
             <div className="HeaderHeight"></div>
             <section className="p-3">
                 <div className="row p-3">
-                    <div className="col-1 p-3">
+                    <div className="col-1 col-xs-12 p-3">
                         <label for="secondary form" class="form-label h4">Form</label>
                         <select class="form-select bg-dark text-light" id="secondary form" required="" value={form} onChange={e => setForm(e.target.value)}>
                             <option value="1">S1</option>
@@ -43,7 +43,7 @@ export default function Timer() {
                             <option value="6">S6</option>
                         </select>
                     </div>
-                    <div className="col-4 p-3">
+                    <div className="col-4 col-xs-12 p-3">
                         <label for="subject" class="form-label h4">Subject</label>
                         <select class="form-select bg-dark text-light" id="subject" onChange={handleSubjectChange} required="">
                             {subjectData && subjectData.map((data, key) => {
@@ -55,7 +55,7 @@ export default function Timer() {
                             })}
                         </select>
                     </div>
-                    <div className="col-3 p-3">
+                    <div className="col-3 col-xs-12 p-3">
                         <label for="paper" class="form-label h4">Paper</label>
                         <select class="form-select bg-dark text-light" id="paper" required="">
                         {subjectData.find(sub => sub.subject === selectedSubject) &&
@@ -64,7 +64,7 @@ export default function Timer() {
                         ))}
                         </select>
                     </div>
-                    <div className="col-2 p-3">
+                    <div className="col-2 col-xs-12 p-3">
                         <label for="starting-time" class="col form-label h4">Starting Time</label>
                         <div className="row">
                             <select class="col mx-3 form-select bg-dark text-light" id="starting-time-hour" required="">
@@ -108,7 +108,7 @@ export default function Timer() {
                             </select>
                         </div>
                     </div>
-                    <div className="col-1 p-3">
+                    <div className="col-1 col-xs-12 p-3">
                         <label for="duration" class="form-label h4">Duration</label>
                         <select class="form-select bg-dark text-light" id="duration" required="">
                             <option value="15">15</option>
