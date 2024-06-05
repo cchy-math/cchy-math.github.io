@@ -2,7 +2,21 @@ export const S12subjectData = [
     {
       "subject": "CHI",
       "chi_name": "中國語文", 
-      "eng_name": "Chinese Language"
+      "eng_name": "Chinese Language",
+      "papers": [
+        {
+          "chi_name": "試卷（一） 閱讀", 
+          "eng_name": "Paper I Reading",
+        },
+        {
+          "chi_name": "試卷（二） 寫作", 
+          "eng_name": "Paper II Writing",
+        },
+        {
+          "chi_name": "試卷（三） 聆聽", 
+          "eng_name": "Paper III Listening",
+        },
+      ],
     },
     {
       "subject": "ENG",
