@@ -60,6 +60,14 @@ export const S12subjectData = [
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
+        {
+          "chi_name": "小測", 
+          "eng_name": "Section Quiz",
+        },
+        {
+          "chi_name": "級測", 
+          "eng_name": "Chapter Test",
+        },
       ],
     },
     {

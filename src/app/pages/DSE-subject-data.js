@@ -60,6 +60,14 @@ export const DSEsubjectData = [
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
+        {
+          "chi_name": "小測", 
+          "eng_name": "Section Quiz",
+        },
+        {
+          "chi_name": "級測", 
+          "eng_name": "Chapter Test",
+        },
       ],
     },
     {
@@ -68,8 +76,16 @@ export const DSEsubjectData = [
       "eng_name": "Mathematics Extended Part Modules 1" ,
       "papers": [
         {
-          "chi_name": "", 
-          "eng_name": "",
+          "chi_name": "微積分與統計學", 
+          "eng_name": "Calculus and Statistics",
+        },
+        {
+          "chi_name": "小測", 
+          "eng_name": "Section Quiz",
+        },
+        {
+          "chi_name": "級測", 
+          "eng_name": "Chapter Test",
         },
       ],
     },
@@ -79,8 +95,16 @@ export const DSEsubjectData = [
       "eng_name": "Mathematics Extended Part Modules 2",
       "papers": [
         {
-          "chi_name": "", 
-          "eng_name": "",
+          "chi_name": "代數與微積分", 
+          "eng_name": "Algebra and Calculus",
+        },
+        {
+          "chi_name": "小測", 
+          "eng_name": "Section Quiz",
+        },
+        {
+          "chi_name": "級測", 
+          "eng_name": "Chapter Test",
         },
       ],
     },
@@ -266,8 +290,12 @@ export const DSEsubjectData = [
       "eng_name": "Visual Arts",
       "papers": [
         {
-          "chi_name": "", 
-          "eng_name": "",
+          "chi_name": "試卷（一）視覺形式表達主題", 
+          "eng_name": "Paper I Visual presentation of a theme",
+        },
+        {
+          "chi_name": "試卷（二）設計", 
+          "eng_name": "Paper II Design",
         },
       ],
     },
