@@ -31,7 +31,7 @@ export default function Menu() {
                         </NavLink>
                         <NavLink to="/timer">
                             <button className="button-rainbow my-5" style={{'width': '100%'}}>
-                                <h5>Countdown Timer</h5>
+                                <h5>Timer</h5>
                             </button>
                         </NavLink>
                     </div>

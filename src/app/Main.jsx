@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import News from './pages/News.jsx';
 import Menu from './pages/Menu.jsx';
+import Timer from './pages/Timer.jsx';
 import MathDrills_S123 from './pages/MathDrills_S123.jsx';
 import MathDrills_DSEMathCore from './pages/MathDrills_DSEMathCore.jsx';
 import AnglePmTheta from './pages/dse-drills/Trigo/ASTC/angle-pm-theta.jsx';
@@ -39,6 +40,7 @@ export default function Main() {
             <Route path="*" element={<News />} />
             <Route path="/" element={<News />} />
             <Route path="menu" element={<Menu />} />
+            <Route path="timer" element={<Timer />} />
             <Route path="math-drills-DSEMathCore">
                 <Route path="" element={<MathDrills_DSEMathCore />} />
                 <Route path="Quadratic">
