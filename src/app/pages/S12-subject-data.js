@@ -16,17 +16,51 @@ export const S12subjectData = [
           "chi_name": "試卷（三） 聆聽", 
           "eng_name": "Paper III Listening",
         },
+        
+        {
+          "chi_name": "試卷（四） 說話", 
+          "eng_name": "Paper IV Speaking",
+        },
       ],
     },
     {
       "subject": "ENG",
       "chi_name": "英國語文",
-      "eng_name": "English Language"
+      "eng_name": "English Language",
+      "papers": [
+        {
+          "chi_name": "試卷（一） 閱讀", 
+          "eng_name": "Paper I Reading",
+        },
+        {
+          "chi_name": "試卷（二） 寫作", 
+          "eng_name": "Paper II Writing",
+        },
+        {
+          "chi_name": "試卷（三） 聆聽", 
+          "eng_name": "Paper III Listening",
+        },
+        
+        {
+          "chi_name": "試卷（四） 說話", 
+          "eng_name": "Paper IV Speaking",
+        },
+      ],
     },
     {
       "subject": "MATH",
       "chi_name": "數學",
-      "eng_name": "Mathematics"
+      "eng_name": "Mathematics",
+      "papers": [
+        {
+          "chi_name": "試卷（一）", 
+          "eng_name": "Paper I",
+        },
+        {
+          "chi_name": "試卷（二）", 
+          "eng_name": "Paper II",
+        },
+      ],
     },
     {
       "subject": "SCI",
