@@ -130,14 +130,36 @@ export default function Timer() {
                                 <option value="45">45 min</option>
                                 <option value="50">50 min</option>
                                 <option value="55">55 min</option>
-                                
                             </select>
                         </div>
                     </div>
                 </div>
             </section>
             <section>
-
+                <div className="row p-3">
+                    <div className="col-3 col-xs-12 p-3">
+                        <label for="display" class="form-label h4">Display</label>
+                        <select class="form-select bg-dark text-light" id="display" required="" value={form} onChange={e => setForm(e.target.value)}>
+                            <option value="CHI">中文 Chinese</option>
+                            <option value="ENG">英文 English</option>
+                            <option value="BOTH">雙語切換 Switch</option>
+                        </select>
+                    </div>
+                    <div className="col-5 col-xs-12 p-3">
+                        <label for="remaining-time" class="form-label h4">Remaining Time</label>
+                        <select class="form-select bg-dark text-light" id="remaining-time" required="" value={form} onChange={e => setForm(e.target.value)}>
+                            <option value="NO">沒有剩餘時間提示 No Remaining Time Reminder</option>
+                            <option value="15+5">時間剩餘15分鐘及5分鐘時提示 Remind when 15 minutes left and 5 minutes left</option>
+                        </select>
+                    </div>
+                    <div className="col-4 col-xs-12 p-3">
+                        <label for="auto" class="form-label h4">Auto Start</label>
+                        <select class="form-select bg-dark text-light" id="auto" required="" value={form} onChange={e => setForm(e.target.value)}>
+                            <option value="MANUAL">手動開始 Start Manually</option>
+                            <option value="AUTO">自動開始 Start Automatically</option>
+                        </select>
+                    </div>
+                </div>
             </section>
         </main>
     );
