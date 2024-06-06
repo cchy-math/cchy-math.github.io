@@ -108,38 +108,31 @@ export default function Timer() {
                             </select>
                         </div>
                     </div>
-                    <div className="col-1 col-xs-12 p-3">
+                    <div className="col-2 col-xs-12 p-3">
                         <label for="duration" class="form-label h4">Duration</label>
-                        <select class="form-select bg-dark text-light" id="duration" required="">
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="25">25</option>
-                            <option value="30">30</option>
-                            <option value="35">35</option>
-                            <option value="40">40</option>
-                            <option value="45">45</option>
-                            <option value="50">50</option>
-                            <option value="55">55</option>
-                            <option value="60">60</option>
-                            <option value="65">65</option>
-                            <option value="70">70</option> 
-                            <option value="75">75</option>
-                            <option value="80">80</option>
-                            <option value="85">85</option>
-                            <option value="90">90</option>
-                            <option value="95">95</option>
-                            <option value="100">100</option>
-                            <option value="105">105</option>
-                            <option value="110">110</option>
-                            <option value="115">115</option>
-                            <option value="120">120</option>
-                            <option value="125">125</option>
-                            <option value="130">130</option>
-                            <option value="135">135</option>
-                            <option value="140">140</option>
-                            <option value="145">145</option>
-                            <option value="150">150</option>
-                        </select>
+                        <div className="row">
+                            <select class="col mx-3 form-select bg-dark text-light" id="duration-hour" required="">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <select class="col mx-3 form-select bg-dark text-light" id="duration-min" required="">
+                                <option value="5">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                                
+                            </select>
+                        </div>
                     </div>
                 </div>
             </section>
