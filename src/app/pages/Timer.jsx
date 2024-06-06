@@ -7,9 +7,7 @@ import { S12subjectData } from "./S12-subject-data.js";
 import { S3subjectData } from "./S3-subject-data.js";
 import { DSEsubjectData } from "./DSE-subject-data.js";
 export default function Timer() {
-    const [form, setForm] = useState('');
-    const [selectedSubject, setSelectedSubject] = useState('');
-    const [selectedPaper, setSelectedPaper] = useState('');
+    
     let subjectData;
     if(form === '1' || form === '2') {
         subjectData = S12subjectData;
@@ -20,13 +18,6 @@ export default function Timer() {
     else {
         subjectData = DSEsubjectData; 
     };
-    const handleSubjectChange = (e) => {
-        setSelectedSubject(e.target.value);
-        setSelectedPaper(''); 
-    }
-    useEffect(() => {
-        setSelectedPaper('');
-    }, [selectedSubject]);
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
@@ -34,34 +25,20 @@ export default function Timer() {
                 <div className="row p-3">
                     <div className="col-md-1 col-xs-12 p-3">
                         <label for="secondary form" class="form-label h4">Form</label>
-                        <select class="form-select bg-dark text-light" id="secondary form" required="" value={form} onChange={e => setForm(e.target.value)}>
-                            <option value="1">中一 S1</option>
-                            <option value="2">中二 S2</option>
-                            <option value="3">中三 S3</option>
-                            <option value="4">中四 S4</option>
-                            <option value="5">中五 S5</option>
-                            <option value="6">中六 S6</option>
+                        <select class="form-select bg-dark text-light" id="secondary form" required="">
+                            
                         </select>
                     </div>
                     <div className="col-md-4 col-xs-12 p-3">
                         <label for="subject" class="form-label h4">Subject</label>
-                        <select class="form-select bg-dark text-light" id="subject" onChange={handleSubjectChange} required="">
-                            {subjectData && subjectData.map((data, key) => {
-                                return (
-                                    <option value={data.subject}>
-                                        {data.chi_name+" "+data.eng_name}
-                                    </option>
-                                );
-                            })}
+                        <select class="form-select bg-dark text-light" id="subject" equired="">
+                            
                         </select>
                     </div>
-                    <div className="col-md-3 col-xs-12 p-3">
+                    <div className="col-3 col-xs-12 p-3">
                         <label for="paper" class="form-label h4">Paper</label>
                         <select class="form-select bg-dark text-light" id="paper" required="">
-                        {subjectData.find(sub => sub.subject_code === selectedSubject) &&
-                            subjectData.find(sub => sub.subject_code === selectedSubject).papers.map(paper => (
-                            <option value={paper.subject_code}>{paper.chi_name} {paper.eng_name}</option> 
-                        ))}
+                        
                         </select>
                     </div>
                     <div className="col-md-2 col-xs-12 p-3">
