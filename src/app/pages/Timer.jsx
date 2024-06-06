@@ -30,17 +30,17 @@ export default function Timer() {
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
-            <section className="p-3">
+            <section className="TimerSetting p-3">
                 <div className="row p-3">
                     <div className="col-md-1 col-xs-12 p-3">
                         <label for="secondary form" class="form-label h4">Form</label>
                         <select class="form-select bg-dark text-light" id="secondary form" required="" value={form} onChange={e => setForm(e.target.value)}>
-                            <option value="1">S1</option>
-                            <option value="2">S2</option>
-                            <option value="3">S3</option>
-                            <option value="4">S4</option>
-                            <option value="5">S5</option>
-                            <option value="6">S6</option>
+                            <option value="1">中一 S1</option>
+                            <option value="2">中二 S2</option>
+                            <option value="3">中三 S3</option>
+                            <option value="4">中四 S4</option>
+                            <option value="5">中五 S5</option>
+                            <option value="6">中六 S6</option>
                         </select>
                     </div>
                     <div className="col-md-4 col-xs-12 p-3">
