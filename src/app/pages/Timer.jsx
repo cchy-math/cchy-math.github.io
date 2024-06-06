@@ -1,32 +1,46 @@
-import React, {useEffect, useState} from 'react';
-import '../../components/button/button.css'
-import '../../components/button/button.js'
-import '../../components/clock/clock.css'
-import '../../components/clock/clock.js'
+import React, {useEffect, useState} from "react";
+import "../../components/button/button.css"
+import "../../components/button/button.js"
+import "../../components/clock/clock.css"
+import "../../components/clock/clock.js"
 import { S12subjectData } from "./S12-subject-data.js";
 import { S3subjectData } from "./S3-subject-data.js";
 import { DSEsubjectData } from "./DSE-subject-data.js";
 export default function Timer() {
-    
-    let subjectData;
-    if(form === '1' || form === '2') {
-        subjectData = S12subjectData;
-    }
-    else if(form === '3'){
-        subjectData = S3subjectData; 
-    }
-    else {
-        subjectData = DSEsubjectData; 
-    };
+    const [yearSelection, setYearSelection] = useState("");
+    const yearList = [
+        ["年級", "Year"],
+        ["中一", "S1"],
+        ["中二", "S2"], 
+        ["中三", "S3"],
+        ["中四", "S4"],
+        ["中五", "S5"],
+        ["中六", "S6"]
+      ];
+    const handleYearChange = (e) => {
+        setYearSelection(e.target.value);
+      };
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
             <section className="p-3">
                 <div className="row p-3">
-                    <div className="col-md-1 col-xs-12 p-3">
-                        <label for="secondary form" class="form-label h4">Form</label>
-                        <select class="form-select bg-dark text-light" id="secondary form" required="">
-                            
+                    <div className="col-md-2 col-xs-12 p-3">
+                        <label for="year" class="form-label h4">Year</label>
+                        <select 
+                            value={yearSelection}
+                            onChange={handleYearChange}
+                            class="form-select bg-dark text-light" 
+                            id="year"
+                            required
+                        >
+                            {yearList.map((year, index) => {
+                                return (
+                                    <option key={index} value={year[1]}>
+                                        {year[0]} {year[1]}  
+                                    </option>
+                                )
+                            })}
                         </select>
                     </div>
                     <div className="col-md-4 col-xs-12 p-3">
@@ -35,7 +49,7 @@ export default function Timer() {
                             
                         </select>
                     </div>
-                    <div className="col-3 col-xs-12 p-3">
+                    <div className="col-2 col-xs-12 p-3">
                         <label for="paper" class="form-label h4">Paper</label>
                         <select class="form-select bg-dark text-light" id="paper" required="">
                         
