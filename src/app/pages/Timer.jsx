@@ -134,8 +134,6 @@ export default function Timer() {
                         </div>
                     </div>
                 </div>
-            </section>
-            <section className="p-3">
                 <div className="row p-3">
                     <div className="col-md-4 col-xs-12 p-3">
                         <label for="display" class="form-label h4">Display</label>
