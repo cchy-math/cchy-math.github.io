@@ -32,7 +32,7 @@ export default function Timer() {
             <div className="HeaderHeight"></div>
             <section className="p-3">
                 <div className="row p-3">
-                    <div className="col-1 col-xs-12 p-3">
+                    <div className="col-md-1 col-xs-12 p-3">
                         <label for="secondary form" class="form-label h4">Form</label>
                         <select class="form-select bg-dark text-light" id="secondary form" required="" value={form} onChange={e => setForm(e.target.value)}>
                             <option value="1">S1</option>
@@ -43,7 +43,7 @@ export default function Timer() {
                             <option value="6">S6</option>
                         </select>
                     </div>
-                    <div className="col-4 col-xs-12 p-3">
+                    <div className="col-md-4 col-xs-12 p-3">
                         <label for="subject" class="form-label h4">Subject</label>
                         <select class="form-select bg-dark text-light" id="subject" onChange={handleSubjectChange} required="">
                             {subjectData && subjectData.map((data, key) => {
@@ -55,7 +55,7 @@ export default function Timer() {
                             })}
                         </select>
                     </div>
-                    <div className="col-3 col-xs-12 p-3">
+                    <div className="col-md-3 col-xs-12 p-3">
                         <label for="paper" class="form-label h4">Paper</label>
                         <select class="form-select bg-dark text-light" id="paper" required="">
                         {subjectData.find(sub => sub.subject === selectedSubject) &&
@@ -64,7 +64,7 @@ export default function Timer() {
                         ))}
                         </select>
                     </div>
-                    <div className="col-2 col-xs-12 p-3">
+                    <div className="col-md-2 col-xs-12 p-3">
                         <label for="starting-time" class="col form-label h4">Starting Time</label>
                         <div className="row">
                             <select class="col mx-3 form-select bg-dark text-light" id="starting-time-hour" required="">
@@ -108,7 +108,7 @@ export default function Timer() {
                             </select>
                         </div>
                     </div>
-                    <div className="col-2 col-xs-12 p-3">
+                    <div className="col-md-2 col-xs-12 p-3">
                         <label for="duration" class="form-label h4">Duration</label>
                         <div className="row">
                             <select class="col mx-3 form-select bg-dark text-light" id="duration-hour" required="">
@@ -137,7 +137,7 @@ export default function Timer() {
             </section>
             <section className="p-3">
                 <div className="row p-3">
-                    <div className="col-4 col-xs-12 p-3">
+                    <div className="col-md-4 col-xs-12 p-3">
                         <label for="display" class="form-label h4">Display</label>
                         <select class="form-select bg-dark text-light" id="display" required="">
                             <option value="CHI">中文 Chinese</option>
@@ -145,14 +145,14 @@ export default function Timer() {
                             <option value="BOTH">雙語切換 Switch</option>
                         </select>
                     </div>
-                    <div className="col-4 col-xs-12 p-3">
+                    <div className="col-md-4 col-xs-12 p-3">
                         <label for="remaining-time" class="form-label h4">Remaining Time</label>
                         <select class="form-select bg-dark text-light" id="remaining-time" required="">
                             <option value="NO">沒有剩餘時間提示 No Remaining Time Reminder</option>
                             <option value="YES">時間剩餘15分鐘及5分鐘時提示 Remind when 15 minutes left and 5 minutes left</option>
                         </select>
                     </div>
-                    <div className="col-4 col-xs-12 p-3">
+                    <div className="col-md-4 col-xs-12 p-3">
                         <label for="auto" class="form-label h4">Auto Start</label>
                         <select class="form-select bg-dark text-light" id="auto" required="">
                             <option value="MANUAL">手動開始 Start Manually</option>
