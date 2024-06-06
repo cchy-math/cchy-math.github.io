@@ -46,6 +46,10 @@ export default function Timer() {
         setSubjectOptions(subjectOptions);
         
     }, [yearSelection])
+    const [selectedSubject, setSelectedSubject] = useState();
+    const handleSubjectChange = (e) => {
+        setSelectedSubject(e.target.value);
+      }
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
@@ -78,7 +82,7 @@ export default function Timer() {
                     <div className="col-2 col-xs-12 p-3">
                         <label for="paper" class="form-label h4">Paper</label>
                         <select class="form-select bg-dark text-light" id="paper" required="">
-                        
+                            
                         </select>
                     </div>
                     <div className="col-md-2 col-xs-12 p-3">
