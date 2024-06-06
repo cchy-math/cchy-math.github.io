@@ -1,63 +1,73 @@
 export const S3subjectData = [
   {
-    "subject": "CHI",
+    "subject_code": "CHI",
     "chi_name": "中國語文", 
     "eng_name": "Chinese Language",
     "papers": [
       {
-        "chi_name": "試卷（一） 閱讀", 
+        "id": "1",
+          "chi_name": "試卷（一） 閱讀", 
         "eng_name": "Paper I Reading",
       },
       {
-        "chi_name": "試卷（二） 寫作", 
+        "id": "2",
+          "chi_name": "試卷（二） 寫作", 
         "eng_name": "Paper II Writing",
       },
       {
-        "chi_name": "試卷（三） 聆聽", 
+        "id": "3",
+          "chi_name": "試卷（三） 聆聽", 
         "eng_name": "Paper III Listening",
       },
       
       {
-        "chi_name": "試卷（四） 說話", 
+        "id": "4",
+          "chi_name": "試卷（四） 說話", 
         "eng_name": "Paper IV Speaking",
       },
     ],
   },
   {
-    "subject": "ENG",
+    "subject_code": "ENG",
     "chi_name": "英國語文",
     "eng_name": "English Language",
     "papers": [
       {
-        "chi_name": "試卷（一） 閱讀", 
+        "id": "1",
+          "chi_name": "試卷（一） 閱讀", 
         "eng_name": "Paper I Reading",
       },
       {
-        "chi_name": "試卷（二） 寫作", 
+        "id": "2",
+          "chi_name": "試卷（二） 寫作", 
         "eng_name": "Paper II Writing",
       },
       {
-        "chi_name": "試卷（三） 聆聽", 
+        "id": "3",
+          "chi_name": "試卷（三） 聆聽", 
         "eng_name": "Paper III Listening",
       },
       
       {
-        "chi_name": "試卷（四） 說話", 
+        "id": "4",
+          "chi_name": "試卷（四） 說話", 
         "eng_name": "Paper IV Speaking",
       },
     ],
   },
   {
-    "subject": "MATH",
+    "subject_code": "MATH",
     "chi_name": "數學",
     "eng_name": "Mathematics",
     "papers": [
       {
-        "chi_name": "試卷（一）", 
+        "id": "1",
+          "chi_name": "試卷（一）", 
         "eng_name": "Paper I",
       },
       {
-        "chi_name": "試卷（二）", 
+        "id": "2",
+          "chi_name": "試卷（二）", 
         "eng_name": "Paper II",
       },
       {
@@ -71,7 +81,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "PHY",
+    "subject_code": "PHY",
     "chi_name": "物理", 
     "eng_name": "Physics",
     "papers": [
@@ -82,7 +92,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "CHEM",
+    "subject_code": "CHEM",
     "chi_name": "化學",
     "eng_name": "Chemistry",
     "papers": [
@@ -93,7 +103,7 @@ export const S3subjectData = [
     ],
   }, 
   {  
-    "subject": "BIO",
+    "subject_code": "BIO",
     "chi_name": "生物",
     "eng_name": "Biology",
     "papers": [
@@ -104,7 +114,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "ECON",
+    "subject_code": "ECON",
     "chi_name": "經濟",
     "eng_name": "Economics",
     "papers": [
@@ -115,7 +125,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "BUS",
+    "subject_code": "BUS",
     "chi_name": "企業概論", 
     "eng_name": "Business Studies",
     "papers": [
@@ -126,7 +136,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "GEO", 
+    "subject_code": "GEO", 
     "chi_name": "地理",
     "eng_name": "Geography",
     "papers": [
@@ -137,7 +147,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "CHIS",
+    "subject_code": "CHIS",
     "chi_name": "中國歷史", 
     "eng_name": "Chinese History",
     "papers": [
@@ -148,7 +158,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "HIST",
+    "subject_code": "HIST",
     "chi_name": "歷史",
     "eng_name": "History",
     "papers": [
@@ -159,7 +169,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "COM",
+    "subject_code": "COM",
     "chi_name": "電腦", 
     "eng_name": "Computer Literacy",
     "papers": [
@@ -170,7 +180,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "EDB",
+    "subject_code": "EDB",
     "chi_name": "教育局教學語言研究計劃（評估）", 
     "eng_name": "",
     "papers": [
@@ -181,7 +191,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "TSA_CHI_I",
+    "subject_code": "TSA_CHI_I",
     "chi_name": "TSA 中文閱讀", 
     "eng_name": "TSA Chinese Reading",
     "papers": [
@@ -192,7 +202,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "TSA_CHI_II",
+    "subject_code": "TSA_CHI_II",
     "chi_name": "TSA 中文寫作", 
     "eng_name": "TSA Chinese Writing",
     "papers": [
@@ -203,7 +213,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "TSA_CHI_III",
+    "subject_code": "TSA_CHI_III",
     "chi_name": "TSA 中文聆聽", 
     "eng_name": "TSA Chinese Listening",
     "papers": [
@@ -214,7 +224,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "TSA_ENG_I",
+    "subject_code": "TSA_ENG_I",
     "chi_name": "TSA 英文閱讀及聆聽", 
     "eng_name": "TSA English Reading and Listening",
     "papers": [
@@ -225,7 +235,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "TSA_CHI_II",
+    "subject_code": "TSA_CHI_II",
     "chi_name": "TSA 英文寫作", 
     "eng_name": "TSA English Writing",
     "papers": [
@@ -236,7 +246,7 @@ export const S3subjectData = [
     ],
   },
   {
-    "subject": "TSA_MATH",
+    "subject_code": "TSA_MATH",
     "chi_name": "TSA 數學", 
     "eng_name": "TSA Mathematics",
     "papers": [

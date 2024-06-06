@@ -1,62 +1,72 @@
 export const DSEsubjectData = [
     {
-      "subject": "CHI",
+      "subject_code": "CHI",
       "chi_name": "中國語文", 
       "eng_name": "Chinese Language",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一） 閱讀", 
           "eng_name": "Paper I Reading",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二） 寫作", 
           "eng_name": "Paper II Writing",
         },
         {
+          "id": "3",
           "chi_name": "試卷（三） 聆聽", 
           "eng_name": "Paper III Listening",
         },
         
         {
+          "id": "4",
           "chi_name": "試卷（四） 說話", 
           "eng_name": "Paper IV Speaking",
         },
       ],
     },
     {
-      "subject": "ENG",
+      "subject_code": "ENG",
       "chi_name": "英國語文",
       "eng_name": "English Language",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一） 閱讀", 
           "eng_name": "Paper I Reading",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二） 寫作", 
           "eng_name": "Paper II Writing",
         },
         {
+          "id": "3",
           "chi_name": "試卷（三） 聆聽", 
           "eng_name": "Paper III Listening",
         },
         
         {
+          "id": "4",
           "chi_name": "試卷（四） 說話", 
           "eng_name": "Paper IV Speaking",
         },
       ],
     },  
     {
-      "subject": "MACO", 
+      "subject_code": "MACO", 
       "chi_name": "數學必修部分",
       "eng_name": "Mathematics Compulsory Part",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
@@ -71,7 +81,7 @@ export const DSEsubjectData = [
       ],
     },
     {
-      "subject": "M1",
+      "subject_code": "M1",
       "chi_name": "數學延伸部分單元(一)",
       "eng_name": "Mathematics Extended Part Modules 1" ,
       "papers": [
@@ -90,7 +100,7 @@ export const DSEsubjectData = [
       ],
     },
     {
-      "subject": "M2",
+      "subject_code": "M2",
       "chi_name": "數學延伸部分單元(二)",
       "eng_name": "Mathematics Extended Part Modules 2",
       "papers": [
@@ -109,7 +119,7 @@ export const DSEsubjectData = [
       ],
     },
     {
-      "subject": "CSD",
+      "subject_code": "CSD",
       "chi_name": "公民與社會發展",
       "eng_name": "Citizenship and Social Development",
       "papers": [
@@ -120,187 +130,211 @@ export const DSEsubjectData = [
       ],
     },
     {
-      "subject": "PHY",
+      "subject_code": "PHY",
       "chi_name": "物理", 
       "eng_name": "Physics",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
       ],
     },
     {
-      "subject": "CHEM",
+      "subject_code": "CHEM",
       "chi_name": "化學",
       "eng_name": "Chemistry",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
       ],
     }, 
     {  
-      "subject": "BIO",
+      "subject_code": "BIO",
       "chi_name": "生物",
       "eng_name": "Biology",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
       ],
     },
     {
-      "subject": "ECON",
+      "subject_code": "ECON",
       "chi_name": "經濟",
       "eng_name": "Economics",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
       ],
     },
     {
-      "subject": "BAFS",
+      "subject_code": "BAFS",
       "chi_name": "企業、會計與財務概論", 
       "eng_name": "Business, Accounting & Financial Studies",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
       ],
     },
     {
-      "subject": "ICT",
+      "subject_code": "ICT",
       "chi_name": "資訊及通訊科技",
       "eng_name": "Information & Communication Technology",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
       ],
     },
     {
-      "subject": "THS",
+      "subject_code": "THS",
       "chi_name": "旅遊與款待",
       "eng_name": "Tourism & Hospitality Studies",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
       ], 
     },
     {
-      "subject": "CLIT",
+      "subject_code": "CLIT",
       "chi_name": "中國文學",
       "eng_name": "Chinese Literature",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
       ],
     },
     {
-      "subject": "GEO", 
+      "subject_code": "GEO", 
       "chi_name": "地理",
       "eng_name": "Geography",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
       ],
     },
     {
-      "subject": "CHIS",
+      "subject_code": "CHIS",
       "chi_name": "中國歷史", 
       "eng_name": "Chinese History",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
       ],
     },
     {
-      "subject": "HIST",
+      "subject_code": "HIST",
       "chi_name": "歷史",
       "eng_name": "History",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）", 
           "eng_name": "Paper I",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）", 
           "eng_name": "Paper II",
         },
       ],
     },
     {
-      "subject": "VA",
+      "subject_code": "VA",
       "chi_name": "視覺藝術",
       "eng_name": "Visual Arts",
       "papers": [
         {
+          "id": "1",
           "chi_name": "試卷（一）視覺形式表達主題", 
           "eng_name": "Paper I Visual presentation of a theme",
         },
         {
+          "id": "2",
           "chi_name": "試卷（二）設計", 
           "eng_name": "Paper II Design",
         },
       ],
     },
     {
-      "subject": "PE",
+      "subject_code": "PE",
       "chi_name": "體育",
       "eng_name": "Physical Education",
       "papers": [

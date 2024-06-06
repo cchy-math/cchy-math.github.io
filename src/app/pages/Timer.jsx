@@ -30,7 +30,7 @@ export default function Timer() {
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
-            <section className="TimerSetting p-3">
+            <section className="p-3">
                 <div className="row p-3">
                     <div className="col-md-1 col-xs-12 p-3">
                         <label for="secondary form" class="form-label h4">Form</label>
@@ -58,9 +58,9 @@ export default function Timer() {
                     <div className="col-md-3 col-xs-12 p-3">
                         <label for="paper" class="form-label h4">Paper</label>
                         <select class="form-select bg-dark text-light" id="paper" required="">
-                        {subjectData.find(sub => sub.subject === selectedSubject) &&
-                            subjectData.find(sub => sub.subject === selectedSubject).papers.map(paper => (
-                            <option value={paper}>{paper.chi_name} {paper.eng_name}</option> 
+                        {subjectData.find(sub => sub.subject_code === selectedSubject) &&
+                            subjectData.find(sub => sub.subject_code === selectedSubject).papers.map(paper => (
+                            <option value={paper.subject_code}>{paper.chi_name} {paper.eng_name}</option> 
                         ))}
                         </select>
                     </div>
@@ -134,6 +134,8 @@ export default function Timer() {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section className="p-3">
                 <div className="row p-3">
                     <div className="col-md-4 col-xs-12 p-3">
                         <label for="display" class="form-label h4">Display</label>
