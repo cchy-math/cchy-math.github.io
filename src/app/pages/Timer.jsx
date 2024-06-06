@@ -20,6 +20,32 @@ export default function Timer() {
     const handleYearChange = (e) => {
         setYearSelection(e.target.value);
       };
+    const [subjectOptions, setSubjectOptions] = useState([]);
+    useEffect(() => {
+        let subjectData;
+        
+        if(yearSelection === 'S1' || yearSelection === 'S2') {
+            subjectData = S12subjectData;
+        } else if(yearSelection === 'S3') {
+            subjectData = S3subjectData; 
+        } else {
+            subjectData = DSEsubjectData;
+        }
+        
+        // map over subjectData to generate <option> elements
+        const subjectOptions = subjectData.map((subject) => (
+            <option 
+            key={subject.value}
+            value={subject.value}
+            >
+            {subject.chi_name} {subject.eng_name}
+            </option>
+        ));
+        
+        // re-render subject dropdown
+        setSubjectOptions(subjectOptions);
+        
+    }, [yearSelection])
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
@@ -46,7 +72,7 @@ export default function Timer() {
                     <div className="col-md-4 col-xs-12 p-3">
                         <label for="subject" class="form-label h4">Subject</label>
                         <select class="form-select bg-dark text-light" id="subject" equired="">
-                            
+                            {subjectOptions}
                         </select>
                     </div>
                     <div className="col-2 col-xs-12 p-3">
