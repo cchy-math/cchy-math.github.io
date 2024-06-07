@@ -1,4 +1,4 @@
-export const lang_papers = [
+export const math_papers = [
   {
     "value": "1",
     "chi_name": "試卷（一）", 

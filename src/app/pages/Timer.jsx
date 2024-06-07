@@ -47,23 +47,6 @@ export default function Timer() {
         setSubjectOptions(subjectOptions);
 
     }, [yearSelection])
-    const [selectedSubject, setSelectedSubject] = useState(subjectData[0].value); 
-    const handleSubjectChange = (e) => {
-        setSelectedSubject(e.target.value);
-    }
-    useEffect(() => {
-        let papers;
-      
-        if(selectedSubject) {
-          papers = subjectData.find(sub => sub.value === selectedSubject).papers;
-        }
-      
-        // generate paper options
-      
-        setPaperOptions(papers);
-      
-      }, [selectedSubject])
-    
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
@@ -96,7 +79,7 @@ export default function Timer() {
                     <div className="col-2 col-xs-12 p-3">
                         <label for="paper" class="form-label h4">Paper</label>
                         <select class="form-select bg-dark text-light" id="paper" required="">
-                            {paperOptions}
+                            
                         </select>
                     </div>
                     <div className="col-md-2 col-xs-12 p-3">
