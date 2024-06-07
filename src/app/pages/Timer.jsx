@@ -6,6 +6,11 @@ import "../../components/clock/clock.js"
 import { S12subjectData } from "./S12-subject-data.js";
 import { S3subjectData } from "./S3-subject-data.js";
 import { DSEsubjectData } from "./DSE-subject-data.js";
+import { langPapersData } from "./lang_papers.js";
+import { mathPapersData } from "./math_papers.js";
+import { twoPapersData } from "./two_papers.js";
+import { vaPapersData } from "./va_papers.js";
+import { noPaperData } from "./no_paper.js";
 export default function Timer() {
     const [yearSelection, setYearSelection] = useState("");
     const yearList = [
