@@ -1,4 +1,4 @@
-export const no_papers = [
+export const no_paper = [
     {
       "value": "0",
       "chi_name": "-", 

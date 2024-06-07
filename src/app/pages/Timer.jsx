@@ -6,13 +6,14 @@ import "../../components/clock/clock.js"
 import { S12subjectData } from "./S12-subject-data.js";
 import { S3subjectData } from "./S3-subject-data.js";
 import { DSEsubjectData } from "./DSE-subject-data.js";
-import { langPapersData } from "./lang_papers.js";
-import { mathPapersData } from "./math_papers.js";
-import { twoPapersData } from "./two_papers.js";
-import { vaPapersData } from "./va_papers.js";
-import { noPaperData } from "./no_paper.js";
+import { lang_papers } from "./lang-papers.js";
+import { math_papers } from "./math-papers.js";
+import { two_papers } from "./two-papers.js";
+import { va_papers } from "./va-papers.js";
+import { no_paper } from "./no-paper.js";
 export default function Timer() {
-    const [yearSelection, setYearSelection] = useState("");
+    const [yearSelection, setYearSelection] = useState('');
+    const [selectedSubject, setSelectedSubject] = useState(''); 
     const yearList = [
         ["年級", "Year"],
         ["中一", "S1"],
@@ -23,14 +24,14 @@ export default function Timer() {
         ["中六", "S6"]
       ];
     const handleYearChange = (e) => {
-        setYearSelection(e.target.value);
-      };
+    setYearSelection(e.target.value);
+    };
+    const handleSubjectChange = (e) => {
+        setSelectedSubject(e.target.value);
+    }
     const [subjectOptions, setSubjectOptions] = useState([]);
-    const [paperOptions, setPaperOptions] = useState([]);
     let subjectData;
     useEffect(() => {
-        
-        
         if(yearSelection === 'S1' || yearSelection === 'S2') {
             subjectData = S12subjectData;
         } else if(yearSelection === 'S3') {
@@ -38,7 +39,6 @@ export default function Timer() {
         } else {
             subjectData = DSEsubjectData;
         }
-        
         // map over subjectData to generate <option> elements
         const subjectOptions = subjectData.map((subject) => (
             <option 
@@ -47,11 +47,34 @@ export default function Timer() {
             {subject.chi_name} {subject.eng_name}
             </option>
         ));
-        
         // re-render subject dropdown
         setSubjectOptions(subjectOptions);
-
     }, [yearSelection])
+    const [paperOptions, setPaperOptions] = useState([]);
+    let paperData;
+    useEffect(() => {
+        if(selectedSubject === 'CHI' || selectedSubject === 'ENG') {
+            paperData = lang_papers;
+        } else if(selectedSubject === 'MATH' || selectedSubject === 'MACO' || selectedSubject === 'M1' || selectedSubject === 'M2') {
+            paperData = math_papers; 
+        } else if(selectedSubject === 'VA') {
+            paperData = va_papers; 
+        } else if(selectedSubject.slice(0, 2) === 'S3' || selectedSubject.slice(0, 2) === 'PE' || selectedSubject.slice(0, 3) === 'S12' || selectedSubject.slice(0, 3) === 'TSA' || selectedSubject.slice(0, 3) === 'EDB') {
+            paperData = no_paper; 
+        } else {
+            paperData = two_papers;
+        }
+        // map over paperData to generate <option> elements
+        const paperOptions = paperData.map((paper) => (
+            <option 
+                value={paper.value}
+            >
+            {paper.chi_name} {paper.eng_name}
+            </option>
+        ));
+        // re-render paper dropdown
+        setPaperOptions(paperOptions);
+    }, [selectedSubject]) 
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
@@ -77,16 +100,28 @@ export default function Timer() {
                     </div>
                     <div className="col-md-4 col-xs-12 p-3">
                         <label for="subject" class="form-label h4">Subject</label>
-                        <select class="form-select bg-dark text-light" id="subject" equired="">
+                        <select onChange={handleSubjectChange}  class="form-select bg-dark text-light" id="subject" equired="">
                             {subjectOptions}
                         </select>
                     </div>
-                    <div className="col-2 col-xs-12 p-3">
+                    <div className="col-4 col-xs-12 p-3">
                         <label for="paper" class="form-label h4">Paper</label>
                         <select class="form-select bg-dark text-light" id="paper" required="">
-                            
+                            {paperOptions}
                         </select>
                     </div>
+                    <div className="col-md-2 col-xs-12 p-3">
+                        <label for="display" class="form-label h4">Language</label>
+                        <select class="form-select bg-dark text-light" id="display" required="">
+                            <option value="CHI">中文 Chinese</option>
+                            <option value="ENG">英文 English</option>
+                            <option value="BOTH">中英對照 Chinese-English Parallel</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <section className="p-3">
+                <div className="row p-3">
                     <div className="col-md-2 col-xs-12 p-3">
                         <label for="starting-time" class="col form-label h4">Starting Time</label>
                         <div className="row">
@@ -156,18 +191,6 @@ export default function Timer() {
                             </select>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section className="p-3">
-                <div className="row p-3">
-                    <div className="col-md-4 col-xs-12 p-3">
-                        <label for="display" class="form-label h4">Display</label>
-                        <select class="form-select bg-dark text-light" id="display" required="">
-                            <option value="CHI">中文 Chinese</option>
-                            <option value="ENG">英文 English</option>
-                            <option value="BOTH">雙語切換 Switch</option>
-                        </select>
-                    </div>
                     <div className="col-md-4 col-xs-12 p-3">
                         <label for="remaining-time" class="form-label h4">Remaining Time</label>
                         <select class="form-select bg-dark text-light" id="remaining-time" required="">
@@ -175,7 +198,7 @@ export default function Timer() {
                             <option value="YES">時間剩餘15分鐘及5分鐘時提示 Remind when 15 minutes left and 5 minutes left</option>
                         </select>
                     </div>
-                    <div className="col-md-4 col-xs-12 p-3">
+                    <div className="col-md-2 col-xs-12 p-3">
                         <label for="auto" class="form-label h4">Auto Start</label>
                         <select class="form-select bg-dark text-light" id="auto" required="">
                             <option value="MANUAL">手動開始 Start Manually</option>
