@@ -130,13 +130,6 @@ export const DSEsubjectData = [
       "value": "CSD",
       "chi_name": "公民與社會發展",
       "eng_name": "Citizenship and Social Development",
-      "papers": [
-        {
-          "value": "",
-          "chi_name": "", 
-          "eng_name": "",
-        },
-      ],
     },
     {
       "value": "PHY",
@@ -346,12 +339,5 @@ export const DSEsubjectData = [
       "value": "PE",
       "chi_name": "體育",
       "eng_name": "Physical Education",
-      "papers": [
-        {
-          "value": "",
-          "chi_name": "", 
-          "eng_name": "",
-        },
-      ],
     },
   ];

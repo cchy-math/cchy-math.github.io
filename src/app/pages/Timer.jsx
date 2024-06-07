@@ -21,8 +21,10 @@ export default function Timer() {
         setYearSelection(e.target.value);
       };
     const [subjectOptions, setSubjectOptions] = useState([]);
+    const [paperOptions, setPaperOptions] = useState([]);
+    let subjectData;
     useEffect(() => {
-        let subjectData;
+        
         
         if(yearSelection === 'S1' || yearSelection === 'S2') {
             subjectData = S12subjectData;
@@ -35,7 +37,6 @@ export default function Timer() {
         // map over subjectData to generate <option> elements
         const subjectOptions = subjectData.map((subject) => (
             <option 
-            key={subject.value}
             value={subject.value}
             >
             {subject.chi_name} {subject.eng_name}
@@ -44,12 +45,25 @@ export default function Timer() {
         
         // re-render subject dropdown
         setSubjectOptions(subjectOptions);
-        
+
     }, [yearSelection])
-    const [selectedSubject, setSelectedSubject] = useState();
+    const [selectedSubject, setSelectedSubject] = useState(subjectData[0].value); 
     const handleSubjectChange = (e) => {
         setSelectedSubject(e.target.value);
-      }
+    }
+    useEffect(() => {
+        let papers;
+      
+        if(selectedSubject) {
+          papers = subjectData.find(sub => sub.value === selectedSubject).papers;
+        }
+      
+        // generate paper options
+      
+        setPaperOptions(papers);
+      
+      }, [selectedSubject])
+    
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
@@ -66,7 +80,7 @@ export default function Timer() {
                         >
                             {yearList.map((year, index) => {
                                 return (
-                                    <option key={index} value={year[1]}>
+                                    <option value={year[1]}>
                                         {year[0]} {year[1]}  
                                     </option>
                                 )
@@ -82,7 +96,7 @@ export default function Timer() {
                     <div className="col-2 col-xs-12 p-3">
                         <label for="paper" class="form-label h4">Paper</label>
                         <select class="form-select bg-dark text-light" id="paper" required="">
-                            
+                            {paperOptions}
                         </select>
                     </div>
                     <div className="col-md-2 col-xs-12 p-3">

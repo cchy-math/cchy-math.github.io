@@ -6,17 +6,17 @@ export const S3subjectData = [
     "papers": [
       {
         "value": "1",
-          "chi_name": "試卷（一） 閱讀", 
+        "chi_name": "試卷（一） 閱讀", 
         "eng_name": "Paper I Reading",
       },
       {
         "value": "2",
-          "chi_name": "試卷（二） 寫作", 
+        "chi_name": "試卷（二） 寫作", 
         "eng_name": "Paper II Writing",
       },
       {
         "value": "3",
-          "chi_name": "試卷（三） 聆聽", 
+        "chi_name": "試卷（三） 聆聽", 
         "eng_name": "Paper III Listening",
       },
       
@@ -34,7 +34,7 @@ export const S3subjectData = [
     "papers": [
       {
         "value": "1",
-          "chi_name": "試卷（一） 閱讀", 
+        "chi_name": "試卷（一） 閱讀", 
         "eng_name": "Paper I Reading",
       },
       {
@@ -86,192 +86,80 @@ export const S3subjectData = [
     "value": "PHY",
     "chi_name": "物理", 
     "eng_name": "Physics",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "CHEM",
     "chi_name": "化學",
     "eng_name": "Chemistry",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   }, 
   {  
     "value": "BIO",
     "chi_name": "生物",
     "eng_name": "Biology",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "ECON",
     "chi_name": "經濟",
     "eng_name": "Economics",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "BUS",
     "chi_name": "企業概論", 
     "eng_name": "Business Studies",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "GEO", 
     "chi_name": "地理",
     "eng_name": "Geography",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "CHIS",
     "chi_name": "中國歷史", 
     "eng_name": "Chinese History",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "HIST",
     "chi_name": "歷史",
     "eng_name": "History",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "COM",
     "chi_name": "電腦", 
     "eng_name": "Computer Literacy",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "EDB",
     "chi_name": "教育局教學語言研究計劃（評估）", 
     "eng_name": "",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "TSA_CHI_I",
     "chi_name": "TSA 中文閱讀", 
     "eng_name": "TSA Chinese Reading",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "TSA_CHI_II",
     "chi_name": "TSA 中文寫作", 
     "eng_name": "TSA Chinese Writing",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "TSA_CHI_III",
     "chi_name": "TSA 中文聆聽", 
     "eng_name": "TSA Chinese Listening",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "TSA_ENG_I",
     "chi_name": "TSA 英文閱讀及聆聽", 
     "eng_name": "TSA English Reading and Listening",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "TSA_CHI_II",
     "chi_name": "TSA 英文寫作", 
     "eng_name": "TSA English Writing",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
   {
     "value": "TSA_MATH",
     "chi_name": "TSA 數學", 
     "eng_name": "TSA Mathematics",
-    "papers": [
-      {
-        "value": "",
-        "chi_name": "", 
-        "eng_name": "",
-      },
-    ],
   },
 ];

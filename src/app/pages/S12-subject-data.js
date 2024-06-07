@@ -86,60 +86,25 @@ export const S12subjectData = [
       "value": "SCI",
       "chi_name": "科學",
       "eng_name": "Science",
-      "papers": [
-        {
-          "value": "",
-          "chi_name": "", 
-          "eng_name": "",
-        },
-      ],
     },
     {
       "value": "IH",
       "chi_name": "綜合人文",
       "eng_name": "Integrated Humanities",
-      "papers": [
-        {
-          "value": "",
-          "chi_name": "", 
-          "eng_name": "",
-        },
-      ],
     },
     {
       "value": "CHIS",
       "chi_name": "中國歷史", 
       "eng_name": "Chinese History",
-      "papers": [
-        {
-          "value": "",
-          "chi_name": "", 
-          "eng_name": "",
-        },
-      ],
     },
     {
       "value": "PTH",
       "chi_name": "普通話", 
       "eng_name": "Putonghua",
-      "papers": [
-        {
-          "value": "",
-          "chi_name": "", 
-          "eng_name": "",
-        },
-      ],
     },
     {
       "value": "EDB",
       "chi_name": "教育局教學語言研究計劃（評估）", 
       "eng_name": "",
-      "papers": [
-        {
-          "value": "",
-          "chi_name": "", 
-          "eng_name": "",
-        },
-      ],
     },
   ];
