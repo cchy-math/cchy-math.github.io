@@ -78,6 +78,7 @@ export default function Timer() {
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
+            <div className="h1 text-center">Timer Settings</div>
             <section className="p-3">
                 <div className="row p-3">
                     <div className="col-md-2 col-xs-12 p-3">
