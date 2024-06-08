@@ -85,6 +85,30 @@ export default function Timer() {
         // re-render paper dropdown
         setPaperOptions(paperOptions);
     }, [selectedSubject]) 
+    const [startHour, setStartHour] = useState(''); 
+    const handleStartHourChange = (e) => {
+        setStartHour(e.target.value);
+    }
+    const [startMin, setStartMin] = useState(''); 
+    const handleStartMinChange = (e) => {
+        setStartMin(e.target.value);
+    }
+    const [durationHour, setDurationHour] = useState(''); 
+    const handleDurationHourChange = (e) => {
+        setDurationHour(e.target.value);
+    }
+    const [durationMin, setDurationMin] = useState(''); 
+    const handleDurationMinChange = (e) => {
+        setDurationMin(e.target.value);
+    }
+    function calculateEndTime(sH, sM, dH, dM) {
+        let endTime = Number(sH)*60 + Number(sM) + Number(dH.slice(0, dH.indexOf(' ')))*60 + Number(dM.slice(0, dM.indexOf(' ')));
+        let endHour = Math.floor(endTime/60);
+        let endMin = endTime - endHour;
+        if(endHour.length < 2) endHour = "0" + endHour;
+        if(endMin.length < 2) endMin = "0" + endMin;
+
+    }
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
@@ -137,7 +161,7 @@ export default function Timer() {
                         <div className="col-md-2 col-xs-12 p-3">
                             <label for="starting-time" class="col form-label h4">Starting Time</label>
                             <div className="row">
-                                <select class="col mx-3 form-select bg-dark text-light" id="starting-time-hour" required="">
+                                <select onChange={handleStartHourChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-hour" required="">
                                     <option id="8-st-h">08</option>
                                     <option id="9-st-h">09</option>
                                     <option id="10-st-h">10</option>
@@ -150,7 +174,7 @@ export default function Timer() {
                                     <option id="17-st-h">17</option>
                                     <option id="18-st-h">18</option>
                                 </select>
-                                <select class="col mx-3 form-select bg-dark text-light" id="starting-time-min" required="">
+                                <select onChange={handleStartMinChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-min" required="">
                                     <option id="0-st-m">00</option>
                                     <option id="5-st-m">05</option>
                                     <option id="10-st-m">10</option>
@@ -169,14 +193,14 @@ export default function Timer() {
                         <div className="col-md-2 col-xs-12 p-3">
                             <label for="duration" class="form-label h4">Duration</label>
                             <div className="row">
-                                <select class="col mx-3 form-select bg-dark text-light" id="duration-hour" required="">
+                                <select onChange={handleDurationHourChange} class="col mx-3 form-select bg-dark text-light" id="duration-hour" required="">
                                     <option id="0-dt-h">0 hour</option>
                                     <option id="1-dt-h">1 hour</option>
                                     <option id="2-dt-h">2 hour</option>
                                     <option id="3-dt-h">3 hour</option>
                                     <option id="4-dt-h">4 hour</option>
                                 </select>
-                                <select class="col mx-3 form-select bg-dark text-light" id="duration-min" required="">
+                                <select onChange={handleDurationMinChange} class="col mx-3 form-select bg-dark text-light" id="duration-min" required="">
                                     <option id="0-dt-m">0 min</option>
                                     <option id="5-dt-m">5 min</option>
                                     <option id="10-dt-m">10 min</option>
@@ -220,9 +244,13 @@ export default function Timer() {
                     <br/>
                     {selectedPaper.slice(0, selectedPaper.indexOf(' '))}
                     <br/>
+                    {startHour}:{startMin}-{startHour + durationHour + Math.floor((startMin + durationMin)/60)}:{(startMin + durationMin)%60}
+                    <br/>
                     {yearSelection.slice(yearSelection.indexOf(' ')+1)} {selectedSubject.slice(selectedSubject.indexOf(' ')+1)}
                     <br/>
                     {selectedPaper.slice(selectedPaper.indexOf(' ')+1)}
+                    <br/>
+                    {startHour}:{startMin} - {calculateEndTime(startHour, startMin, durationHour, durationMin)};
                 </section>
                 <section id="progress-bar">
 
