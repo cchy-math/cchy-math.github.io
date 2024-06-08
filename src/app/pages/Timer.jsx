@@ -214,13 +214,15 @@ export default function Timer() {
                     </div>
                 </section>
             </form>
-            <div className="text-center align-items-center">
-                <section id="timer-display" className="text-center align-items-center display-6">
-                    {yearSelection.split(" ",2)[0]}
+            <div for="timer-display" className="text-center align-items-center display-6">
+                <section id="info" className="">
+                    {yearSelection.slice(0, yearSelection.indexOf(' '))} {selectedSubject.slice(0, selectedSubject.indexOf(' '))}
                     <br/>
-                    {selectedSubject}
+                    {selectedPaper.slice(0, selectedPaper.indexOf(' '))}
                     <br/>
-                    {selectedPaper}
+                    {yearSelection.slice(yearSelection.indexOf(' ')+1)} {selectedSubject.slice(selectedSubject.indexOf(' ')+1)}
+                    <br/>
+                    {selectedPaper.slice(selectedPaper.indexOf(' ')+1)}
                 </section>
                 <section id="progress-bar">
 
