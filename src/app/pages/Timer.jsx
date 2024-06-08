@@ -217,7 +217,9 @@ export default function Timer() {
                 </section>
             </form>
             <div for="Display" className="text-center">
-                
+                {yearSelection.split(" ", 1)[0]}
+                {selectedSubject}
+                {paperOptions}
             </div>
         </main>
     );
