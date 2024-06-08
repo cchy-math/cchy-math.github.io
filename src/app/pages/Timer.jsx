@@ -8,6 +8,8 @@ import { S3subjectData } from "./S3-subject-data.js";
 import { DSEsubjectData } from "./DSE-subject-data.js";
 import { lang_papers } from "./lang-papers.js";
 import { math_papers } from "./math-papers.js";
+import { m1_papers } from "./m1-papers.js";
+import { m2_papers } from "./m2-papers.js";
 import { two_papers } from "./two-papers.js";
 import { va_papers } from "./va-papers.js";
 import { no_paper } from "./no-paper.js";
@@ -36,9 +38,9 @@ export default function Timer() {
     const [subjectOptions, setSubjectOptions] = useState([]);
     useEffect(() => {
         let subjectData;
-        if(yearSelection === 'S1' || yearSelection === 'S2') {
+        if(yearSelection === '中一 S1' || yearSelection === '中二 S2') {
             subjectData = S12subjectData;
-        } else if(yearSelection === 'S3') {
+        } else if(yearSelection === '中三 S3') {
             subjectData = S3subjectData; 
         } else {
             subjectData = DSEsubjectData;
@@ -57,16 +59,20 @@ export default function Timer() {
     const [paperOptions, setPaperOptions] = useState([]);
     useEffect(() => {
         let paperData;
-        if(selectedSubject === 'CHI' || selectedSubject === 'ENG') {
+        if(selectedSubject === '中國語文 Chinese Language' || selectedSubject === '英國語文 English Language') {
             paperData = lang_papers;
-        } else if(selectedSubject === 'MATH' || selectedSubject === 'MACO' || selectedSubject === 'M1' || selectedSubject === 'M2') {
+        } else if(selectedSubject === '數學 Mathematics' || selectedSubject === '數學必修部分 Mathematics Compulsory Part' ) {
             paperData = math_papers; 
-        } else if(selectedSubject === 'VA') {
+        } else if(selectedSubject === '數學延伸部分單元(一) Mathematics Extended Part Modules 1') {
+            paperData = m1_papers; 
+        } else if(selectedSubject === '數學延伸部分單元(二) Mathematics Extended Part Modules 2') {
+            paperData = m2_papers; 
+        } else if(selectedSubject === '視覺藝術 Visual Arts') {
             paperData = va_papers; 
-        } else if(selectedSubject.slice(0, 2) === 'S3' || selectedSubject.slice(0, 2) === 'PE' || selectedSubject.slice(0, 3) === 'S12' || selectedSubject.slice(0, 3) === 'TSA' || selectedSubject.slice(0, 3) === 'EDB') {
-            paperData = no_paper; 
+        } else if((yearSelection.split(" ",2)[1] === 'S4' || yearSelection.split(" ",2)[1] === 'S5' || yearSelection.split(" ",2)[1] === 'S6') && selectedSubject !== '公民與社會發展 Citizenship and Social Development' && selectedSubject !== '視覺藝術 Visual Arts' && selectedSubject !== '體育 Physical Education') {
+            paperData = two_papers; 
         } else {
-            paperData = two_papers;
+            paperData = no_paper;
         }
         // map over paperData to generate <option> elements
         const paperOptions = paperData.map((paper) => (
@@ -212,9 +218,9 @@ export default function Timer() {
                 <section id="timer-display" className="text-center align-items-center display-6">
                     {yearSelection.split(" ",2)[0]}
                     <br/>
-                    {selectedSubject.split(" ",2)[0]}
+                    {selectedSubject}
                     <br/>
-                    {paperOptions}
+                    {selectedPaper}
                 </section>
                 <section id="progress-bar">
 
