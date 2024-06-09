@@ -249,7 +249,7 @@ export default function Timer() {
     useEffect(() => {
         let interval = setInterval(() => {
             let date = new Date();
-            if(autoStart && Number(date.getHours()) >= Number(startHour) && Number(date.getMinutes()) >= Number(startMin)) {
+            if(autoStart && Number(date.getHours()) === Number(startHour) && Number(date.getMinutes()) === Number(startMin)) {
                 handleStartClick();
             }
         }, 1000);
