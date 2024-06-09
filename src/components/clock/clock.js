@@ -33,5 +33,6 @@ setInterval(()=>{
         time[i].textContent = hours + ":" + minutes + ":" + seconds + " ";
         time[i].style["font-size"] = display[i].clientWidth/6 + "px";
     }
+    
 });
 

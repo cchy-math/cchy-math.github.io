@@ -3,8 +3,6 @@ import "../../components/button/button.css"
 import "../../components/button/button.js"
 import "../../components/clock/clock.css"
 import "../../components/clock/clock.js"
-import '../../components/time_left_bar/time_left_bar.css'
-import '../../components/time_left_bar/time_left_bar.js'
 import Clock2 from "../../components/clock/Clock2.jsx"
 import { S12subjectData } from "./S12-subject-data.js";
 import { S3subjectData } from "./S3-subject-data.js";
@@ -133,6 +131,7 @@ export default function Timer() {
     useEffect(() => {
         setExamTime(startHour+":"+startMin+" - "+calculateEndTime(startHour, startMin, durationHour, durationMin));
     }, [startHour, startMin, durationHour, durationMin])
+    const [timeLeft, setTimeLeft] = useState(''); 
     const handleStartClick = () => {
         let date  = new Date();
         let h = date.getHours();
@@ -141,7 +140,14 @@ export default function Timer() {
         h = (h < 10) ? h = "0" + h : h;
         m = (m < 10) ? m = "0" + m : m;
         s = (s < 10) ? s = "0" + s : s;
+        let hLeft = Number(durationHour.slice(0, durationHour.indexOf(' ')));
+        let mLeft = Number(durationMin.slice(0, durationMin.indexOf(' ')));
+        let sLeft = 0;
+        hLeft = (hLeft < 10) ? hLeft = "0" + hLeft : hLeft;
+        mLeft = (mLeft < 10) ? mLeft = "0" + mLeft : mLeft;
+        sLeft = (sLeft < 10) ? sLeft = "0" + sLeft : sLeft;
         setExamTime(h+":"+m+" - "+calculateEndTime(h, m, durationHour, durationMin));
+        setTimeLeft(hLeft+":"+mLeft+":"+sLeft);
     }
     return (
         <main className="container">
@@ -270,8 +276,8 @@ export default function Timer() {
                 </form>
             )}
             {displayVisible && (
-                <section visible={displayVisible} for="timer-display" className="vh-100 text-center align-items-center display-2">
-                    <section id="info" className="vh-50">
+                <section visible={displayVisible} for="timer-display" className="vh-100 text-center align-items-center">
+                    <section id="info" className="vh-50 display-2 mb-5">
                         { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
                         { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
                         <br/>
@@ -284,16 +290,18 @@ export default function Timer() {
                         { examTime }
                         <br/>
                     </section>
-                    <section id="time-display" className="vh-50">
-                        <section id="progress-bar" className="row vh-25 px-5">
+                    <section id="time-display" className="px-5">
+                        <section id="progress-bar" className="row px-5">
                             <div className="row">
                                 <div className="col-xs-4 col-md-1">
                                     <button onClick={handleStartClick} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
                                         Start
                                     </button>
                                 </div>
-                                <div className="col-xs-4 col-md-10">
-                                    Time Remaining
+                                <div className="col-xs-4 col-md-10 display-6 text-info">
+                                    { selectedLanguage === '中文 Chinese' && "剩餘時間 " }
+                                    { selectedLanguage === '英文 English' && "Remaining Time " }
+                                    { timeLeft }
                                 </div>
                                 <div className="col-xs-4 col-md-1">
                                     <button onClick={() => {setFormVisible(true); setDisplayVisible(false)}} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
@@ -301,11 +309,11 @@ export default function Timer() {
                                     </button>
                                 </div>
                             </div>
-                            <div className="time_left_bar flex-row-reverse">
-                                <div className="progress-bar progress-bar-striped progress-bar-animated bg-success" />
+                            <div id="time-left-bar" className="progress flex-row-reverse">
+                                <div className="progress-bar time-left progress-bar-striped progress-bar-animated bg-info" />
                             </div>
                         </section>
-                        <section id="clock" className="row vh-25">
+                        <section id="clock" className="row">
                             <div className="col-xs-1 col-md-4"></div>
                             <div className="col-xs-10 col-md-4"><Clock2 /></div>
                             <div className="col-xs-1 col-md-4"></div>
