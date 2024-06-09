@@ -91,19 +91,19 @@ export default function Timer() {
         // re-render paper dropdown
         setPaperOptions(paperOptions);
     }, [selectedSubject, yearSelection]) 
-    const [startHour, setStartHour] = useState('08'); 
+    const [startHour, setStartHour] = useState('00'); 
     const handleStartHourChange = (e) => {
         setStartHour(e.target.value);
     }
-    const [startMin, setStartMin] = useState('30'); 
+    const [startMin, setStartMin] = useState('00'); 
     const handleStartMinChange = (e) => {
         setStartMin(e.target.value);
     }
-    const [durationHour, setDurationHour] = useState('0'); 
+    const [durationHour, setDurationHour] = useState(''); 
     const handleDurationHourChange = (e) => {
         setDurationHour(e.target.value);
     }
-    const [durationMin, setDurationMin] = useState('0'); 
+    const [durationMin, setDurationMin] = useState(''); 
     const handleDurationMinChange = (e) => {
         setDurationMin(e.target.value);
     }
@@ -119,11 +119,33 @@ export default function Timer() {
     const handleLanguageChange = (e) => {
         setSelectedLanguage(e.target.value);
     }
+    const minuteOptions = [];
+    for(let i = 0; i < 60; i++) {
+        minuteOptions.push(
+            <option key={i}>
+                {i < 10 ? '0'+i : i} 
+            </option>
+        );
+    }
+    const [examTime, setExamTime] = useState('');
+    useEffect(() => {
+        setExamTime(startHour+":"+startMin+" - "+calculateEndTime(startHour, startMin, durationHour, durationMin));
+    }, [startHour, startMin, durationHour, durationMin])
+    const handleDoneClick = () => {
+        let date  = new Date();
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        h = (h < 10) ? h = "0" + h : h;
+        m = (m < 10) ? m = "0" + m : m;
+        s = (s < 10) ? s = "0" + s : s;
+        setExamTime(h+":"+m+" - "+calculateEndTime(h, m, durationHour, durationMin));
+    }
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
             <div className="h1 text-center">Timer Settings</div>
-            <form>
+           
                 <section className="p-3">
                     <div className="row p-3">
                         <div className="col-md-2 col-xs-12 p-3">
@@ -173,32 +195,21 @@ export default function Timer() {
                             <div className="row">
                                 <select onChange={handleStartHourChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-hour" required="">
                                     <option></option>
-                                    <option id="8-st-h">08</option>
-                                    <option id="9-st-h">09</option>
-                                    <option id="10-st-h">10</option>
-                                    <option id="11-st-h">11</option>
-                                    <option id="12-st-h">12</option>
-                                    <option id="13-st-h">13</option>
-                                    <option id="14-st-h">14</option>
-                                    <option id="15-st-h">15</option>
-                                    <option id="16-st-h">16</option>
-                                    <option id="17-st-h">17</option>
-                                    <option id="18-st-h">18</option>
+                                    <option>08</option>
+                                    <option>09</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>15</option>
+                                    <option>16</option>
+                                    <option>17</option>
+                                    <option>18</option>
                                 </select>
                                 <select onChange={handleStartMinChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-min" required="">
                                     <option></option>
-                                    <option id="0-st-m">00</option>
-                                    <option id="5-st-m">05</option>
-                                    <option id="10-st-m">10</option>
-                                    <option id="15-st-m">15</option>
-                                    <option id="20-st-m">20</option>
-                                    <option id="25-st-m">25</option>
-                                    <option id="30-st-m">30</option>
-                                    <option id="35-st-m">35</option>
-                                    <option id="40-st-m">40</option>
-                                    <option id="45-st-m">45</option>
-                                    <option id="50-st-m">50</option>
-                                    <option id="55-st-m">55</option>
+                                    {minuteOptions}
                                 </select>
                             </div>
                         </div>
@@ -247,15 +258,15 @@ export default function Timer() {
                             </select>
                         </div>
                         <div className="col-md-2 col-xs-12 px-4">
-                            <button className="button-rainbow my-5 h5" style={{'width': '100%'}}>
+                            <button onClick={handleDoneClick} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
                                 Done
                             </button>
                         </div>
                     </div>
                 </section>
-            </form>
-            <div for="timer-display" className="text-center align-items-center display-2">
-                <section id="info" className="">
+            
+            <div for="timer-display" className="vh-100 text-center align-items-center display-2">
+                <section id="info" className="vh-50">
                     { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
                     { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
                     <br/>
@@ -264,15 +275,15 @@ export default function Timer() {
                     <br/>
                     { selectedLanguage === '中文 Chinese' && (selectedPaper && selectedPaper.slice(0, selectedPaper.indexOf(' '))) }
                     { selectedLanguage === '英文 English' && (selectedPaper && selectedPaper.slice(selectedPaper.indexOf(' ')+1)) }
-                    {selectedPaper && <br/>}
-                    {startHour}:{startMin} - {calculateEndTime(startHour, startMin, durationHour, durationMin)}
+                    { selectedPaper && <br/> }
+                    { examTime }
                 </section>
-                <section id="progress-bar">
+                <section id="progress-bar" className="vh-25 row">
                     <div className="time_left_bar flex-row-reverse">
                         <div className="progress-bar progress-bar-striped progress-bar-animated bg-success" />
                     </div>
                 </section>
-                <section id="clock" className="row">
+                <section id="clock" className="vh-25 row">
                     <div className="col-xs-1 col-md-4"></div>
                     <div className="col-xs-10 col-md-4"><Clock2 /></div>
                     <div className="col-xs-1 col-md-4"></div>

@@ -1,11 +1,11 @@
 setInterval(()=>{
     let date  = new Date();
+    let hrs = date.getHours() * 30;
+    let mins = date.getMinutes() * 6;
+    let secs = date.getSeconds() * 6;
     let sec = document.querySelectorAll(".clock1-body .sec");
     let min = document.querySelectorAll(".clock1-body .min");
     let hr = document.querySelectorAll(".clock1-body .hr");
-    let secs = date.getSeconds() * 6;
-    let mins = date.getMinutes() * 6;
-    let hrs = date.getHours() * 30;
     for(let i=0; i<sec.length; i++) {
         sec[i].style.transform = `rotateZ(${secs}deg)`;
         min[i].style.transform = `rotateZ(${mins}deg)`;
@@ -31,7 +31,7 @@ setInterval(()=>{
     }
     for(let i=0; i<time.length; i++) {
         time[i].textContent = hours + ":" + minutes + ":" + seconds + " ";
-        time[i].style["font-size"] = display[i].clientWidth/7 + "px";
+        time[i].style["font-size"] = display[i].clientWidth/6 + "px";
     }
 });
 
