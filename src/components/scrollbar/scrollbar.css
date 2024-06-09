@@ -18,6 +18,4 @@
 	height: 8px;
 	position:relative;
 	background-color: var(--bs-dark);
-	filter: blur(1px);
-	-webkit-filter: blur(1px);
 }

@@ -112,6 +112,14 @@ export default function Timer() {
     const handleDurationMinChange = (e) => {
         setDurationMin(e.target.value);
     }
+    const [autoStart, setAutoStart] = useState(false); 
+    const handleStartingMethodChange = (e) => {
+        if(e.target.value === '自動開始 Start Automatically'){
+            setAutoStart(true);
+        }else{
+            setAutoStart(false);
+        }
+    }
     function calculateEndTime(sH, sM, dH, dM) {
         let endTime = Number(sH)*60 + Number(sM) + Number(dH.slice(0, dH.indexOf(' ')))*60 + Number(dM.slice(0, dM.indexOf(' ')));
         let endHour = Math.floor(endTime/60);
@@ -151,6 +159,8 @@ export default function Timer() {
         let endTimeMin = hNow*60 + mNow + hLeft*60 + mLeft;
         let endH = Math.floor(endTimeMin/60);
         let endM = endTimeMin - endH*60;
+        if(hNow < 10) hNow = "0" + hNow;
+        if(mNow < 10) mNow = "0" + mNow;
         if(endH < 10) endH = "0" + endH;
         if(endM < 10) endM = "0" + endM;
         setExamTime(hNow+":"+mNow+" - "+endH+":"+endM)
@@ -181,17 +191,17 @@ export default function Timer() {
             let barWidth5 = (5*60/totalTime) * 100;
             document.querySelector(".time-left").style.width = barWidth + "%";
             if(barWidth >=barWidth15 && barWidth <=100) {
-                document.querySelector(".time-left").className = "progress-bar time-left bg-success";
-                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-4 text-success";
+                document.querySelector(".time-left").className = "progress-bar progress-bar-striped progress-bar-animated time-left bg-success";
+                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-5 text-success";
             }
             if(barWidth >=barWidth5 && barWidth <barWidth15) {
-                document.querySelector(".time-left").className = "progress-bar time-left bg-warning";
-                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-4 text-warning";
+                document.querySelector(".time-left").className = "progress-bar progress-bar-striped progress-bar-animated time-left bg-warning";
+                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-5 text-warning";
                 setAnnouncement15(true);
             }
             if(barWidth >=0 && barWidth < barWidth5) {
-                document.querySelector(".time-left").className = "progress-bar time-left bg-danger";
-                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-4 text-danger";
+                document.querySelector(".time-left").className = "progress-bar progress-bar-striped progress-bar-animated time-left bg-danger";
+                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-5 text-danger";
                 setAnnouncement15(false);
                 setAnnouncement5(true);
             }     
@@ -211,6 +221,11 @@ export default function Timer() {
     const handleDoneClick = () => {
         setFormVisible(false); 
         setDisplayVisible(true);
+        if(autoStart){
+            setStartVisible(false);
+        }else{
+            setStartVisible(true);
+        }
         let hLeft = Number(durationHour.slice(0, durationHour.indexOf(' ')));
         let mLeft = Number(durationMin.slice(0, durationMin.indexOf(' ')));
         let sH = Number(startHour);
@@ -231,6 +246,15 @@ export default function Timer() {
             setSelectedLanguage('中文 Chinese');
         }
     }
+    useEffect(() => {
+        let interval = setInterval(() => {
+            let date = new Date();
+            if(autoStart && Number(date.getHours()) >= Number(startHour) && Number(date.getMinutes()) >= Number(startMin)) {
+                handleStartClick();
+            }
+        }, 1000);
+        return () => clearInterval(interval);
+      }, [autoStart, startHour, startMin]);                    
     return (
         <main className="container">
             {formVisible && (
@@ -312,35 +336,34 @@ export default function Timer() {
                                 <div className="row h3">
                                     <select onChange={handleDurationHourChange} class="col mx-3 form-select bg-dark text-light" id="duration-hour" required="">
                                         <option></option>
-                                        <option id="0-dt-h">0 hour</option>
-                                        <option id="1-dt-h">1 hour</option>
-                                        <option id="2-dt-h">2 hour</option>
-                                        <option id="3-dt-h">3 hour</option>
-                                        <option id="4-dt-h">4 hour</option>
+                                        <option>0 hour</option>
+                                        <option>1 hour</option>
+                                        <option>2 hour</option>
+                                        <option>3 hour</option>
+                                        <option>4 hour</option>
                                     </select>
                                     :
                                     <select onChange={handleDurationMinChange} class="col mx-3 form-select bg-dark text-light" id="duration-min" required="">
                                         <option></option>
-                                        <option id="0-dt-m">0 min</option>
-                                        <option id="5-dt-m">1 min</option>
-                                        <option id="5-dt-m">5 min</option>
-                                        <option id="10-dt-m">10 min</option>
-                                        <option id="15-dt-m">15 min</option>
-                                        <option id="20-dt-m">20 min</option>
-                                        <option id="25-dt-m">25 min</option>
-                                        <option id="30-dt-m">30 min</option>
-                                        <option id="35-dt-m">35 min</option>
-                                        <option id="40-dt-m">40 min</option>
-                                        <option id="45-dt-m">45 min</option>
-                                        <option id="50-dt-m">50 min</option>
-                                        <option id="55-dt-m">55 min</option>
+                                        <option>0 min</option>
+                                        <option>5 min</option>
+                                        <option>10 min</option>
+                                        <option>15 min</option>
+                                        <option>20 min</option>
+                                        <option>25 min</option>
+                                        <option>30 min</option>
+                                        <option>35 min</option>
+                                        <option>40 min</option>
+                                        <option>45 min</option>
+                                        <option>50 min</option>
+                                        <option>55 min</option>
                                     </select>
                                 </div>
                             </div>
                             
                             <div className="col-md-2 col-xs-12 p-3">
                                 <label for="auto" class="form-label h4">Auto Start</label>
-                                <select class="form-select bg-dark text-light" id="auto" required="">
+                                <select onChange={handleStartingMethodChange} class="form-select bg-dark text-light" id="auto" required="">
                                     <option></option>
                                     <option id="MANUAL">手動開始 Start Manually</option>
                                     <option id="AUTO">自動開始 Start Automatically</option>
@@ -372,9 +395,9 @@ export default function Timer() {
                         <br/>
                     </section>
                     <section id="time-display" className="p-3">
-                        <section id="progress-bar" className="row px-5 my-3">
+                        <section id="bar" className="row px-5 my-3">
                             <div id="time-left-bar" className="progress flex-row-reverse my-3">
-                                <div className="progress-bar time-left bg-info" style={{width: 100+'%'}} />
+                                <div className="progress-bar progress-bar-striped progress-bar-animated time-left bg-info" style={{width: 100+'%'}} />
                             </div>
                             <div className="row align-items-center">
                                 <div className="col-xs-4 col-md-2">
