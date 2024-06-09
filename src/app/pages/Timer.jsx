@@ -154,6 +154,8 @@ export default function Timer() {
         if(mLeft < 10) mLeft = "0" + mLeft;
         if(sLeft < 10) sLeft = "0" + sLeft;
         setTimeLeft(hLeft+":"+mLeft+":"+sLeft);
+        let barWidth;
+        let totalTime = timeLeftInSeconds;
         interval = setInterval(()=>{
             if(timeLeftInSeconds <= 0) {
                 clearInterval(interval);
@@ -167,8 +169,14 @@ export default function Timer() {
             if(mLeft < 10) mLeft = "0" + mLeft;
             if(sLeft < 10) sLeft = "0" + sLeft;
             setTimeLeft(hLeft+":"+mLeft+":"+sLeft);
+            barWidth = (timeLeftInSeconds/totalTime) * 100;
+            let barWidth15 = (15*60/totalTime) * 100;
+            let barWidth5 = (5*60/totalTime) * 100;
+            document.querySelector(".time-left").style.width = barWidth + "%";
+            if(barWidth >=barWidth15 && barWidth <=100) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-success";}
+            if(barWidth >=barWidth5 && barWidth <barWidth15) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-warning";}
+            if(barWidth < barWidth5) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-danger";}
           }, 1000);
-        
     }
     const handleDoneClick = () => {
         setTimeLeftColor('text-info');
@@ -196,13 +204,6 @@ export default function Timer() {
         setFormVisible(true);
         setDisplayVisible(false)
       }
-    /*
-                document.querySelector(".time-left").style.width = left + "%";
-            if(left >90 && left <=100) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-info";}
-            if(left >50 && left <=90) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-success";}
-            if(left >30 && left <=50) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-warning";}
-            if(left >=0 && left <=30) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-warning";}
-        */
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
