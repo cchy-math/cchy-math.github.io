@@ -111,6 +111,10 @@ export default function Timer() {
         if(endMin < 10) endMin = "0" + endMin;
         return (endHour + ":" + endMin);
     }
+    const [selectedLanguage, setSelectedLanguage] = useState(''); 
+    const handleLanguageChange = (e) => {
+        setSelectedLanguage(e.target.value);
+    }
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
@@ -150,10 +154,10 @@ export default function Timer() {
                         </div>
                         <div className="col-md-2 col-xs-12 p-3">
                             <label for="display" class="form-label h4">Language</label>
-                            <select class="form-select bg-dark text-light" id="display" required="">
-                                <option id="displayChi">中文 Chinese</option>
-                                <option id="displayEng">英文 English</option>
-                                <option id="displayBoth">中英對照 Chinese-English Parallel</option>
+                            <select onChange={handleLanguageChange} class="form-select bg-dark text-light" id="display" required="">
+                                <option id="中文 Chinese">中文 Chinese</option>
+                                <option id="英文 English">英文 English</option>
+                                <option id="中英對照 Chinese-English Parallel">中英對照 Chinese-English Parallel</option>
                             </select>
                         </div>
                     </div>
@@ -242,19 +246,14 @@ export default function Timer() {
             </form>
             <div for="timer-display" className="text-center align-items-center display-6">
                 <section id="info" className="">
-                    {yearSelection.slice(0, yearSelection.indexOf(' '))}
+                    { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
+                    { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
                     <br/>
-                    {selectedSubject.slice(0, selectedSubject.indexOf(' '))}
+                    { selectedLanguage === '中文 Chinese' && selectedSubject.slice(0, selectedSubject.indexOf(' ')) }
+                    { selectedLanguage === '英文 English' && selectedSubject.slice(selectedSubject.indexOf(' ')+1) }
                     <br/>
-                    {selectedPaper && selectedPaper.slice(0, selectedPaper.indexOf(' '))}
-                    {selectedPaper && <br/>}
-                    {startHour}:{startMin} - {calculateEndTime(startHour, startMin, durationHour, durationMin)}
-                    <br/>
-                    {yearSelection.slice(yearSelection.indexOf(' ')+1)}
-                    <br/>
-                    {selectedSubject.slice(selectedSubject.indexOf(' ')+1)}
-                    <br/>
-                    {selectedPaper && selectedPaper.slice(selectedPaper.indexOf(' ')+1)}
+                    { selectedLanguage === '中文 Chinese' && (selectedPaper && selectedPaper.slice(0, selectedPaper.indexOf(' '))) }
+                    { selectedLanguage === '英文 English' && (selectedPaper && selectedPaper.slice(selectedPaper.indexOf(' ')+1)) }
                     {selectedPaper && <br/>}
                     {startHour}:{startMin} - {calculateEndTime(startHour, startMin, durationHour, durationMin)}
                 </section>
