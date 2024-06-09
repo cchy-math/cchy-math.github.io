@@ -104,10 +104,10 @@ export default function Timer() {
     function calculateEndTime(sH, sM, dH, dM) {
         let endTime = Number(sH)*60 + Number(sM) + Number(dH.slice(0, dH.indexOf(' ')))*60 + Number(dM.slice(0, dM.indexOf(' ')));
         let endHour = Math.floor(endTime/60);
-        let endMin = endTime - endHour;
-        if(endHour.length < 2) endHour = "0" + endHour;
-        if(endMin.length < 2) endMin = "0" + endMin;
-
+        let endMin = endTime - endHour*60;
+        if(endHour < 10) endHour = "0" + endHour;
+        if(endMin < 10) endMin = "0" + endMin;
+        return (endHour + ":" + endMin);
     }
     return (
         <main className="container">
@@ -240,17 +240,21 @@ export default function Timer() {
             </form>
             <div for="timer-display" className="text-center align-items-center display-6">
                 <section id="info" className="">
-                    {yearSelection.slice(0, yearSelection.indexOf(' '))} {selectedSubject.slice(0, selectedSubject.indexOf(' '))}
+                    {yearSelection.slice(0, yearSelection.indexOf(' '))}
+                    <br/>
+                    {selectedSubject.slice(0, selectedSubject.indexOf(' '))}
                     <br/>
                     {selectedPaper.slice(0, selectedPaper.indexOf(' '))}
                     <br/>
-                    {startHour}:{startMin}-{startHour + durationHour + Math.floor((startMin + durationMin)/60)}:{(startMin + durationMin)%60}
+                    {startHour}:{startMin} - {calculateEndTime(startHour, startMin, durationHour, durationMin)}
                     <br/>
-                    {yearSelection.slice(yearSelection.indexOf(' ')+1)} {selectedSubject.slice(selectedSubject.indexOf(' ')+1)}
+                    {yearSelection.slice(yearSelection.indexOf(' ')+1)}
+                    <br/>
+                    {selectedSubject.slice(selectedSubject.indexOf(' ')+1)}
                     <br/>
                     {selectedPaper.slice(selectedPaper.indexOf(' ')+1)}
                     <br/>
-                    {startHour}:{startMin} - {calculateEndTime(startHour, startMin, durationHour, durationMin)};
+                    {startHour}:{startMin} - {calculateEndTime(startHour, startMin, durationHour, durationMin)}
                 </section>
                 <section id="progress-bar">
 
