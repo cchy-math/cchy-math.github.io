@@ -184,17 +184,17 @@ export default function Timer() {
             if(barWidth < barWidth5) {
                 document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-danger";
                 document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-4 text-danger";
-            }      
-            if(switchLanguage){
+            }     
+            if(timeLeftInSeconds%5 === 0){
                 if(selectedLanguage === '中文 Chinese') {
                     setSelectedLanguage('英文 English');
-                }
-                if(selectedLanguage === '英文 English'){
+                  } else {
                     setSelectedLanguage('中文 Chinese');
-                }
+                  }
             }
-          }, 1000);
+        }, 1000);
     }
+    
     const handleDoneClick = () => {
         setFormVisible(false); 
         setDisplayVisible(true);
