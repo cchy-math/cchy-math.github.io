@@ -188,25 +188,13 @@ export default function Timer() {
             if(switchLanguage){
                 if(selectedLanguage === '中文 Chinese') {
                     setSelectedLanguage('英文 English');
-                }else {
+                }
+                if(selectedLanguage === '英文 English'){
                     setSelectedLanguage('中文 Chinese');
                 }
             }
           }, 1000);
     }
-    const displayInfo = () => {
-        <>
-            { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
-            { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
-            <br/>
-            { selectedLanguage === '中文 Chinese' && selectedSubject.slice(0, selectedSubject.indexOf(' ')) }
-            { selectedLanguage === '英文 English' && selectedSubject.slice(selectedSubject.indexOf(' ')+1) }
-            <br/>
-            { selectedLanguage === '中文 Chinese' && (selectedPaper && selectedPaper.slice(0, selectedPaper.indexOf(' '))) }
-            { selectedLanguage === '英文 English' && (selectedPaper && selectedPaper.slice(selectedPaper.indexOf(' ')+1)) }
-            { selectedPaper && <br/> }
-        </>
-    };
     const handleDoneClick = () => {
         setFormVisible(false); 
         setDisplayVisible(true);
@@ -358,7 +346,15 @@ export default function Timer() {
             {displayVisible && (
                 <section visible={displayVisible} for="timer-display" className="text-center align-items-center">
                     <section id="info" className="display-1 mb-5">
-                        { displayInfo }
+                        { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
+                        { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
+                        <br/>
+                        { selectedLanguage === '中文 Chinese' && selectedSubject.slice(0, selectedSubject.indexOf(' ')) }
+                        { selectedLanguage === '英文 English' && selectedSubject.slice(selectedSubject.indexOf(' ')+1) }
+                        <br/>
+                        { selectedLanguage === '中文 Chinese' && (selectedPaper && selectedPaper.slice(0, selectedPaper.indexOf(' '))) }
+                        { selectedLanguage === '英文 English' && (selectedPaper && selectedPaper.slice(selectedPaper.indexOf(' ')+1)) }
+                        { selectedPaper && <br/> }
                         { examTime }
                         <br/>
                     </section>
