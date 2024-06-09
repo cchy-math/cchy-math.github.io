@@ -3,6 +3,8 @@ import "../../components/button/button.css"
 import "../../components/button/button.js"
 import "../../components/clock/clock.css"
 import "../../components/clock/clock.js"
+import '../../components/time_left_bar/time_left_bar.css'
+import '../../components/time_left_bar/time_left_bar.js'
 import Clock2 from "../../components/clock/Clock2.jsx"
 import { S12subjectData } from "./S12-subject-data.js";
 import { S3subjectData } from "./S3-subject-data.js";
@@ -88,7 +90,7 @@ export default function Timer() {
         ));
         // re-render paper dropdown
         setPaperOptions(paperOptions);
-    }, [selectedSubject]) 
+    }, [selectedSubject, yearSelection]) 
     const [startHour, setStartHour] = useState('08'); 
     const handleStartHourChange = (e) => {
         setStartHour(e.target.value);
@@ -266,12 +268,14 @@ export default function Timer() {
                     {startHour}:{startMin} - {calculateEndTime(startHour, startMin, durationHour, durationMin)}
                 </section>
                 <section id="progress-bar">
-
+                    <div className="time_left_bar flex-row-reverse">
+                        <div className="progress-bar progress-bar-striped progress-bar-animated bg-success" />
+                    </div>
                 </section>
                 <section id="clock" className="row">
-                    <div className="col"></div>
-                    <div className="col"><Clock2 /></div>
-                    <div className="col"></div>
+                    <div className="col-xs-1 col-md-4"></div>
+                    <div className="col-xs-10 col-md-4"><Clock2 /></div>
+                    <div className="col-xs-1 col-md-4"></div>
                 </section>
             </div>
         </main>

@@ -1,5 +1,10 @@
 export const lang_papers = [
   {
+    "value": "0",
+    "chi_name": "", 
+    "eng_name": "",
+  },
+  {
     "value": "1",
     "chi_name": "試卷（一）閱讀", 
     "eng_name": "Paper I Reading",
