@@ -15,11 +15,9 @@
 .progress#time-left-bar {
 	max-width: 100%;
 	text-align: center;
-	width: 100vw;
-	height: 7px;
+	height: 8px;
 	position:relative;
-  	left:0px;
-	bottom: 0;
 	background-color: var(--bs-dark);
-	
+	filter: blur(1px);
+	-webkit-filter: blur(1px);
 }

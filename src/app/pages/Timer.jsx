@@ -15,6 +15,7 @@ import { two_papers } from "./two-papers.js";
 import { va_papers } from "./va-papers.js";
 import { no_paper } from "./no-paper.js";
 export default function Timer() {
+    const [switchLanguage, setSwitchLanguage] = useState(false);
     const [formVisible, setFormVisible] = useState(true);
     const [displayVisible, setDisplayVisible] = useState(false);
     const [yearSelection, setYearSelection] = useState('');
@@ -136,7 +137,6 @@ export default function Timer() {
     let timeLeftInSeconds;
     const [timeLeftColor, setTimeLeftColor] = useState('text-info');
     const handleStartClick = () => {
-        setTimeLeftColor('text-success');
         let hLeft = Number(durationHour.slice(0, durationHour.indexOf(' ')));
         let mLeft = Number(durationMin.slice(0, durationMin.indexOf(' ')));
         let sLeft = 0;
@@ -173,13 +173,41 @@ export default function Timer() {
             let barWidth15 = (15*60/totalTime) * 100;
             let barWidth5 = (5*60/totalTime) * 100;
             document.querySelector(".time-left").style.width = barWidth + "%";
-            if(barWidth >=barWidth15 && barWidth <=100) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-success";}
-            if(barWidth >=barWidth5 && barWidth <barWidth15) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-warning";}
-            if(barWidth < barWidth5) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-danger";}
+            if(barWidth >=barWidth15 && barWidth <=100) {
+                document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-success";
+                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-4 text-success";
+            }
+            if(barWidth >=barWidth5 && barWidth <barWidth15) {
+                document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-warning";
+                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-4 text-warning";
+            }
+            if(barWidth < barWidth5) {
+                document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-danger";
+                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-4 text-danger";
+            }      
+            if(switchLanguage){
+                if(selectedLanguage === '中文 Chinese') {
+                    setSelectedLanguage('英文 English');
+                }else {
+                    setSelectedLanguage('中文 Chinese');
+                }
+            }
           }, 1000);
     }
+    const displayInfo = () => {
+        <>
+            { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
+            { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
+            <br/>
+            { selectedLanguage === '中文 Chinese' && selectedSubject.slice(0, selectedSubject.indexOf(' ')) }
+            { selectedLanguage === '英文 English' && selectedSubject.slice(selectedSubject.indexOf(' ')+1) }
+            <br/>
+            { selectedLanguage === '中文 Chinese' && (selectedPaper && selectedPaper.slice(0, selectedPaper.indexOf(' '))) }
+            { selectedLanguage === '英文 English' && (selectedPaper && selectedPaper.slice(selectedPaper.indexOf(' ')+1)) }
+            { selectedPaper && <br/> }
+        </>
+    };
     const handleDoneClick = () => {
-        setTimeLeftColor('text-info');
         setFormVisible(false); 
         setDisplayVisible(true);
         let hLeft = Number(durationHour.slice(0, durationHour.indexOf(' ')));
@@ -197,22 +225,23 @@ export default function Timer() {
         if(sM < 10) sM = "0" + sM;
         setTimeLeft(hLeft+":"+mLeft+":"+"00");
         setExamTime(sH+":"+sM+" - "+endH+":"+endM)
+        if(selectedLanguage === '雙語顯示 Bilingual') {
+            setSwitchLanguage(true);
+            setSelectedLanguage('中文 Chinese');
+        }
     }
     const handleFinishClick = () => {
-        clearInterval(interval);
-        timeLeftInSeconds = 0;
-        setFormVisible(true);
-        setDisplayVisible(false)
-      }
+        window.location.reload();
+    }
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
             {formVisible && (
                 <form className="" visible={formVisible}>
                     <div className="h1 text-center">Timer Settings</div>
-                    <section className="p-3">
-                        <div className="row p-3">
-                            <div className="col-md-2 col-xs-12 p-3">
+                    <section className="p-3 justify-content-center">
+                        <div className="row p-3 justify-content-center">
+                            <div className="col-md-1 col-xs-12 p-3">
                                 <label for="year" class="form-label h4">Year</label>
                                 <select 
                                     value={yearSelection}
@@ -236,7 +265,7 @@ export default function Timer() {
                                     {subjectOptions}
                                 </select>
                             </div>
-                            <div className="col-md-4 col-xs-12 p-3">
+                            <div className="col-md-3 col-xs-12 p-3">
                                 <label for="paper" class="form-label h4">Paper</label>
                                 <select onChange={handlePaperChange} class="form-select bg-dark text-light" id="paper" required="">
                                     {paperOptions}
@@ -248,15 +277,16 @@ export default function Timer() {
                                     <option></option>
                                     <option id="中文 Chinese">中文 Chinese</option>
                                     <option id="英文 English">英文 English</option>
+                                    <option id="雙語顯示 Bilingual">雙語顯示 Bilingual</option>
                                 </select>
                             </div>
                         </div>
                     </section>
                     <section className="p-3">
-                        <div className="row p-3">
+                        <div className="row p-3 justify-content-center">
                             <div className="col-md-2 col-xs-12 p-3">
                                 <label for="starting-time" class="col form-label h4">Starting Time</label>
-                                <div className="row">
+                                <div className="row h3">
                                     <select onChange={handleStartHourChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-hour" required="">
                                         <option></option>
                                         <option>08</option>
@@ -271,6 +301,7 @@ export default function Timer() {
                                         <option>17</option>
                                         <option>18</option>
                                     </select>
+                                    :
                                     <select onChange={handleStartMinChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-min" required="">
                                         <option></option>
                                         {minuteOptions}
@@ -279,7 +310,7 @@ export default function Timer() {
                             </div>
                             <div className="col-md-2 col-xs-12 p-3">
                                 <label for="duration" class="form-label h4">Duration Time</label>
-                                <div className="row">
+                                <div className="row h3">
                                     <select onChange={handleDurationHourChange} class="col mx-3 form-select bg-dark text-light" id="duration-hour" required="">
                                         <option></option>
                                         <option id="0-dt-h">0 hour</option>
@@ -288,6 +319,7 @@ export default function Timer() {
                                         <option id="3-dt-h">3 hour</option>
                                         <option id="4-dt-h">4 hour</option>
                                     </select>
+                                    :
                                     <select onChange={handleDurationMinChange} class="col mx-3 form-select bg-dark text-light" id="duration-min" required="">
                                         <option></option>
                                         <option id="0-dt-m">0 min</option>
@@ -305,14 +337,7 @@ export default function Timer() {
                                     </select>
                                 </div>
                             </div>
-                            <div className="col-md-4 col-xs-12 p-3">
-                                <label for="remaining-time" class="form-label h4">Reminder</label>
-                                <select class="form-select bg-dark text-light" id="remaining-time" required="">
-                                    <option></option>
-                                    <option id="15+5-reminder">時間剩餘15分鐘及5分鐘時提示 Remind when 15 minutes left and 5 minutes left</option>
-                                    <option id="no-reminder">沒有剩餘時間提示 No Remaining Time Reminder</option>
-                                </select>
-                            </div>
+                            
                             <div className="col-md-2 col-xs-12 p-3">
                                 <label for="auto" class="form-label h4">Auto Start</label>
                                 <select class="form-select bg-dark text-light" id="auto" required="">
@@ -331,46 +356,41 @@ export default function Timer() {
                 </form>
             )}
             {displayVisible && (
-                <section visible={displayVisible} for="timer-display" className="vh-100 text-center align-items-center">
-                    <section id="info" className="vh-50 display-2 mb-5">
-                        { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
-                        { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
-                        <br/>
-                        { selectedLanguage === '中文 Chinese' && selectedSubject.slice(0, selectedSubject.indexOf(' ')) }
-                        { selectedLanguage === '英文 English' && selectedSubject.slice(selectedSubject.indexOf(' ')+1) }
-                        <br/>
-                        { selectedLanguage === '中文 Chinese' && (selectedPaper && selectedPaper.slice(0, selectedPaper.indexOf(' '))) }
-                        { selectedLanguage === '英文 English' && (selectedPaper && selectedPaper.slice(selectedPaper.indexOf(' ')+1)) }
-                        { selectedPaper && <br/> }
+                <section visible={displayVisible} for="timer-display" className="text-center align-items-center">
+                    <section id="info" className="display-1 mb-5">
+                        { displayInfo }
                         { examTime }
                         <br/>
                     </section>
-                    <section id="time-display" className="px-5">
-                        <section id="progress-bar" className="row px-5">
-                            <div className="row">
-                                <div className="col-xs-4 col-md-1">
-                                    <button onClick={handleStartClick} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
+                    <section id="time-display" className="px-5 mt-5">
+                        <section id="progress-bar" className="row my-5">
+                            <div className="row align-items-center">
+                                <div className="col-xs-4 col-md-2">
+                                    <button onClick={handleStartClick} className="button-rainbow h5" style={{'width': '100%'}}>
                                         Start
                                     </button>
                                 </div>
-                                <div id="exam-time-left-info" className={`col-xs-4 col-md-10 display-6 ${timeLeftColor}`}>
+                                <div id="exam-time-left-info" className="col-xs-4 col-md-8 display-4 text-info">
                                     { selectedLanguage === '中文 Chinese' && "剩餘時間 " }
                                     { selectedLanguage === '英文 English' && "Remaining Time " }
                                     { timeLeft }
                                 </div>
-                                <div className="col-xs-4 col-md-1">
-                                    <button onClick={handleFinishClick} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
+                                <div className="col-xs-4 col-md-2">
+                                    <button onClick={handleFinishClick} className="button-rainbow h5" style={{'width': '100%'}}>
                                         Finish
                                     </button>
                                 </div>
                             </div>
-                            <div id="time-left-bar" className="progress flex-row-reverse">
-                                <div className="progress-bar time-left progress-bar-striped progress-bar-animated bg-info" />
+                            <div id="time-left-bar" className="progress flex-row-reverse my-3">
+                                <div className="progress-bar time-left progress-bar-striped progress-bar-animated bg-info" style={{width: 100+'%'}} />
                             </div>
                         </section>
-                        <section id="clock" className="row">
+                        <section id="announcement" className="display-6 my-5">
+                            考試時間尚餘十五分鐘。請考生確保在試卷及答題紙上寫上姓名、班別及學號。
+                        </section>
+                        <section id="clock" className="row mt-5">
                             <div className="col-xs-1 col-md-4"></div>
-                            <div className="col-xs-10 col-md-4"><Clock2 /></div>
+                            <div className="col-xs-10 col-md-4 my-5"><Clock2 /></div>
                             <div className="col-xs-1 col-md-4"></div>
                         </section>
                     </section>
