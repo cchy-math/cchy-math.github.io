@@ -18,7 +18,6 @@ export default function Timer() {
     const [selectedSubject, setSelectedSubject] = useState(''); 
     const [selectedPaper, setSelectedPaper] = useState(''); 
     const yearList = [
-        ["年級", "Year"],
         ["中一", "S1"],
         ["中二", "S2"], 
         ["中三", "S3"],
@@ -28,9 +27,12 @@ export default function Timer() {
       ];
     const handleYearChange = (e) => {
         setYearSelection(e.target.value);
+        setSelectedSubject('');
+        setSelectedPaper('');
     };
     const handleSubjectChange = (e) => {
         setSelectedSubject(e.target.value);
+        setSelectedPaper('');
     }
     const handlePaperChange = (e) => {
         setSelectedPaper(e.target.value);
@@ -244,16 +246,16 @@ export default function Timer() {
                     <br/>
                     {selectedSubject.slice(0, selectedSubject.indexOf(' '))}
                     <br/>
-                    {selectedPaper.slice(0, selectedPaper.indexOf(' '))}
-                    <br/>
+                    {selectedPaper && selectedPaper.slice(0, selectedPaper.indexOf(' '))}
+                    {selectedPaper && <br/>}
                     {startHour}:{startMin} - {calculateEndTime(startHour, startMin, durationHour, durationMin)}
                     <br/>
                     {yearSelection.slice(yearSelection.indexOf(' ')+1)}
                     <br/>
                     {selectedSubject.slice(selectedSubject.indexOf(' ')+1)}
                     <br/>
-                    {selectedPaper.slice(selectedPaper.indexOf(' ')+1)}
-                    <br/>
+                    {selectedPaper && selectedPaper.slice(selectedPaper.indexOf(' ')+1)}
+                    {selectedPaper && <br/>}
                     {startHour}:{startMin} - {calculateEndTime(startHour, startMin, durationHour, durationMin)}
                 </section>
                 <section id="progress-bar">
