@@ -3,6 +3,7 @@ import "../../components/button/button.css"
 import "../../components/button/button.js"
 import "../../components/clock/clock.css"
 import "../../components/clock/clock.js"
+import Clock2 from "../../components/clock/Clock2.jsx"
 import { S12subjectData } from "./S12-subject-data.js";
 import { S3subjectData } from "./S3-subject-data.js";
 import { DSEsubjectData } from "./DSE-subject-data.js";
@@ -18,6 +19,7 @@ export default function Timer() {
     const [selectedSubject, setSelectedSubject] = useState(''); 
     const [selectedPaper, setSelectedPaper] = useState(''); 
     const yearList = [
+        ["", ""],
         ["中一", "S1"],
         ["中二", "S2"], 
         ["中三", "S3"],
@@ -87,19 +89,19 @@ export default function Timer() {
         // re-render paper dropdown
         setPaperOptions(paperOptions);
     }, [selectedSubject]) 
-    const [startHour, setStartHour] = useState(''); 
+    const [startHour, setStartHour] = useState('08'); 
     const handleStartHourChange = (e) => {
         setStartHour(e.target.value);
     }
-    const [startMin, setStartMin] = useState(''); 
+    const [startMin, setStartMin] = useState('30'); 
     const handleStartMinChange = (e) => {
         setStartMin(e.target.value);
     }
-    const [durationHour, setDurationHour] = useState(''); 
+    const [durationHour, setDurationHour] = useState('0'); 
     const handleDurationHourChange = (e) => {
         setDurationHour(e.target.value);
     }
-    const [durationMin, setDurationMin] = useState(''); 
+    const [durationMin, setDurationMin] = useState('0'); 
     const handleDurationMinChange = (e) => {
         setDurationMin(e.target.value);
     }
@@ -155,9 +157,9 @@ export default function Timer() {
                         <div className="col-md-2 col-xs-12 p-3">
                             <label for="display" class="form-label h4">Language</label>
                             <select onChange={handleLanguageChange} class="form-select bg-dark text-light" id="display" required="">
+                                <option></option>
                                 <option id="中文 Chinese">中文 Chinese</option>
                                 <option id="英文 English">英文 English</option>
-                                <option id="中英對照 Chinese-English Parallel">中英對照 Chinese-English Parallel</option>
                             </select>
                         </div>
                     </div>
@@ -168,6 +170,7 @@ export default function Timer() {
                             <label for="starting-time" class="col form-label h4">Starting Time</label>
                             <div className="row">
                                 <select onChange={handleStartHourChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-hour" required="">
+                                    <option></option>
                                     <option id="8-st-h">08</option>
                                     <option id="9-st-h">09</option>
                                     <option id="10-st-h">10</option>
@@ -181,6 +184,7 @@ export default function Timer() {
                                     <option id="18-st-h">18</option>
                                 </select>
                                 <select onChange={handleStartMinChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-min" required="">
+                                    <option></option>
                                     <option id="0-st-m">00</option>
                                     <option id="5-st-m">05</option>
                                     <option id="10-st-m">10</option>
@@ -200,6 +204,7 @@ export default function Timer() {
                             <label for="duration" class="form-label h4">Duration</label>
                             <div className="row">
                                 <select onChange={handleDurationHourChange} class="col mx-3 form-select bg-dark text-light" id="duration-hour" required="">
+                                    <option></option>
                                     <option id="0-dt-h">0 hour</option>
                                     <option id="1-dt-h">1 hour</option>
                                     <option id="2-dt-h">2 hour</option>
@@ -207,6 +212,7 @@ export default function Timer() {
                                     <option id="4-dt-h">4 hour</option>
                                 </select>
                                 <select onChange={handleDurationMinChange} class="col mx-3 form-select bg-dark text-light" id="duration-min" required="">
+                                    <option></option>
                                     <option id="0-dt-m">0 min</option>
                                     <option id="5-dt-m">5 min</option>
                                     <option id="10-dt-m">10 min</option>
@@ -225,13 +231,15 @@ export default function Timer() {
                         <div className="col-md-4 col-xs-12 p-3">
                             <label for="remaining-time" class="form-label h4">Remaining Time</label>
                             <select class="form-select bg-dark text-light" id="remaining-time" required="">
-                                <option id="no-reminder">沒有剩餘時間提示 No Remaining Time Reminder</option>
+                                <option></option>
                                 <option id="15+5-reminder">時間剩餘15分鐘及5分鐘時提示 Remind when 15 minutes left and 5 minutes left</option>
+                                <option id="no-reminder">沒有剩餘時間提示 No Remaining Time Reminder</option>
                             </select>
                         </div>
                         <div className="col-md-2 col-xs-12 p-3">
                             <label for="auto" class="form-label h4">Auto Start</label>
                             <select class="form-select bg-dark text-light" id="auto" required="">
+                                <option></option>
                                 <option id="MANUAL">手動開始 Start Manually</option>
                                 <option id="AUTO">自動開始 Start Automatically</option>
                             </select>
@@ -244,7 +252,7 @@ export default function Timer() {
                     </div>
                 </section>
             </form>
-            <div for="timer-display" className="text-center align-items-center display-6">
+            <div for="timer-display" className="text-center align-items-center display-2">
                 <section id="info" className="">
                     { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
                     { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
@@ -260,8 +268,10 @@ export default function Timer() {
                 <section id="progress-bar">
 
                 </section>
-                <section id="clock">
-
+                <section id="clock" className="row">
+                    <div className="col"></div>
+                    <div className="col"><Clock2 /></div>
+                    <div className="col"></div>
                 </section>
             </div>
         </main>

@@ -20,11 +20,6 @@ setInterval(()=>{
     let hours = date.getHours();
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
-    let day_night = "AM";
-    if(hours > 12){
-    day_night = "PM";
-    hours = hours - 12;
-    }
     if(seconds < 10){
     seconds = "0" + seconds;
     }
@@ -35,7 +30,7 @@ setInterval(()=>{
     hours = "0" + hours;
     }
     for(let i=0; i<time.length; i++) {
-        time[i].textContent = hours + ":" + minutes + ":" + seconds + " " + day_night;
+        time[i].textContent = hours + ":" + minutes + ":" + seconds + " ";
         time[i].style["font-size"] = display[i].clientWidth/7 + "px";
     }
 });

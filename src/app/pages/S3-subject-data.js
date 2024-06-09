@@ -1,5 +1,11 @@
 export const S3subjectData = [
   {
+    "value": "",
+    "chi_name": "", 
+    "eng_name": "",
+    "papers": "./no_paper.js",
+  },
+  {
     "value": "CHI",
     "chi_name": "中國語文", 
     "eng_name": "Chinese Language",
