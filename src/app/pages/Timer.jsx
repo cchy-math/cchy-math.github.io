@@ -17,6 +17,8 @@ import { two_papers } from "./two-papers.js";
 import { va_papers } from "./va-papers.js";
 import { no_paper } from "./no-paper.js";
 export default function Timer() {
+    const [formVisible, setFormVisible] = useState(true);
+    const [displayVisible, setDisplayVisible] = useState(false);
     const [yearSelection, setYearSelection] = useState('');
     const [selectedSubject, setSelectedSubject] = useState(''); 
     const [selectedPaper, setSelectedPaper] = useState(''); 
@@ -120,7 +122,7 @@ export default function Timer() {
         setSelectedLanguage(e.target.value);
     }
     const minuteOptions = [];
-    for(let i = 0; i < 60; i++) {
+    for(let i = 0; i < 60; i+=5) {
         minuteOptions.push(
             <option key={i}>
                 {i < 10 ? '0'+i : i} 
@@ -131,7 +133,7 @@ export default function Timer() {
     useEffect(() => {
         setExamTime(startHour+":"+startMin+" - "+calculateEndTime(startHour, startMin, durationHour, durationMin));
     }, [startHour, startMin, durationHour, durationMin])
-    const handleDoneClick = () => {
+    const handleStartClick = () => {
         let date  = new Date();
         let h = date.getHours();
         let m = date.getMinutes();
@@ -144,151 +146,174 @@ export default function Timer() {
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
-            <div className="h1 text-center">Timer Settings</div>
-           
-                <section className="p-3">
-                    <div className="row p-3">
-                        <div className="col-md-2 col-xs-12 p-3">
-                            <label for="year" class="form-label h4">Year</label>
-                            <select 
-                                value={yearSelection}
-                                onChange={handleYearChange}
-                                class="form-select bg-dark text-light" 
-                                id="year"
-                                required
-                            >
-                                {yearList.map((year, index) => {
-                                    return (
-                                        <option id={year[1]} /* value={year[1]} */> 
-                                            {year[0]} {year[1]}  
-                                        </option>
-                                    )
-                                })}
-                            </select>
-                        </div>
-                        <div className="col-md-4 col-xs-12 p-3">
-                            <label for="subject" class="form-label h4">Subject</label>
-                            <select onChange={handleSubjectChange}  class="form-select bg-dark text-light" id="subject" equired="">
-                                {subjectOptions}
-                            </select>
-                        </div>
-                        <div className="col-md-4 col-xs-12 p-3">
-                            <label for="paper" class="form-label h4">Paper</label>
-                            <select onChange={handlePaperChange} class="form-select bg-dark text-light" id="paper" required="">
-                                {paperOptions}
-                            </select>
-                        </div>
-                        <div className="col-md-2 col-xs-12 p-3">
-                            <label for="display" class="form-label h4">Language</label>
-                            <select onChange={handleLanguageChange} class="form-select bg-dark text-light" id="display" required="">
-                                <option></option>
-                                <option id="中文 Chinese">中文 Chinese</option>
-                                <option id="英文 English">英文 English</option>
-                            </select>
-                        </div>
-                    </div>
-                </section>
-                <section className="p-3">
-                    <div className="row p-3">
-                        <div className="col-md-2 col-xs-12 p-3">
-                            <label for="starting-time" class="col form-label h4">Starting Time</label>
-                            <div className="row">
-                                <select onChange={handleStartHourChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-hour" required="">
-                                    <option></option>
-                                    <option>08</option>
-                                    <option>09</option>
-                                    <option>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                    <option>13</option>
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option>
-                                    <option>17</option>
-                                    <option>18</option>
+            {formVisible && (
+                <form className="" visible={formVisible}>
+                    <div className="h1 text-center">Timer Settings</div>
+                    <section className="p-3">
+                        <div className="row p-3">
+                            <div className="col-md-2 col-xs-12 p-3">
+                                <label for="year" class="form-label h4">Year</label>
+                                <select 
+                                    value={yearSelection}
+                                    onChange={handleYearChange}
+                                    class="form-select bg-dark text-light" 
+                                    id="year"
+                                    required
+                                >
+                                    {yearList.map((year, index) => {
+                                        return (
+                                            <option id={year[1]} /* value={year[1]} */> 
+                                                {year[0]} {year[1]}  
+                                            </option>
+                                        )
+                                    })}
                                 </select>
-                                <select onChange={handleStartMinChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-min" required="">
+                            </div>
+                            <div className="col-md-4 col-xs-12 p-3">
+                                <label for="subject" class="form-label h4">Subject</label>
+                                <select onChange={handleSubjectChange}  class="form-select bg-dark text-light" id="subject" equired="">
+                                    {subjectOptions}
+                                </select>
+                            </div>
+                            <div className="col-md-4 col-xs-12 p-3">
+                                <label for="paper" class="form-label h4">Paper</label>
+                                <select onChange={handlePaperChange} class="form-select bg-dark text-light" id="paper" required="">
+                                    {paperOptions}
+                                </select>
+                            </div>
+                            <div className="col-md-2 col-xs-12 p-3">
+                                <label for="display" class="form-label h4">Language</label>
+                                <select onChange={handleLanguageChange} class="form-select bg-dark text-light" id="display" required="">
                                     <option></option>
-                                    {minuteOptions}
+                                    <option id="中文 Chinese">中文 Chinese</option>
+                                    <option id="英文 English">英文 English</option>
                                 </select>
                             </div>
                         </div>
-                        <div className="col-md-2 col-xs-12 p-3">
-                            <label for="duration" class="form-label h4">Duration</label>
-                            <div className="row">
-                                <select onChange={handleDurationHourChange} class="col mx-3 form-select bg-dark text-light" id="duration-hour" required="">
+                    </section>
+                    <section className="p-3">
+                        <div className="row p-3">
+                            <div className="col-md-2 col-xs-12 p-3">
+                                <label for="starting-time" class="col form-label h4">Starting Time</label>
+                                <div className="row">
+                                    <select onChange={handleStartHourChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-hour" required="">
+                                        <option></option>
+                                        <option>08</option>
+                                        <option>09</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                    </select>
+                                    <select onChange={handleStartMinChange} class="col mx-3 form-select bg-dark text-light" id="starting-time-min" required="">
+                                        <option></option>
+                                        {minuteOptions}
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="col-md-2 col-xs-12 p-3">
+                                <label for="duration" class="form-label h4">Duration Time</label>
+                                <div className="row">
+                                    <select onChange={handleDurationHourChange} class="col mx-3 form-select bg-dark text-light" id="duration-hour" required="">
+                                        <option></option>
+                                        <option id="0-dt-h">0 hour</option>
+                                        <option id="1-dt-h">1 hour</option>
+                                        <option id="2-dt-h">2 hour</option>
+                                        <option id="3-dt-h">3 hour</option>
+                                        <option id="4-dt-h">4 hour</option>
+                                    </select>
+                                    <select onChange={handleDurationMinChange} class="col mx-3 form-select bg-dark text-light" id="duration-min" required="">
+                                        <option></option>
+                                        <option id="0-dt-m">0 min</option>
+                                        <option id="5-dt-m">5 min</option>
+                                        <option id="10-dt-m">10 min</option>
+                                        <option id="15-dt-m">15 min</option>
+                                        <option id="20-dt-m">20 min</option>
+                                        <option id="25-dt-m">25 min</option>
+                                        <option id="30-dt-m">30 min</option>
+                                        <option id="35-dt-m">35 min</option>
+                                        <option id="40-dt-m">40 min</option>
+                                        <option id="45-dt-m">45 min</option>
+                                        <option id="50-dt-m">50 min</option>
+                                        <option id="55-dt-m">55 min</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="col-md-4 col-xs-12 p-3">
+                                <label for="remaining-time" class="form-label h4">Reminder</label>
+                                <select class="form-select bg-dark text-light" id="remaining-time" required="">
                                     <option></option>
-                                    <option id="0-dt-h">0 hour</option>
-                                    <option id="1-dt-h">1 hour</option>
-                                    <option id="2-dt-h">2 hour</option>
-                                    <option id="3-dt-h">3 hour</option>
-                                    <option id="4-dt-h">4 hour</option>
-                                </select>
-                                <select onChange={handleDurationMinChange} class="col mx-3 form-select bg-dark text-light" id="duration-min" required="">
-                                    <option></option>
-                                    <option id="0-dt-m">0 min</option>
-                                    <option id="5-dt-m">5 min</option>
-                                    <option id="10-dt-m">10 min</option>
-                                    <option id="15-dt-m">15 min</option>
-                                    <option id="20-dt-m">20 min</option>
-                                    <option id="25-dt-m">25 min</option>
-                                    <option id="30-dt-m">30 min</option>
-                                    <option id="35-dt-m">35 min</option>
-                                    <option id="40-dt-m">40 min</option>
-                                    <option id="45-dt-m">45 min</option>
-                                    <option id="50-dt-m">50 min</option>
-                                    <option id="55-dt-m">55 min</option>
+                                    <option id="15+5-reminder">時間剩餘15分鐘及5分鐘時提示 Remind when 15 minutes left and 5 minutes left</option>
+                                    <option id="no-reminder">沒有剩餘時間提示 No Remaining Time Reminder</option>
                                 </select>
                             </div>
+                            <div className="col-md-2 col-xs-12 p-3">
+                                <label for="auto" class="form-label h4">Auto Start</label>
+                                <select class="form-select bg-dark text-light" id="auto" required="">
+                                    <option></option>
+                                    <option id="MANUAL">手動開始 Start Manually</option>
+                                    <option id="AUTO">自動開始 Start Automatically</option>
+                                </select>
+                            </div>
+                            <div className="col-md-2 col-xs-12 px-4">
+                                <button onClick={() => {setFormVisible(false); setDisplayVisible(true)}} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
+                                    Done
+                                </button>
+                            </div>
                         </div>
-                        <div className="col-md-4 col-xs-12 p-3">
-                            <label for="remaining-time" class="form-label h4">Remaining Time</label>
-                            <select class="form-select bg-dark text-light" id="remaining-time" required="">
-                                <option></option>
-                                <option id="15+5-reminder">時間剩餘15分鐘及5分鐘時提示 Remind when 15 minutes left and 5 minutes left</option>
-                                <option id="no-reminder">沒有剩餘時間提示 No Remaining Time Reminder</option>
-                            </select>
-                        </div>
-                        <div className="col-md-2 col-xs-12 p-3">
-                            <label for="auto" class="form-label h4">Auto Start</label>
-                            <select class="form-select bg-dark text-light" id="auto" required="">
-                                <option></option>
-                                <option id="MANUAL">手動開始 Start Manually</option>
-                                <option id="AUTO">自動開始 Start Automatically</option>
-                            </select>
-                        </div>
-                        <div className="col-md-2 col-xs-12 px-4">
-                            <button onClick={handleDoneClick} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
-                                Done
-                            </button>
-                        </div>
-                    </div>
+                    </section>
+                </form>
+            )}
+            {displayVisible && (
+                <section visible={displayVisible} for="timer-display" className="vh-100 text-center align-items-center display-2">
+                    <section id="info" className="vh-50">
+                        { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
+                        { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
+                        <br/>
+                        { selectedLanguage === '中文 Chinese' && selectedSubject.slice(0, selectedSubject.indexOf(' ')) }
+                        { selectedLanguage === '英文 English' && selectedSubject.slice(selectedSubject.indexOf(' ')+1) }
+                        <br/>
+                        { selectedLanguage === '中文 Chinese' && (selectedPaper && selectedPaper.slice(0, selectedPaper.indexOf(' '))) }
+                        { selectedLanguage === '英文 English' && (selectedPaper && selectedPaper.slice(selectedPaper.indexOf(' ')+1)) }
+                        { selectedPaper && <br/> }
+                        { examTime }
+                        <br/>
+                    </section>
+                    <section id="time-display" className="vh-50">
+                        <section id="progress-bar" className="row vh-25 px-5">
+                            <div className="row">
+                                <div className="col-xs-4 col-md-1">
+                                    <button onClick={handleStartClick} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
+                                        Start
+                                    </button>
+                                </div>
+                                <div className="col-xs-4 col-md-10">
+                                    Time Remaining
+                                </div>
+                                <div className="col-xs-4 col-md-1">
+                                    <button onClick={() => {setFormVisible(true); setDisplayVisible(false)}} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
+                                        Finish
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="time_left_bar flex-row-reverse">
+                                <div className="progress-bar progress-bar-striped progress-bar-animated bg-success" />
+                            </div>
+                        </section>
+                        <section id="clock" className="row vh-25">
+                            <div className="col-xs-1 col-md-4"></div>
+                            <div className="col-xs-10 col-md-4"><Clock2 /></div>
+                            <div className="col-xs-1 col-md-4"></div>
+                        </section>
+                    </section>
                 </section>
+            )}   
             
-            <div for="timer-display" className="vh-100 text-center align-items-center display-2">
-                <section id="info" className="vh-50">
-                    { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
-                    { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
-                    <br/>
-                    { selectedLanguage === '中文 Chinese' && selectedSubject.slice(0, selectedSubject.indexOf(' ')) }
-                    { selectedLanguage === '英文 English' && selectedSubject.slice(selectedSubject.indexOf(' ')+1) }
-                    <br/>
-                    { selectedLanguage === '中文 Chinese' && (selectedPaper && selectedPaper.slice(0, selectedPaper.indexOf(' '))) }
-                    { selectedLanguage === '英文 English' && (selectedPaper && selectedPaper.slice(selectedPaper.indexOf(' ')+1)) }
-                    { selectedPaper && <br/> }
-                    { examTime }
-                </section>
-                <section id="progress-bar" className="vh-25 row">
-                    <div className="time_left_bar flex-row-reverse">
-                        <div className="progress-bar progress-bar-striped progress-bar-animated bg-success" />
-                    </div>
-                </section>
-                <section id="clock" className="vh-25 row">
-                    <div className="col-xs-1 col-md-4"></div>
-                    <div className="col-xs-10 col-md-4"><Clock2 /></div>
-                    <div className="col-xs-1 col-md-4"></div>
-                </section>
-            </div>
         </main>
     );
 }

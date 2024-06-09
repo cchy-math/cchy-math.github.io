@@ -3,7 +3,7 @@
 	text-align: center;
 	width: 100vw;
 	height: 10px;
-	position:absolute;
+	position:relative;
   	left:0px;
 	bottom: 0;
 	background-color: var(--bs-dark);
