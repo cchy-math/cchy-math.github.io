@@ -132,23 +132,77 @@ export default function Timer() {
         setExamTime(startHour+":"+startMin+" - "+calculateEndTime(startHour, startMin, durationHour, durationMin));
     }, [startHour, startMin, durationHour, durationMin])
     const [timeLeft, setTimeLeft] = useState(''); 
+    let interval;
+    let timeLeftInSeconds;
+    const [timeLeftColor, setTimeLeftColor] = useState('text-info');
     const handleStartClick = () => {
-        let date  = new Date();
-        let h = date.getHours();
-        let m = date.getMinutes();
-        let s = date.getSeconds();
-        h = (h < 10) ? h = "0" + h : h;
-        m = (m < 10) ? m = "0" + m : m;
-        s = (s < 10) ? s = "0" + s : s;
+        setTimeLeftColor('text-success');
         let hLeft = Number(durationHour.slice(0, durationHour.indexOf(' ')));
         let mLeft = Number(durationMin.slice(0, durationMin.indexOf(' ')));
         let sLeft = 0;
-        hLeft = (hLeft < 10) ? hLeft = "0" + hLeft : hLeft;
-        mLeft = (mLeft < 10) ? mLeft = "0" + mLeft : mLeft;
-        sLeft = (sLeft < 10) ? sLeft = "0" + sLeft : sLeft;
-        setExamTime(h+":"+m+" - "+calculateEndTime(h, m, durationHour, durationMin));
+        let date  = new Date();
+        let hNow = date.getHours();
+        let mNow = date.getMinutes();
+        let endTimeMin = hNow*60 + mNow + hLeft*60 + mLeft;
+        let endH = Math.floor(endTimeMin/60);
+        let endM = endTimeMin - endH*60;
+        if(endH < 10) endH = "0" + endH;
+        if(endM < 10) endM = "0" + endM;
+        setExamTime(hNow+":"+mNow+" - "+endH+":"+endM)
+        timeLeftInSeconds = hLeft*3600 + mLeft*60;
+        if(hLeft < 10) hLeft = "0" + hLeft;
+        if(mLeft < 10) mLeft = "0" + mLeft;
+        if(sLeft < 10) sLeft = "0" + sLeft;
         setTimeLeft(hLeft+":"+mLeft+":"+sLeft);
+        interval = setInterval(()=>{
+            if(timeLeftInSeconds <= 0) {
+                clearInterval(interval);
+                return;
+            }
+            timeLeftInSeconds = timeLeftInSeconds-1;
+            hLeft = Math.floor(timeLeftInSeconds/3600);
+            mLeft = Math.floor((timeLeftInSeconds - hLeft*3600)/60);
+            sLeft = timeLeftInSeconds - hLeft*3600 - mLeft*60;
+            if(hLeft < 10) hLeft = "0" + hLeft;
+            if(mLeft < 10) mLeft = "0" + mLeft;
+            if(sLeft < 10) sLeft = "0" + sLeft;
+            setTimeLeft(hLeft+":"+mLeft+":"+sLeft);
+          }, 1000);
+        
     }
+    const handleDoneClick = () => {
+        setTimeLeftColor('text-info');
+        setFormVisible(false); 
+        setDisplayVisible(true);
+        let hLeft = Number(durationHour.slice(0, durationHour.indexOf(' ')));
+        let mLeft = Number(durationMin.slice(0, durationMin.indexOf(' ')));
+        let sH = Number(startHour);
+        let sM = Number(startMin);
+        let endTimeMin = sH*60 + sM + hLeft*60 + mLeft;
+        let endH = Math.floor(endTimeMin/60);
+        let endM = endTimeMin - endH*60;
+        if(hLeft < 10) hLeft = "0" + hLeft;
+        if(mLeft < 10) mLeft = "0" + mLeft;
+        if(endH < 10) endH = "0" + endH;
+        if(endM < 10) endM = "0" + endM;
+        if(sH < 10) sH = "0" + sH;
+        if(sM < 10) sM = "0" + sM;
+        setTimeLeft(hLeft+":"+mLeft+":"+"00");
+        setExamTime(sH+":"+sM+" - "+endH+":"+endM)
+    }
+    const handleFinishClick = () => {
+        clearInterval(interval);
+        timeLeftInSeconds = 0;
+        setFormVisible(true);
+        setDisplayVisible(false)
+      }
+    /*
+                document.querySelector(".time-left").style.width = left + "%";
+            if(left >90 && left <=100) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-info";}
+            if(left >50 && left <=90) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-success";}
+            if(left >30 && left <=50) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-warning";}
+            if(left >=0 && left <=30) {document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-warning";}
+        */
     return (
         <main className="container">
             <div className="HeaderHeight"></div>
@@ -267,7 +321,7 @@ export default function Timer() {
                                 </select>
                             </div>
                             <div className="col-md-2 col-xs-12 px-4">
-                                <button onClick={() => {setFormVisible(false); setDisplayVisible(true)}} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
+                                <button onClick={handleDoneClick} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
                                     Done
                                 </button>
                             </div>
@@ -298,13 +352,13 @@ export default function Timer() {
                                         Start
                                     </button>
                                 </div>
-                                <div className="col-xs-4 col-md-10 display-6 text-info">
+                                <div id="exam-time-left-info" className={`col-xs-4 col-md-10 display-6 ${timeLeftColor}`}>
                                     { selectedLanguage === '中文 Chinese' && "剩餘時間 " }
                                     { selectedLanguage === '英文 English' && "Remaining Time " }
                                     { timeLeft }
                                 </div>
                                 <div className="col-xs-4 col-md-1">
-                                    <button onClick={() => {setFormVisible(true); setDisplayVisible(false)}} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
+                                    <button onClick={handleFinishClick} className="button-rainbow my-5 h5" style={{'width': '100%'}}>
                                         Finish
                                     </button>
                                 </div>
