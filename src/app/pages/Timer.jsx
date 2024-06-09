@@ -16,8 +16,12 @@ import { va_papers } from "./va-papers.js";
 import { no_paper } from "./no-paper.js";
 export default function Timer() {
     const [switchLanguage, setSwitchLanguage] = useState(false);
+    const [announcement15, setAnnouncement15] = useState(false);
+    const [announcement5, setAnnouncement5] = useState(false);
+    const [announcement0, setAnnouncement0] = useState(false);
     const [formVisible, setFormVisible] = useState(true);
     const [displayVisible, setDisplayVisible] = useState(false);
+    const [startVisible, setStartVisible] = useState(true);
     const [yearSelection, setYearSelection] = useState('');
     const [selectedSubject, setSelectedSubject] = useState(''); 
     const [selectedPaper, setSelectedPaper] = useState(''); 
@@ -137,6 +141,7 @@ export default function Timer() {
     let timeLeftInSeconds;
     const [timeLeftColor, setTimeLeftColor] = useState('text-info');
     const handleStartClick = () => {
+        setStartVisible(false);
         let hLeft = Number(durationHour.slice(0, durationHour.indexOf(' ')));
         let mLeft = Number(durationMin.slice(0, durationMin.indexOf(' ')));
         let sLeft = 0;
@@ -158,6 +163,8 @@ export default function Timer() {
         let totalTime = timeLeftInSeconds;
         interval = setInterval(()=>{
             if(timeLeftInSeconds <= 0) {
+                setAnnouncement5(false);
+                setAnnouncement0(true);
                 clearInterval(interval);
                 return;
             }
@@ -174,27 +181,33 @@ export default function Timer() {
             let barWidth5 = (5*60/totalTime) * 100;
             document.querySelector(".time-left").style.width = barWidth + "%";
             if(barWidth >=barWidth15 && barWidth <=100) {
-                document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-success";
+                document.querySelector(".time-left").className = "progress-bar time-left bg-success";
                 document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-4 text-success";
             }
             if(barWidth >=barWidth5 && barWidth <barWidth15) {
-                document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-warning";
+                document.querySelector(".time-left").className = "progress-bar time-left bg-warning";
                 document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-4 text-warning";
+                setAnnouncement15(true);
             }
-            if(barWidth < barWidth5) {
-                document.querySelector(".time-left").className = "progress-bar time-left progress-bar-striped progress-bar-animated bg-danger";
+            if(barWidth >=0 && barWidth < barWidth5) {
+                document.querySelector(".time-left").className = "progress-bar time-left bg-danger";
                 document.querySelector("#exam-time-left-info").className = "col-xs-4 col-md-8 display-4 text-danger";
+                setAnnouncement15(false);
+                setAnnouncement5(true);
             }     
-            if(timeLeftInSeconds%5 === 0){
-                if(selectedLanguage === '中文 Chinese') {
-                    setSelectedLanguage('英文 English');
-                  } else {
-                    setSelectedLanguage('中文 Chinese');
-                  }
-            }
         }, 1000);
     }
-    
+    useEffect(() => {
+        let interval = switchLanguage && setInterval(() => {
+          if(selectedLanguage === '中文 Chinese') {
+            setSelectedLanguage('英文 English');
+          } else {
+            setSelectedLanguage('中文 Chinese');
+          }
+        }, 5000);
+      
+        return () => clearInterval(interval);
+      }, [selectedLanguage, switchLanguage]);
     const handleDoneClick = () => {
         setFormVisible(false); 
         setDisplayVisible(true);
@@ -218,13 +231,11 @@ export default function Timer() {
             setSelectedLanguage('中文 Chinese');
         }
     }
-    const handleFinishClick = () => {
-        window.location.reload();
-    }
     return (
         <main className="container">
-            <div className="HeaderHeight"></div>
             {formVisible && (
+                <>
+                <div className="HeaderHeight"></div>
                 <form className="" visible={formVisible}>
                     <div className="h1 text-center">Timer Settings</div>
                     <section className="p-3 justify-content-center">
@@ -311,6 +322,7 @@ export default function Timer() {
                                     <select onChange={handleDurationMinChange} class="col mx-3 form-select bg-dark text-light" id="duration-min" required="">
                                         <option></option>
                                         <option id="0-dt-m">0 min</option>
+                                        <option id="5-dt-m">1 min</option>
                                         <option id="5-dt-m">5 min</option>
                                         <option id="10-dt-m">10 min</option>
                                         <option id="15-dt-m">15 min</option>
@@ -342,10 +354,11 @@ export default function Timer() {
                         </div>
                     </section>
                 </form>
+                </>
             )}
             {displayVisible && (
                 <section visible={displayVisible} for="timer-display" className="text-center align-items-center">
-                    <section id="info" className="display-1 mb-5">
+                    <section id="info" className="display-2 pt-5">
                         { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
                         { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
                         <br/>
@@ -358,33 +371,38 @@ export default function Timer() {
                         { examTime }
                         <br/>
                     </section>
-                    <section id="time-display" className="px-5 mt-5">
-                        <section id="progress-bar" className="row my-5">
+                    <section id="time-display" className="p-5">
+                        <section id="progress-bar" className="row px-5 my-3">
                             <div className="row align-items-center">
                                 <div className="col-xs-4 col-md-2">
-                                    <button onClick={handleStartClick} className="button-rainbow h5" style={{'width': '100%'}}>
+                                {startVisible && 
+                                    <button visible={startVisible} onClick={handleStartClick} className="button-rainbow h5" style={{'width': '100%'}}>
                                         Start
                                     </button>
+                                }
                                 </div>
-                                <div id="exam-time-left-info" className="col-xs-4 col-md-8 display-4 text-info">
+                                <div id="exam-time-left-info" className="col-xs-4 col-md-8 display-5 text-info">
                                     { selectedLanguage === '中文 Chinese' && "剩餘時間 " }
                                     { selectedLanguage === '英文 English' && "Remaining Time " }
                                     { timeLeft }
                                 </div>
                                 <div className="col-xs-4 col-md-2">
-                                    <button onClick={handleFinishClick} className="button-rainbow h5" style={{'width': '100%'}}>
-                                        Finish
-                                    </button>
+                                   
                                 </div>
                             </div>
                             <div id="time-left-bar" className="progress flex-row-reverse my-3">
-                                <div className="progress-bar time-left progress-bar-striped progress-bar-animated bg-info" style={{width: 100+'%'}} />
+                                <div className="progress-bar time-left bg-info" style={{width: 100+'%'}} />
                             </div>
                         </section>
-                        <section id="announcement" className="display-6 my-5">
-                            考試時間尚餘十五分鐘。請考生確保在試卷及答題紙上寫上姓名、班別及學號。
+                        <section id="announcement" className="h3 align-items-center py-3">
+                            { announcement15 && selectedLanguage === '中文 Chinese' && "考試時間尚餘十五分鐘。請考生確保在試卷及答題紙上寫上姓名、班別及學號。" }
+                            { announcement15 && selectedLanguage === '英文 English' && "You have 15 minutes left. Make sure you have written your name, class and class number on the Question papers and the Answer Sheets."}
+                            { announcement5 && selectedLanguage === '中文 Chinese' && "考試時間尚餘五分鐘。請考生確保在試卷及答題紙（或補充答題紙）上寫上姓名、班別及學號。將不必要的文字、草稿及圖形劃去。當考試完結，宣布「停止作答」後，考生不可再改動試卷及答題紙內的內容。" }
+                            { announcement5 && selectedLanguage === '英文 English' && "You have 5 minutes left. Make sure you have written your name, class and class number on the Question papers and the Answer Sheets. Cross out all unwanted materials. You will NOT be allowed to work on your Question papers and the Answer Sheets after the 'Stop working' announcement."}
+                            { announcement0 && selectedLanguage === '中文 Chinese' && `現在時間是${examTime.split(" - ")[1]}。考試完結，停止作答。請放下所有文具。考生須安坐靜候，待得到指示後才可收拾個人物件。在離開試場前，切勿交談。將試卷及答題紙由後面傳上，傳卷時請將自己的答題紙放於其他考生的答題紙之上。`}
+                            { announcement0 && selectedLanguage === '英文 English' && `The time now is ${examTime.split(" - ")[1]}. Time is up. Stop working. Put down all your stationery. Be seated quietly. Do not pack your personal belongings until you are told to do so. You should not talk before leaving this examination room. Now pass the answer sheets to the front with yours on the top, then the Question Papers.`}
                         </section>
-                        <section id="clock" className="row mt-5">
+                        <section id="exam-clock" className="row">
                             <div className="col-xs-1 col-md-4"></div>
                             <div className="col-xs-10 col-md-4 my-5"><Clock2 /></div>
                             <div className="col-xs-1 col-md-4"></div>

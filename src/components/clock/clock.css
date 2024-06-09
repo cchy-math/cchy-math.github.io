@@ -191,3 +191,9 @@
 	background: inherit;
 	opacity: 0;
 }
+
+#exam-clock {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	}
