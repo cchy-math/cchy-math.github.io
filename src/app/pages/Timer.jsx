@@ -251,6 +251,7 @@ export default function Timer() {
             let date = new Date();
             if(autoStart && Number(date.getHours()) === Number(startHour) && Number(date.getMinutes()) === Number(startMin) && Number(date.getSeconds()) === 0) {
                 handleStartClick();
+                return;
             }
         }, 1000);
         return () => clearInterval(interval);
