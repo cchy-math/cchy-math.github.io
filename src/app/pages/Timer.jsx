@@ -371,8 +371,11 @@ export default function Timer() {
                         { examTime }
                         <br/>
                     </section>
-                    <section id="time-display" className="p-5">
+                    <section id="time-display" className="p-3">
                         <section id="progress-bar" className="row px-5 my-3">
+                            <div id="time-left-bar" className="progress flex-row-reverse my-3">
+                                <div className="progress-bar time-left bg-info" style={{width: 100+'%'}} />
+                            </div>
                             <div className="row align-items-center">
                                 <div className="col-xs-4 col-md-2">
                                 {startVisible && 
@@ -390,9 +393,11 @@ export default function Timer() {
                                    
                                 </div>
                             </div>
-                            <div id="time-left-bar" className="progress flex-row-reverse my-3">
-                                <div className="progress-bar time-left bg-info" style={{width: 100+'%'}} />
-                            </div>
+                        </section>
+                        <section id="exam-clock" className="row">
+                            <div className="col-xs-1 col-md-4"></div>
+                            <div className="col-xs-10 col-md-4 my-5"><Clock2 /></div>
+                            <div className="col-xs-1 col-md-4"></div>
                         </section>
                         <section id="announcement" className="h3 align-items-center py-3">
                             { announcement15 && selectedLanguage === '中文 Chinese' && "考試時間尚餘十五分鐘。請考生確保在試卷及答題紙上寫上姓名、班別及學號。" }
@@ -401,11 +406,6 @@ export default function Timer() {
                             { announcement5 && selectedLanguage === '英文 English' && "You have 5 minutes left. Make sure you have written your name, class and class number on the Question papers and the Answer Sheets. Cross out all unwanted materials. You will NOT be allowed to work on your Question papers and the Answer Sheets after the 'Stop working' announcement."}
                             { announcement0 && selectedLanguage === '中文 Chinese' && `現在時間是${examTime.split(" - ")[1]}。考試完結，停止作答。請放下所有文具。考生須安坐靜候，待得到指示後才可收拾個人物件。在離開試場前，切勿交談。將試卷及答題紙由後面傳上，傳卷時請將自己的答題紙放於其他考生的答題紙之上。`}
                             { announcement0 && selectedLanguage === '英文 English' && `The time now is ${examTime.split(" - ")[1]}. Time is up. Stop working. Put down all your stationery. Be seated quietly. Do not pack your personal belongings until you are told to do so. You should not talk before leaving this examination room. Now pass the answer sheets to the front with yours on the top, then the Question Papers.`}
-                        </section>
-                        <section id="exam-clock" className="row">
-                            <div className="col-xs-1 col-md-4"></div>
-                            <div className="col-xs-10 col-md-4 my-5"><Clock2 /></div>
-                            <div className="col-xs-1 col-md-4"></div>
                         </section>
                     </section>
                 </section>
