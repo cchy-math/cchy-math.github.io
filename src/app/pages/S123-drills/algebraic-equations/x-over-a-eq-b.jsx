@@ -48,16 +48,12 @@ export default function XoverAeqB() {
 			window.MathJax.typeset()
 		}
 	},[texA_chi])
-    let begin = "\\(";
-    let x = "x";
-    let pmsign = "-";
-    let a = "a";
+    let begin = "\\( \\displaystyle ";
+    let x;
+    let a;
     let eqsign = "=";
-    let b = "b";
+    let b;
     let end = "\\)";
-    let i = 0;
-    let pm = -1;
-    let ans = 0;
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -84,21 +80,17 @@ export default function XoverAeqB() {
                             }while(x === "e" || x === "i" || x === "l" || x === "o");
                             a = getRndInteger(2,10)*Math.pow(-1,getRndInteger(1,3));
                             b = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
-                            ans = a*b;
-                            setTexA_eng("\\( "+x+eqsign+ans+" \\)");
-                            setTexA_chi("\\( "+x+eqsign+ans+" \\)");
+                            setTexA_eng("\\( "+x+eqsign+Number(a*b)+" \\)");
                             setIsVisible(false);
                             if(a < 0){
-                                let position = getRndInteger(1,4);
-                                a = Math.abs(a);
+                                let position = 2; //getRndInteger(1,4);
+                                a = -a;
                                 if(position === 1){
-                                    setTexQ(begin+"\\displaystyle \\frac{ -"+x+"}{"+a+"}"+eqsign+b+end);
-                                };
-                                if(position === 2){
-                                    setTexQ(begin+"- \\displaystyle \\frac{"+x+"}{"+a+"}"+eqsign+b+end);
-                                };
-                                if(position === 3){
-                                    setTexQ(begin+"\\displaystyle \\frac{"+x+"}{-"+a+"}"+eqsign+b+end);
+                                    setTexQ(begin+"\\frac{ -"+x+"}{"+a+"}"+eqsign+b+end);
+                                }else if(position === 2){
+                                    setTexQ(begin+"- \\frac{"+x+"}{"+a+"}"+eqsign+b+end);
+                                }else{
+                                    setTexQ(begin+"\\frac{"+x+"}{-"+a+"}"+eqsign+b+end);
                                 };
                             };
                             
