@@ -83,15 +83,10 @@ export default function XoverAeqB() {
                             setTexA_eng("\\( "+x+eqsign+Number(a*b)+" \\)");
                             setIsVisible(false);
                             if(a < 0){
-                                let position = 2; //getRndInteger(1,4);
                                 a = -a;
-                                if(position === 1){
-                                    setTexQ(begin+"\\frac{ -"+x+"}{"+a+"}"+eqsign+b+end);
-                                }else if(position === 2){
-                                    setTexQ(begin+"- \\frac{"+x+"}{"+a+"}"+eqsign+b+end);
-                                }else{
-                                    setTexQ(begin+"\\frac{"+x+"}{-"+a+"}"+eqsign+b+end);
-                                };
+                                setTexQ(begin+"- \\frac{"+x+"}{"+a+"}"+eqsign+b+end);
+                            }else{
+                                setTexQ(begin+"\\frac{"+x+"}{"+a+"}"+eqsign+b+end);
                             };
                             
                         }}>
