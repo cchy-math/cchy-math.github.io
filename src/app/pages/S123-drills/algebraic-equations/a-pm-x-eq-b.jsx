@@ -77,25 +77,22 @@ export default function ApmXeqB() {
                             if(order === 1){
                                 ans = b-a;
                                 setTexA_eng("\\( "+x+eqsign+ans+" \\)");
-                                setTexA_chi("\\( "+x+eqsign+ans+" \\)");
                                 setIsVisible(false);
-                                if(a < 0){
-                                    a = Math.abs(a);
-                                    pmsign = "-";
+                                if(a >= 0){
+                                    a = "+" + a;
                                 };
-                                setTexQ(begin+x+pmsign+a+eqsign+b+end);
+                                setTexQ(begin+x+a+eqsign+b+end);
                             }else{
-                                ans = a-b;
                                 let pm = getRndInteger(1,3);
                                 if(pm === 1){
-                                    pmsign = "+";
+                                    setTexA_eng("\\( "+x+eqsign+Number(b-a)+" \\)");
+                                    setTexQ(begin+a+"+"+x+eqsign+b+end);
+                                
                                 }else{
-                                    pmsign = "-";
+                                    setTexA_eng("\\( "+x+eqsign+Number(a-b)+" \\)");
+                                    setTexQ(begin+a+"-"+x+eqsign+b+end);
                                 }
-                                setTexA_eng("\\( "+x+eqsign+ans+" \\)");
-                                setTexA_chi("\\( "+x+eqsign+ans+" \\)");
                                 setIsVisible(false);
-                                setTexQ(begin+a+pmsign+x+eqsign+b+end);
                             };
                             
                         }}>
