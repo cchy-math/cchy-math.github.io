@@ -3,6 +3,8 @@ import "../../components/button/button.css"
 import "../../components/button/button.js"
 import "../../components/clock/clock.css"
 import "../../components/clock/clock.js"
+import "../../components/scrollbar/scrollbar.css"
+import "../../components/scrollbar/scrollbar.js"
 import Clock2 from "../../components/clock/Clock2.jsx"
 import { S12subjectData } from "./S12-subject-data.js";
 import { S3subjectData } from "./S3-subject-data.js";
@@ -192,16 +194,19 @@ export default function Timer() {
             document.querySelector(".time-left").style.width = barWidth + "%";
             if(barWidth >=barWidth15 && barWidth <=100) {
                 document.querySelector(".time-left").className = "progress-bar progress-bar-striped progress-bar-animated time-left bg-success";
-                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-lg-8 h1 text-success";
+                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-lg-8 display-5 text-success";
+                document.querySelector(".progress.time-left-bar").className = "progress time-left-bar time-left-bar-success flex-row-reverse my-3 p-0";
             }
             if(barWidth >=barWidth5 && barWidth <barWidth15) {
                 document.querySelector(".time-left").className = "progress-bar progress-bar-striped progress-bar-animated time-left bg-warning";
-                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-lg-8 h1 text-warning";
+                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-lg-8 display-5 text-warning";
+                document.querySelector(".time-left-bar").className = "progress time-left-bar time-left-bar-warning flex-row-reverse my-3 p-0";
                 setAnnouncement15(true);
             }
             if(barWidth >=0 && barWidth < barWidth5) {
                 document.querySelector(".time-left").className = "progress-bar progress-bar-striped progress-bar-animated time-left bg-danger";
-                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-lg-8 h1 text-danger";
+                document.querySelector("#exam-time-left-info").className = "col-xs-4 col-lg-8 display-5 text-danger";
+                document.querySelector(".time-left-bar").className = "progress time-left-bar time-left-bar-danger flex-row-reverse my-3 p-0";
                 setAnnouncement15(false);
                 setAnnouncement5(true);
             }     
@@ -396,7 +401,7 @@ export default function Timer() {
             )}
             {displayVisible && (
                 <section visible={displayVisible} for="timer-display" className="text-center align-items-center">
-                    <section id="info" className="display-2 pt-5">
+                    <section id="info" className="display-1 pt-3">
                         { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
                         { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
                         <br/>
@@ -411,7 +416,7 @@ export default function Timer() {
                     </section>
                     <section id="time-display" className="p-3">
                         <section id="bar" className="row px-5 my-1">
-                            <div id="time-left-bar" className="progress flex-row-reverse my-3 p-0">
+                            <div className="progress time-left-bar time-left-bar-info flex-row-reverse my-3 p-0">
                                 <div className="progress-bar progress-bar-striped progress-bar-animated time-left bg-info" style={{width: 100+'%'}} />
                             </div>
                             <div className="row align-items-center">
@@ -422,7 +427,7 @@ export default function Timer() {
                                     </button>
                                 }
                                 </div>
-                                <div id="exam-time-left-info" className="col-xs-4 col-lg-8 h1 text-info">
+                                <div id="exam-time-left-info" className="col-xs-4 col-lg-8 display-5 text-info">
                                     { selectedLanguage === '中文 Chinese' && "剩餘時間 " }
                                     { selectedLanguage === '英文 English' && "Remaining Time " }
                                     { timeLeft }
@@ -433,11 +438,11 @@ export default function Timer() {
                             </div>
                         </section>
                         <section id="exam-clock" className="row">
-                            <div className="col-xs-1 col-lg-4"></div>
-                            <div className="col-xs-10 col-lg-4 my-5"><Clock2 /></div>
-                            <div className="col-xs-1 col-lg-4"></div>
+                            <div className="col-xs-2 col-lg-4"></div>
+                            <div className="col-xs-8 col-lg-4 my-5"><Clock2 /></div>
+                            <div className="col-xs-2 col-lg-4"></div>
                         </section>
-                        <section id="announcement" className="h3 align-items-center py-3">
+                        <section id="announcement" className="h2 align-items-center p-3">
                             { announcement15 && selectedLanguage === '中文 Chinese' && "考試時間尚餘十五分鐘。請考生確保在試卷及答題紙上寫上姓名、班別及學號。" }
                             { announcement15 && selectedLanguage === '英文 English' && "You have 15 minutes left. Make sure you have written your name, class and class number on the Question papers and the Answer Sheets."}
                             { announcement5 && selectedLanguage === '中文 Chinese' && "考試時間尚餘五分鐘。請考生確保在試卷及答題紙（或補充答題紙）上寫上姓名、班別及學號。將不必要的文字、草稿及圖形劃去。當考試完結，宣布「停止作答」後，考生不可再改動試卷及答題紙內的內容。" }

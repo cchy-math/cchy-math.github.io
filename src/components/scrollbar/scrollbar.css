@@ -8,14 +8,26 @@
 	bottom: 0;
 	background-color: var(--bs-dark);
 	/*
-	filter: blur(2px);
-	-webkit-filter: blur(2px);
+	filter: blur(1px);
+	-webkit-filter: blur(1px);
 	*/
 }
-.progress#time-left-bar {
+.time-left-bar {
 	width: 100%;
 	text-align: center;
-	height: 10px;
+	height: 8px;
 	position:relative;
 	background-color: var(--bs-black);
+}
+.time-left-bar-info {
+	filter: drop-shadow(0 0 10px var(--bs-info));
+}
+.time-left-bar-success {
+	filter: drop-shadow(0 0 10px var(--bs-success));
+}
+.time-left-bar-warning {
+	filter: drop-shadow(0 0 10px var(--bs-warning));
+}
+.time-left-bar-danger {
+	filter: drop-shadow(0 0 10px var(--bs-danger));
 }
