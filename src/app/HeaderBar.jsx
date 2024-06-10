@@ -27,7 +27,7 @@ export default function HeaderBar() {
           Empty Space
         </button>
       </div>
-      <div className="progress">
+      <div className="progress p-0">
         <div className="progress-bar progress-bar-striped progress-bar-animated" />
       </div>
     </header>
