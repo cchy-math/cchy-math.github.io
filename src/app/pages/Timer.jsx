@@ -426,7 +426,7 @@ export default function Timer() {
                             { announcement0 && selectedLanguage === '英文 English' && `The time now is ${examTime.split(" - ")[1]}. Time is up. Stop working. Put down all your stationery. Be seated quietly. Do not pack your personal belongings until you are told to do so. You should not talk before leaving this examination room. Now pass the answer sheets to the front with yours on the top, then the Question Papers.`}
                         </section>
                         <section id="bar" className="row px-5 pb-5">
-                            <div className="progress time-left-bar time-left-bar-info flex-row-reverse p-0">
+                            <div className="progress time-left-bar time-left-bar-info flex-row-reverse my-3 p-0">
                                 <div className="progress-bar progress-bar-striped progress-bar-animated time-left bg-info" style={{width: 100+'%'}} />
                             </div>
                             <div className="row align-items-center">
