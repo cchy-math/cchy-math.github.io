@@ -98,3 +98,13 @@ main {
 .scroll-news {
 	-ms-overflow-style: -ms-autohiding-scrollbar; }::-webkit-scrollbar {
 	display: none; }
+
+#exam-info-display {
+	position: absolute;
+	top: 0;
+}
+
+#time-info-display {
+	position: absolute;
+	bottom: 0;
+}

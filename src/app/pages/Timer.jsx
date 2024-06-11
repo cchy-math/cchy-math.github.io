@@ -401,7 +401,8 @@ export default function Timer() {
             )}
             {displayVisible && (
                 <section visible={displayVisible} for="timer-display" className="text-center align-items-center">
-                    <section id="info" className="display-1 pt-3">
+                    <section id="exam-info-display" className="display-1 vw-100 pt-5">
+                        <div className="HeaderHeight"/>
                         { selectedLanguage === '中文 Chinese' && yearSelection.slice(0, yearSelection.indexOf(' ')) }
                         { selectedLanguage === '英文 English' && yearSelection.slice(yearSelection.indexOf(' ')+1) }
                         <br/>
@@ -414,15 +415,24 @@ export default function Timer() {
                         { examTime }
                         <br/>
                     </section>
-                    <section id="time-display" className="p-3">
-                        <section id="bar" className="row px-5 my-1">
-                            <div className="progress time-left-bar time-left-bar-info flex-row-reverse my-3 p-0">
+                    
+                    <section id="time-info-display" className="vw-100 px-4 pb-3">
+                        <section id="announcement-display" className="h1 align-items-center">
+                            { announcement15 && selectedLanguage === '中文 Chinese' && "考試時間尚餘十五分鐘。請考生確保在試卷及答題紙上寫上姓名、班別及學號。" }
+                            { announcement15 && selectedLanguage === '英文 English' && "You have 15 minutes left. Make sure you have written your name, class and class number on the Question papers and the Answer Sheets."}
+                            { announcement5 && selectedLanguage === '中文 Chinese' && "考試時間尚餘五分鐘。請考生確保在試卷及答題紙（或補充答題紙）上寫上姓名、班別及學號。將不必要的文字、草稿及圖形劃去。當考試完結，宣布「停止作答」後，考生不可再改動試卷及答題紙內的內容。" }
+                            { announcement5 && selectedLanguage === '英文 English' && "You have 5 minutes left. Make sure you have written your name, class and class number on the Question papers and the Answer Sheets. Cross out all unwanted materials. You will NOT be allowed to work on your Question papers and the Answer Sheets after the 'Stop working' announcement."}
+                            { announcement0 && selectedLanguage === '中文 Chinese' && `現在時間是${examTime.split(" - ")[1]}。考試完結，停止作答。請放下所有文具。考生須安坐靜候，待得到指示後才可收拾個人物件。在離開試場前，切勿交談。將試卷及答題紙由後面傳上，傳卷時請將自己的答題紙放於其他考生的答題紙之上。`}
+                            { announcement0 && selectedLanguage === '英文 English' && `The time now is ${examTime.split(" - ")[1]}. Time is up. Stop working. Put down all your stationery. Be seated quietly. Do not pack your personal belongings until you are told to do so. You should not talk before leaving this examination room. Now pass the answer sheets to the front with yours on the top, then the Question Papers.`}
+                        </section>
+                        <section id="bar" className="row px-5 pb-5">
+                            <div className="progress time-left-bar time-left-bar-info flex-row-reverse p-0">
                                 <div className="progress-bar progress-bar-striped progress-bar-animated time-left bg-info" style={{width: 100+'%'}} />
                             </div>
                             <div className="row align-items-center">
                                 <div className="col-xs-4 col-lg-2">
                                 {startVisible && 
-                                    <button visible={startVisible} onClick={handleStartClick} className="button-rainbow h5" style={{'width': '100%'}}>
+                                    <button visible={startVisible} onClick={handleStartClick} className="button-rainbow h5" style={{'width': '50%'}}>
                                         Start
                                     </button>
                                 }
@@ -437,23 +447,14 @@ export default function Timer() {
                                 </div>
                             </div>
                         </section>
-                        <section id="exam-clock" className="row">
-                            <div className="col-xs-2 col-lg-4"></div>
-                            <div className="col-xs-8 col-lg-4 my-5"><Clock2 /></div>
-                            <div className="col-xs-2 col-lg-4"></div>
-                        </section>
-                        <section id="announcement" className="h2 align-items-center p-3">
-                            { announcement15 && selectedLanguage === '中文 Chinese' && "考試時間尚餘十五分鐘。請考生確保在試卷及答題紙上寫上姓名、班別及學號。" }
-                            { announcement15 && selectedLanguage === '英文 English' && "You have 15 minutes left. Make sure you have written your name, class and class number on the Question papers and the Answer Sheets."}
-                            { announcement5 && selectedLanguage === '中文 Chinese' && "考試時間尚餘五分鐘。請考生確保在試卷及答題紙（或補充答題紙）上寫上姓名、班別及學號。將不必要的文字、草稿及圖形劃去。當考試完結，宣布「停止作答」後，考生不可再改動試卷及答題紙內的內容。" }
-                            { announcement5 && selectedLanguage === '英文 English' && "You have 5 minutes left. Make sure you have written your name, class and class number on the Question papers and the Answer Sheets. Cross out all unwanted materials. You will NOT be allowed to work on your Question papers and the Answer Sheets after the 'Stop working' announcement."}
-                            { announcement0 && selectedLanguage === '中文 Chinese' && `現在時間是${examTime.split(" - ")[1]}。考試完結，停止作答。請放下所有文具。考生須安坐靜候，待得到指示後才可收拾個人物件。在離開試場前，切勿交談。將試卷及答題紙由後面傳上，傳卷時請將自己的答題紙放於其他考生的答題紙之上。`}
-                            { announcement0 && selectedLanguage === '英文 English' && `The time now is ${examTime.split(" - ")[1]}. Time is up. Stop working. Put down all your stationery. Be seated quietly. Do not pack your personal belongings until you are told to do so. You should not talk before leaving this examination room. Now pass the answer sheets to the front with yours on the top, then the Question Papers.`}
+                        <section id="time-display" className="row px-5">
+                            <div className="col-xs-2 col-lg-4 px-3"></div>
+                            <div className="col-xs-8 col-lg-4 px-3"><Clock2 /></div>
+                            <div className="col-xs-2 col-lg-4 px-3"></div>
                         </section>
                     </section>
                 </section>
-            )}   
-            
+            )}
         </main>
     );
 }
