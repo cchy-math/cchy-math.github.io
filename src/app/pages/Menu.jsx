@@ -10,10 +10,10 @@ export default function Menu() {
         <main className="container">
             <div className="HeaderHeight"></div>
             <div className="container">
-                <div className="row align-items-center">
+                <div className="row align-items-center p-5">
                     <div className="col-xs-1 col-lg-4">
                     </div>
-                    <div className="col-xs-10 col-lg-4">
+                    <div className="col-xs-10 col-lg-4 p-3">
                         <NavLink to="/">
                             <button className="button-rainbow my-5" style={{'width': '100%'}}>
                                 <h5>News</h5>
@@ -21,12 +21,12 @@ export default function Menu() {
                         </NavLink>
                         <NavLink to="/math-drills-S123">
                             <button className="button-rainbow my-5" style={{'width': '100%'}}>
-                                <h5>Math Drills S1-S3</h5>
+                                <h5>S1-S3 Math</h5>
                             </button>
                         </NavLink>
                         <NavLink to="/math-drills-DSEMathCore">
                             <button className="button-rainbow my-5" style={{'width': '100%'}}>
-                                <h5>Math Drills DSE Math (Compulsory Part)</h5>
+                                <h5>DSE Math (Compulsory Part)</h5>
                             </button>
                         </NavLink>
                         <NavLink to="/timer">

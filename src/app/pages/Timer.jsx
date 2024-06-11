@@ -431,17 +431,16 @@ export default function Timer() {
                             </div>
                             <div className="row align-items-center">
                                 <div className="col-xs-4 col-lg-2">
-                                {startVisible && 
-                                    <button visible={startVisible} onClick={handleStartClick} className="button-rainbow h5" style={{'width': '50%'}}>
-                                        Start
-                                    </button>
-                                }
+                                    {startVisible && 
+                                        <button visible={startVisible} onClick={handleStartClick} className="button-rainbow h5" style={{'width': '50%'}}>
+                                            Start
+                                        </button>
+                                    }
                                 </div>
                                 <div id="exam-time-left-info" className="col-xs-4 col-lg-8 display-5 text-info">
                                     { selectedLanguage === '中文 Chinese' && "剩餘時間 " }
                                     { selectedLanguage === '英文 English' && "Remaining Time " }
                                     { timeLeft }
-                                    
                                 </div>
                                 <div className="col-xs-4 col-lg-2">
                                    
