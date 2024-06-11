@@ -67,7 +67,7 @@ export default function News() {
 					/>
 					<NewsCard 
 						title={'TSA 補底'}
-						color={''}
+						color={'light'}
 						date={'2024 May 14'}
 						content={'TSA 補底將於5月20日星期一進行，同學請留意日期時間依時出席。'}
 					/>
@@ -79,19 +79,19 @@ export default function News() {
 					/>
 					<NewsCard 
 						title={'午間補底班'}
-						color={''}
+						color={'light'}
 						date={'2024 May 10'}
 						content={'午間補底班將於5月13日星期一進行，請同學於13:40到達702D室出席。'}
 					/>
 					<NewsCard 
 						title={'午間補底班'}
-						color={''}
+						color={'light'}
 						date={'2024 May 08'}
 						content={'午間補底班將於5月9日星期四進行，請同學於13:40到達702D室出席。'}
 					/>
 					<NewsCard 
 						title={'TSA 補底'}
-						color={''}
+						color={'light'}
 						date={'2024 May 05'}
 						content={'TSA 補底將於5月6日星期一及5月7日星期二進行，同學請留意日期時間依時出席。'}
 					/>
@@ -109,13 +109,13 @@ export default function News() {
 					/>
 					<NewsCard 
 						title={'午間補底班'}
-						color={''}
+						color={'light'}
 						date={'2024 May 10'}
 						content={'午間補底班將於5月17日星期五進行，請同學於13:40到達702D室出席。'}
 					/>
 					<NewsCard 
 						title={'午間補底班'}
-						color={''}
+						color={'light'}
 						date={'2024 May 09'}
 						content={'午間補底班將於5月10日星期五進行，請同學於13:40到達702D室出席。'}
 					/>
@@ -145,13 +145,13 @@ export default function News() {
 					/>
 					<NewsCard 
 						title={'午間補底班'}
-						color={''}
+						color={'light'}
 						date={'2024 May 10'}
 						content={'午間補底班將於5月17日星期五進行，請同學於13:40到達702D室出席。'}
 					/>
 					<NewsCard 
 						title={'午間補底班'}
-						color={''}
+						color={'light'}
 						date={'2024 May 09'}
 						content={'午間補底班將於5月10日星期五進行，請同學於13:40到達702D室出席。'}
 					/>

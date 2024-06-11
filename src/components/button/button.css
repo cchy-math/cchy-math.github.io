@@ -9,7 +9,7 @@ button {
 	border-radius: 50px;
 	margin: 0%;
 	display: block;
-	font-size: 10px;
+	font-size: 14px;
 }
 button:before {
 	position: absolute;

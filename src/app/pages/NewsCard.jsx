@@ -10,8 +10,8 @@ export default function NewsCard({ title, date, content, color, imagepath }) {
 	},[tex])
 	if( imagepath !== ""){
 		return (
-			<div className={"col-4 mx-3 g-0 d-flex rounded-4 border border-2 border-" + color} style={{ height: 200, width: 500 }} >
-				<div className="px-4 py-3 flex-grow-1">
+			<div className={"news-card-container col-4 mx-3 g-0 d-flex rounded-4 border border-2 border-" + color + " news-card-" + color} style={{ height: 200, width: 500 }} >
+				<div className="px-4 py-3 flex-grow-1 news-card">
 					<p className={"h3 text-" + color}>{title}</p>
 					<p className="text-muted">{date}</p>
 					<p className="fs-5">{content}</p>
@@ -24,8 +24,8 @@ export default function NewsCard({ title, date, content, color, imagepath }) {
 	}
 	else {
 		return (
-			<div className={"col-3 mx-3 g-0 d-flex rounded-4 border border-2 border-" + color} style={{ height: 200, width: 500 }} >
-				<div className="px-4 py-3 flex-grow-1">
+			<div className={"news-card-container col-3 mx-3 g-0 d-flex rounded-4 border border-2 border-" + color + " news-card-" + color} style={{ height: 200, width: 500 }} >
+				<div className="px-4 py-3 flex-grow-1 news-card">
 					<p className={"h3 text-" + color}>{title}</p>
 					<p className="text-muted">{date}</p>
 					<p className="fs-5">{content}</p>
