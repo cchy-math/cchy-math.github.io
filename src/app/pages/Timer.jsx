@@ -441,6 +441,7 @@ export default function Timer() {
                                     { selectedLanguage === '中文 Chinese' && "剩餘時間 " }
                                     { selectedLanguage === '英文 English' && "Remaining Time " }
                                     { timeLeft }
+                                    
                                 </div>
                                 <div className="col-xs-4 col-lg-2">
                                    
