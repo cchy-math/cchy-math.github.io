@@ -519,7 +519,7 @@ export default function Timer() {
                 >
                     <section
                         id="exam-info-display"
-                        className="display-1 vw-100 pt-5"
+                        className="display-1 vw-100 pt-3"
                     >
                         <div className="HeaderHeight" />
                         {selectedLanguage === "中文 Chinese" &&
@@ -554,7 +554,7 @@ export default function Timer() {
                     >
                         <section
                             id="announcement-display"
-                            className="h1 align-items-center"
+                            className="h2 align-items-center"
                         >
                             {announcement15 &&
                                 selectedLanguage === "中文 Chinese" &&
@@ -579,7 +579,7 @@ export default function Timer() {
                                     examTime.split(" - ")[1]
                                 }. Time is up. Stop working. Put down all your stationery. Be seated quietly. Do not pack your personal belongings until you are told to do so. You should not talk before leaving this examination room. Now pass the answer sheets to the front with yours on the top, then the Question Papers.`}
                         </section>
-                        <section id="bar" className="row px-5 pb-5">
+                        <section id="bar" className="row px-5 pb-3">
                             <div className="progress time-left-bar time-left-bar-info flex-row-reverse my-3 p-0">
                                 <div
                                     className="progress-bar progress-bar-striped progress-bar-animated time-left bg-info"
@@ -614,7 +614,7 @@ export default function Timer() {
                         </section>
                         <section id="time-display" className="row px-5">
                             <div className="col-xs-2 col-lg-4 px-3"></div>
-                            <div className="col-xs-8 col-lg-4 px-3">
+                            <div className="col-xs-8 col-lg-4 px-5">
                                 <Clock2 />
                             </div>
                             <div className="col-xs-2 col-lg-4 px-3"></div>
