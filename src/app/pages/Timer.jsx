@@ -15,6 +15,7 @@ import { m1_papers } from "./m1-papers.js";
 import { m2_papers } from "./m2-papers.js";
 import { two_papers } from "./two-papers.js";
 import { va_papers } from "./va-papers.js";
+import { tsa_papers } from "./tsa-papers.js";
 import { no_paper } from "./no-paper.js";
 export default function Timer() {
     const [switchLanguage, setSwitchLanguage] = useState(false);
@@ -102,6 +103,8 @@ export default function Timer() {
             selectedSubject !== "體育 Physical Education"
         ) {
             paperData = two_papers;
+        } else if (selectedSubject.split("-", 2)[0] === "TSA") {
+            paperData = tsa_papers;
         } else {
             paperData = no_paper;
         }
