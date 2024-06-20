@@ -1,4 +1,4 @@
-export const va_papers = [
+export const tsa_papers = [
   {
     "value": "0",
     "chi_name": "", 
