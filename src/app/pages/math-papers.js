@@ -17,7 +17,7 @@ export const math_papers = [
   {
     "value": "SQ",
     "chi_name": "小測", 
-    "eng_name": "Section Quiz",
+    "eng_name": "Quiz",
   },
   {
     "value": "CT",
