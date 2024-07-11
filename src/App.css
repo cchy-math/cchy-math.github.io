@@ -99,16 +99,6 @@ main {
 	-ms-overflow-style: -ms-autohiding-scrollbar; }::-webkit-scrollbar {
 	display: none; }
 
-#exam-info-display {
-	position: absolute;
-	top: 0;
-}
-
-#time-info-display {
-	position: absolute;
-	bottom: 0;
-}
-
 .news-card-primary {
 	box-shadow: 0px 0px 8px var(--bs-primary);
 }
