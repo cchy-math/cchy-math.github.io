@@ -19,7 +19,7 @@ export default function News() {
 						title={'暑期補課'}
 						color={'warning'}
 						date={'2024 Jul 17'}
-						content={"暑期補課：8月14、15、17及24日09:00"}
+						content={"暑期補課：8月14、15、17及24日 09:00"}
 					/>
 					{/*<NewsCard
 						title={'Chapter Test 13'}
