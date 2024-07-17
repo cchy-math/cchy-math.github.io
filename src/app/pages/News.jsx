@@ -15,6 +15,12 @@ export default function News() {
 			<div className="row align-items-center flex-nowrap h2 ps-3">
 				5C MATH
 				<div className="row ms-3 flex-nowrap overflow-auto scroll-news">
+					<NewsCard
+						title={'暑期補課'}
+						color={'warning'}
+						date={'2024 Jul 17'}
+						content={"暑期補課：8月14、15、17及24日09:00"}
+					/>
 					{/*<NewsCard
 						title={'Chapter Test 13'}
 						color={'success'}
@@ -34,6 +40,12 @@ export default function News() {
 			<div className="row align-items-center flex-nowrap h2 ps-3">
 				4B MATH
 				<div className="row ms-3 flex-nowrap overflow-auto scroll-news">
+					<NewsCard
+						title={'中四數學銜接'}
+						color={'warning'}
+						date={'2024 Jul 17'}
+						content={"中四數學銜接：8月28、29及30日 09:15 - 10:45"}
+					/>
 					{/*<NewsCard
 						title={'Chapter Test 13'}
 						color={'success'}
