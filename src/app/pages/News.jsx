@@ -16,6 +16,12 @@ export default function News() {
 				5C MATH
 				<div className="row ms-3 flex-nowrap overflow-auto scroll-news">
 					<NewsCard
+						title={'Google Classroom'}
+						color={'success'}
+						date={'2024 Aug 24'}
+						content={"請上載 Chapter Assignment 3.1、3.2 及 Quiz 1 至 Google Classroom。"}
+					/>
+					<NewsCard
 						title={'暑期功課'}
 						color={'info'}
 						date={'2024 Jul 17'}
@@ -70,6 +76,12 @@ export default function News() {
 			<div className="row align-items-center flex-nowrap h2 ps-3">
 				2D MATH
 				<div className="row ms-3 flex-nowrap overflow-auto scroll-news">
+					<NewsCard
+						title={'暑期功課'}
+						color={'info'}
+						date={'2024 Aug 24'}
+						content={"暑期功課請於9月2日繳交。"}
+					/>
 					{/*<NewsCard
 						title={'Chapter Test 13'}
 						color={'success'}
