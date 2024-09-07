@@ -9,8 +9,8 @@ export default function MathDrillsCard({ title, date, content, textcolor, border
 		}
 	},[tex])
 	return (
-		<div className={"col-3 my-2 g-0 d-flex bg-dark rounded-4 border border-2 border-" + bordercolor} style={{ height: 100, width: 250 }} >
-			<button className="px-4 py-3 flex-grow-1 align-items-center">
+		<div className={"col-4 my-1 g-0 d-flex bg-dark rounded-4 border border-2 border-" + bordercolor} style={{ height: 100, width: 250 }} >
+			<button className="px-1 py-1 flex-grow-1 align-items-center">
 				<p className="h5">{content}</p>
 			</button>
 		</div>

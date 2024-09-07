@@ -21,7 +21,7 @@ export default function MathDrills_DSEMathCore() {
 					<div className="row flex-nowrap overflow-auto scroll-news">
 						<NavLink to="/math-drills-DSEMathCore/Quadratic/Solving/fmla-01" style={{width: 300 }}>
 							<MathDrillsCard
-								content={"\\( ax^2 + bx + c = 0 \\)"}
+								content={"\\( ax^2 + bx + c = 0,\\ x \\in \\mathbb{Z} \\)"}
 							/>
 						</NavLink>
 						<NavLink to="/math-drills-DSEMathCore/Quadratic/Solving/surd-form" style={{width: 300 }}>
