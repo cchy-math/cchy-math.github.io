@@ -17,6 +17,37 @@ export default function MathDrills_DSEMathCore() {
 			{"\\( \\text{Quadratic} \\)"}
 			<section class="py-3">
 				<div className="row align-items-center flex px-3">
+					{"\\( \\text{Solving Quadratic Equations} \\)"}
+					<div className="row flex-nowrap overflow-auto scroll-news">
+						<NavLink to="/math-drills-DSEMathCore/Quadratic/Solving/fmla-01" style={{width: 300 }}>
+							<MathDrillsCard
+								content={"\\( ax^2 + bx + c = 0 \\)"}
+							/>
+						</NavLink>
+						<NavLink to="/math-drills-DSEMathCore/Quadratic/Solving/surd-form" style={{width: 300 }}>
+							<MathDrillsCard
+								content={"\\( \\displaystyle x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a} \\)"}
+							/>
+						</NavLink>
+						<NavLink to="/math-drills-DSEMathCore/Quadratic/Solving/factor-form" style={{width: 300 }}>
+							<MathDrillsCard
+								content={"\\( (px+q)(rx+s) = 0 \\)"}
+							/>
+						</NavLink>
+						<NavLink to="/math-drills-DSEMathCore/Quadratic/Solving/vertex-form" style={{width: 300 }}>
+							<MathDrillsCard
+								content={"\\( a(x-h)^2+k = 0 \\)"}
+							/>
+						</NavLink>
+						<NavLink to="/math-drills-DSEMathCore/Quadratic/Solving/mixed" style={{width: 300 }}>
+							<MathDrillsCard
+								content={"\\( \\text{mixed type} \\)"}
+							/>
+						</NavLink>
+					</div>
+				</div>
+				<hr/>
+				<div className="row align-items-center flex px-3">
 					{"\\( \\text{Completing the Square} \\)"}
 					<div className="row flex-nowrap overflow-auto scroll-news">
 						<NavLink to="/math-drills-DSEMathCore/Quadratic/CompletingTheSquare/all-type" style={{width: 300 }}>
