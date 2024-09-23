@@ -5,7 +5,13 @@ function getRndInteger(min, max) {
 }
 
 function GCD(a, b) {
-    if (b) {
+    if (a === 1) {
+        return b;
+    }
+    else if (b === 1) {
+        return a;
+    }
+    else if (b) {
         while ((a %= b) && (b %= a));
     }
     return a + b;
