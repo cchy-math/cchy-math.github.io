@@ -11,8 +11,8 @@ function GCD(a, b) {
     else if (b === 1) {
         return a;
     }
-    else if (b) {
-        while ((a %= b) && (b %= a));
+    if (b) {
+        while ((a %= b) && (b %= a) && (a > 0) && (b > 0));
     }
     return a + b;
 }
