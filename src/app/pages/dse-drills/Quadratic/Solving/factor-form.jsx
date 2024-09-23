@@ -81,8 +81,8 @@ export default function FactorForm() {
                     <div className="col-4 col-sm-3 d-flex justify-content-center">
                         <button className="button-rainbow h4 w-75" onClick={() => {
                             p = getRndInteger(1,10);
-                            q = getRndInteger(1,10);
-                            r = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
+                            q = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
+                            r = getRndInteger(1,10);
                             s = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
                             if (r > 0){
                                 r = "+" + r;
