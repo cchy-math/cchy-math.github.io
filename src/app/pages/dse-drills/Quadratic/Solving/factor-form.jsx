@@ -39,7 +39,7 @@ function arctanDeg(num) {
     return degrees;
 }
 
-export default function FactorMethod() {
+export default function FactorForm() {
     
 	const [texQ, setTexQ] = useState('');
     const [texA, setTexA] = useState('');
