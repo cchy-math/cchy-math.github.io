@@ -54,10 +54,10 @@ export default function FactorForm() {
 		}
 	},[texQ, texA, texA_LHS1, texA_RHS1, texA_LHS2, texA_RHS2])
     let begin = "\\( \\displaylines{ ";
-    let alpha = 1;
-    let beta = 1;
-    let B = 1;
-    let C = 1;
+    let p = 1;
+    let q = 1;
+    let r = 1;
+    let s = 1;
     let end = " } \\)";
 
     const [isVisible, setIsVisible] = useState(false);
