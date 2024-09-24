@@ -12,7 +12,7 @@ function GCD(a, b) {
         return a;
     }
     if (b) {
-        while ((a %= b) && (b %= a) && (a > 0) && (b > 0));
+        while ((a %= b) && (b %= a) && (a + b) > 0);
     }
     return a + b;
 }
