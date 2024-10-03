@@ -88,6 +88,11 @@ export default function MathDrills_S123() {
 							content={"\\( (x \\pm a)(x \\pm b) \\)"}
 						/>
 					</NavLink>
+					<NavLink to="/math-drills-S123/identites-expand/discriminant-1" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( (x \\pm b)^2 - 4(x \\pm a)(x \\pm c) \\)"}
+						/>
+					</NavLink>
 				</div>
 			</div>
 			<hr/>

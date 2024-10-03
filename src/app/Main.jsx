@@ -34,6 +34,7 @@ import AXpmB2 from './pages/S123-drills/Identities(Expand)/ax-pm-b-2.jsx';
 import AXpmBY2 from './pages/S123-drills/Identities(Expand)/ax-pm-by-2.jsx';
 import XAXB from './pages/S123-drills/Identities(Expand)/xa-xb.jsx';
 import XpmAXpmB from './pages/S123-drills/Identities(Expand)/xpma-xpmb.jsx';
+import Discriminant1 from './pages/S123-drills/Identities(Expand)/discriminant-1.jsx';
 import AllTypeCompletingTheSquare from './pages/dse-drills/Quadratic/CompletingTheSquare/all-type.jsx';
 import FMLA01 from './pages/dse-drills/Quadratic/Solving/fmla-01.jsx';
 import FactorForm from './pages/dse-drills/Quadratic/Solving/factor-form.jsx';
@@ -98,6 +99,7 @@ export default function Main() {
                     <Route path="ax-pm-by-2" element={<AXpmBY2 />} />
                     <Route path="xa-xb" element={<XAXB />} />
                     <Route path="xpma-xpmb" element={<XpmAXpmB />} />
+                    <Route path="discriminant-1" element={<Discriminant1 />} />
                 </Route>
             </Route>
         </Routes>
