@@ -83,6 +83,11 @@ export default function MathDrills_S123() {
 							content={"\\( (x + a)(x + b) \\)"}
 						/>
 					</NavLink>
+					<NavLink to="/math-drills-S123/identites-expand/xpma-xpmb" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( (x \\pm a)(x \\pm b) \\)"}
+						/>
+					</NavLink>
 				</div>
 			</div>
 			<hr/>
