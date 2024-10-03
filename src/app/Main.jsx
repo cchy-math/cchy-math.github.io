@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import News from './pages/News.jsx';
 import Menu from './pages/Menu.jsx';
 import Timer from './pages/Timer.jsx';
+import CEAddMath1991 from './pages/CEAddMath1991.jsx';
 import MathDrills_S123 from './pages/MathDrills_S123.jsx';
 import MathDrills_DSEMathCore from './pages/MathDrills_DSEMathCore.jsx';
 import AnglePmTheta from './pages/dse-drills/Trigo/ASTC/angle-pm-theta.jsx';
