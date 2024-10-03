@@ -134,7 +134,7 @@ export default function CEAddMath1991() {
                             setFx(begin+"f(x)=x^2 + x + 1"+end);
                             setGx(begin+"g(x)=-"+a+"x^2-"+b+"x-"+c+"=-"+a+"\\left(x+"+h+"\\right)^2-"+k+end);
                             setKfgx(begin+"y=kf(x)+g(x)=(k-"+a+")x^2+(k-"+b+")x+(k-"+c+")"+end);
-                            setDelta(begin+"\\Delta = 0 = -3k^2+"+2*(b-2*a-2*c)+"k-"+Math.abs(b*b-4*a*c)+end);
+                            setDelta(begin+"\\Delta = 0 = -3k^2"+2*(b-2*a-2*c)+"k-"+Math.abs(b*b-4*a*c)+end);
                             setRoot("");
                             setR1kfgx("");
                             setR2kfgx("");
