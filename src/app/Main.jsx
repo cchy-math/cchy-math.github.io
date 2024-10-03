@@ -32,6 +32,7 @@ import TrigoQuadratic from './pages/dse-drills/Trigo/Equations/trigo-quadratic.j
 import XpmA2 from './pages/S123-drills/Identities(Expand)/x-pm-a-2.jsx';
 import AXpmB2 from './pages/S123-drills/Identities(Expand)/ax-pm-b-2.jsx';
 import AXpmBY2 from './pages/S123-drills/Identities(Expand)/ax-pm-by-2.jsx';
+import XAXB from './pages/S123-drills/Identities(Expand)/xa-xb.jsx';
 import AllTypeCompletingTheSquare from './pages/dse-drills/Quadratic/CompletingTheSquare/all-type.jsx';
 import FMLA01 from './pages/dse-drills/Quadratic/Solving/fmla-01.jsx';
 import FactorForm from './pages/dse-drills/Quadratic/Solving/factor-form.jsx';
@@ -94,6 +95,7 @@ export default function Main() {
                     <Route path="x-pm-a-2" element={<XpmA2 />} />
                     <Route path="ax-pm-b-2" element={<AXpmB2 />} />
                     <Route path="ax-pm-by-2" element={<AXpmBY2 />} />
+                    <Route path="xa-xb" element={<XAXB />} />
                 </Route>
             </Route>
         </Routes>

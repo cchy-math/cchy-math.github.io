@@ -78,6 +78,11 @@ export default function MathDrills_S123() {
 							content={"\\( (ax \\pm by)^2 \\)"}
 						/>
 					</NavLink>
+					<NavLink to="/math-drills-S123/identites-expand/xa-xb" style={{width: 300 }}>
+						<MathDrillsCard
+							content={"\\( (x + a)(x + b) \\)"}
+						/>
+					</NavLink>
 				</div>
 			</div>
 			<hr/>
