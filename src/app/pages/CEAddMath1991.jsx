@@ -114,12 +114,12 @@ export default function CEAddMath1991() {
 			<div className="h1 vh-25 w-100">
                 HKCEE 1991 Additional Mathematics Paper I Q9
             </div>
-            <div className="display-1 vh-50 vw-100 d-flex justify-content-center align-items-center">
-                {fx}; {gx};
-                {kfgx}; 
-                {delta};
-                {root};
-                {r1kfgx}; {r2kfgx}; 
+            <div className="display-5 vh-50 vw-100 d-flex justify-content-center align-items-center">
+                <div className="row">{fx} {gx}</div>
+                <div className="row">{kfgx}</div>
+                <div className="row">{delta}</div>
+                <div className="row">{root}</div>
+                <div className="row">{r1kfgx} {r2kfgx}</div>
             </div>
             <div className="vh-25 vw-100 mb-5 align-items-center">
                 <div className="row mb-5">
