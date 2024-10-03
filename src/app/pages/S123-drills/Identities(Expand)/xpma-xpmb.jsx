@@ -70,14 +70,14 @@ export default function XpmAXpmB() {
                             }while(x === "e" || x === "i" || x === "l" || x === "o");
                             a = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
                             b = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
+                            setTexA_eng("\\( "+x+"^2"+(a+b)+x+(a*b)+" \\)");
+                            setIsVisible(false);
                             if (a > 0){
                                 a = "+" + a;
                             }
                             if (b > 0){
                                 b = "+" + b;
                             }
-                            setTexA_eng("\\( "+x+"^2 + "+(a+b)+x+" + "+(a*b)+" \\)");
-                            setIsVisible(false);
                             setTexQ(begin+"("+x+a+")("+x+b+")"+end);
                         }}>
                             Next
