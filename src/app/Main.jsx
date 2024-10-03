@@ -45,6 +45,7 @@ export default function Main() {
             <Route path="*" element={<News />} />
             <Route path="/" element={<News />} />
             <Route path="menu" element={<Menu />} />
+            <Route path="CEAddMath1991" element={<CEAddMath1991 />} />
             <Route path="timer" element={<Timer />} />
             <Route path="math-drills-DSEMathCore">
                 <Route path="" element={<MathDrills_DSEMathCore />} />
