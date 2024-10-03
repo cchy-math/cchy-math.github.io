@@ -39,10 +39,11 @@ export default function XpmAXpmB() {
 	},[texA_chi])
     let begin = "\\(";
     let x = "x";
-    let pmsign = "+";
     let a = 1;
     let eqsign = "=";
     let b = 1;
+    let P = 1;
+    let Q = 1;
     let end = "\\)";
 
     const [isVisible, setIsVisible] = useState(false);
@@ -70,7 +71,15 @@ export default function XpmAXpmB() {
                             }while(x === "e" || x === "i" || x === "l" || x === "o");
                             a = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
                             b = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
-                            setTexA_eng("\\( "+x+"^2"+(a+b)+x+(a*b)+" \\)");
+                            P=a+b;
+                            Q=a*b;
+                            if (a+b > 0){
+                                P = "+" + (a+b);
+                            }
+                            if (a*b > 0){
+                                Q = "+" + (a*b);
+                            }
+                            setTexA_eng("\\( "+x+"^2"+P+x+Q+" \\)");
                             setIsVisible(false);
                             if (a > 0){
                                 a = "+" + a;
