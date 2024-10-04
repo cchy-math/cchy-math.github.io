@@ -79,7 +79,7 @@ export default function Discriminant1() {
                             if (c > 0){
                                 c = "+" + c;
                             }
-                            setTexA_eng("\\( -3"+x+"^2 + "+(2*b-4*a-4*c)+x+" + "+(b*b-4*a*c)+" \\)");
+                            setTexA_eng("\\( -3"+x+"^2"+(2*b-4*a-4*c)+x+(b*b-4*a*c)+" \\)");
                             setIsVisible(false);
                             setTexQ(begin+"("+x+b+")^2"+"-4("+x+a+")("+x+c+")"+end);
                         }}>
