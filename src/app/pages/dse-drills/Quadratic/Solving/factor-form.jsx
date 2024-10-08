@@ -24,6 +24,7 @@ function LCM(a, b) {
 }
 
 function divToFracLaTeX(numerator, denominator) {
+    if (denominator === 1) {return numerator}
     let sign = numerator*denominator < 0 ? "-" : "";
     let N = Math.abs(numerator/ GCD(numerator, denominator));
     let D = Math.abs(denominator/ GCD(numerator, denominator));
