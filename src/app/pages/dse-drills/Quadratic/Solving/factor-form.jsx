@@ -92,6 +92,8 @@ export default function FactorForm() {
                             q = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
                             r = getRndInteger(1,10);
                             s = getRndInteger(1,10)*Math.pow(-1,getRndInteger(1,3));
+                            setTexA_LHS1(begin + "x=" + divToFracLaTeX(-q, p) + "\\text{ or }" + "x=" + divToFracLaTeX(-s, r) + end);
+                            setTexA_RHS1(begin + "x=" + divToFracLaTeX(-q, p) + "\\text{ 或 }" + "x=" + divToFracLaTeX(-s, r) + end);
                             if (q > 0){
                                 q = "+" + q;
                             }
@@ -104,8 +106,6 @@ export default function FactorForm() {
                             if (r === 1){
                                 r = "";
                             }
-                            setTexA_LHS1(begin + "x=" + divToFracLaTeX(-q, p) + "\\text{ or }" + "x=" + divToFracLaTeX(-s, r) + end);
-                            setTexA_RHS1(begin + "x=" + divToFracLaTeX(-q, p) + "\\text{ 或 }" + "x=" + divToFracLaTeX(-s, r) + end);
                             setTexQ(begin + "(" + p + "x" + q + ")(" + r + "x" + s + ")=0" + end);
                             setIsVisible(false);
                         }}>
