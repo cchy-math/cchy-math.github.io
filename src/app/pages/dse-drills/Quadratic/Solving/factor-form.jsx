@@ -27,7 +27,7 @@ function divToFracLaTeX(numerator, denominator) {
     let sign = numerator*denominator < 0 ? "-" : "";
     let N = Math.abs(numerator/ GCD(numerator, denominator));
     let D = Math.abs(denominator/ GCD(numerator, denominator));
-    if (denominator === 1) {return numerator};
+    if (Math.abs(denominator) === 1) {return sign + numerator};
     if (numerator === 1) {return (sign + "\\displaystyle \\frac{1}{"+Math.abs(D)+"}")};
     return (D === 1) ? (sign + N) : (sign + "\\displaystyle \\frac{"+N+"}{"+D+"}");
 }
