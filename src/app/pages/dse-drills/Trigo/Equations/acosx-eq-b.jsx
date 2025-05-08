@@ -83,6 +83,9 @@ export default function AcosxeqB() {
                             A = getRndInteger(1,11)*Math.pow(-1,getRndInteger(1,3));
                             B = getRndInteger(0,11)*Math.pow(-1,getRndInteger(1,3));
                             let arcTrigo = "\\arccos \\left(" + divToFracLaTeX(B,A) + "\\right)";
+                            if(A*B < 0){
+                                arcTrigo = "\\arcsin \\left( \\left|" + divToFracLaTeX(B,A) + "\\right| \\right)";
+                            }
                             setTexA(begin + trigo + "=" + divToFracLaTeX(B,A) + end);
                             if(B/A > 1 || B/A < -1){
                                 setTexA_LHS1(begin + "\\because -1 \\leq \\cos \\theta \\leq 1 " + end);
@@ -96,10 +99,10 @@ export default function AcosxeqB() {
                                     setTexA_LHS2(begin + "\\theta = " + corrTo3sf(Number(arccosDeg(B/A))) + "^{\\circ}" + end);
                                     setTexA_RHS2(begin + "\\theta = " + corrTo3sf(360 - Number(arccosDeg(B/A))) + "^{\\circ}" + end);    
                                 }else{
-                                    setTexA_LHS1(begin + "\\theta = 180^{\\circ} - \\left|" + arcTrigo + "\\right|" + end);
-                                    setTexA_RHS1(begin + "\\theta = 180^{\\circ} + \\left|" + arcTrigo + "\\right|" + end);
-                                    setTexA_LHS2(begin + "\\theta = " + corrTo3sf(180 - Math.abs(Number(arccosDeg(B/A)))) + "^{\\circ}" + end);
-                                    setTexA_RHS2(begin + "\\theta = " + corrTo3sf(180 + Math.abs(Number(arccosDeg(B/A)))) + "^{\\circ}" + end);    
+                                    setTexA_LHS1(begin + "\\theta = 180^{\\circ} -" + arcTrigo + end);
+                                    setTexA_RHS1(begin + "\\theta = 180^{\\circ} +" + arcTrigo + end);
+                                    setTexA_LHS2(begin + "\\theta = " + corrTo3sf(180 - Number(arccosDeg(Math.abs(B/A)))) + "^{\\circ}" + end);
+                                    setTexA_RHS2(begin + "\\theta = " + corrTo3sf(180 + Number(arccosDeg(Math.abs(B/A)))) + "^{\\circ}" + end);    
                                 }
                             }
                             if(A === 1){

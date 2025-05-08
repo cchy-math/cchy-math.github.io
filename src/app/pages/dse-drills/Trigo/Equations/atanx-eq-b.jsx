@@ -83,6 +83,9 @@ export default function AtanxeqB() {
                             A = getRndInteger(1,11)*Math.pow(-1,getRndInteger(1,3));
                             B = getRndInteger(0,11)*Math.pow(-1,getRndInteger(1,3));
                             let arcTrigo = "\\arctan \\left(" + divToFracLaTeX(B,A) + "\\right)";
+                            if(A*B < 0){
+                                arcTrigo = "\\arcsin \\left( \\left|" + divToFracLaTeX(B,A) + "\\right| \\right)";
+                            }
                             setTexA(begin + trigo + "=" + divToFracLaTeX(B,A) + end);
                             if(A*B >= 0){
                                 setTexA_LHS1(begin + "\\theta = " + arcTrigo + end);
@@ -90,10 +93,10 @@ export default function AtanxeqB() {
                                 setTexA_LHS2(begin + "\\theta = " + corrTo3sf(Number(arctanDeg(B/A))) + "^{\\circ}" + end);
                                 setTexA_RHS2(begin + "\\theta = " + corrTo3sf(180 + Number(arctanDeg(B/A))) + "^{\\circ}" + end);    
                             }else{
-                                setTexA_LHS1(begin + "\\theta = 180^{\\circ} - \\left|" + arcTrigo + "\\right|" + end);
-                                setTexA_RHS1(begin + "\\theta = 360^{\\circ} - \\left|" + arcTrigo + "\\right|" + end);
-                                setTexA_LHS2(begin + "\\theta = " + corrTo3sf(180 - Math.abs(Number(arctanDeg(B/A)))) + "^{\\circ}" + end);
-                                setTexA_RHS2(begin + "\\theta = " + corrTo3sf(360 - Math.abs(Number(arctanDeg(B/A)))) + "^{\\circ}" + end);    
+                                setTexA_LHS1(begin + "\\theta = 180^{\\circ} -" + arcTrigo + end);
+                                setTexA_RHS1(begin + "\\theta = 360^{\\circ} -" + arcTrigo + end);
+                                setTexA_LHS2(begin + "\\theta = " + corrTo3sf(180 - Number(arctanDeg(Math.abs(B/A)))) + "^{\\circ}" + end);
+                                setTexA_RHS2(begin + "\\theta = " + corrTo3sf(360 - Number(arctanDeg(Math.abs(B/A)))) + "^{\\circ}" + end);    
                             }
                             if(A === 1){
                                 A = "";
